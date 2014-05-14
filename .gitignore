@@ -1,6 +1,34 @@
+# ----- IGNORE DRUPAL -----
 # Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
+sites/*/*settings*.php
+.htaccess
 
-# Ignore paths that contain user-generated content.
+# Ignore paths that contain generated content.
+cache/
+files/
 sites/*/files
 sites/*/private
+
+# ----- IGNORE OSX -----
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two \r.
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+
+# ----- IGNORE WEBALIZER -----
+webalizer/
