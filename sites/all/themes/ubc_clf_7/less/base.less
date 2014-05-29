@@ -1,0 +1,325 @@
+//
+// Custom Utility classes
+// --------------------------------------------------
+
+.ir { 
+  display: block; 
+  text-indent: -300%; 
+  overflow: hidden; 
+  background-repeat: no-repeat; }
+.floatleft, 
+.floatl { 
+  float: left; 
+  margin: 0 10px 5px 0; }
+.floatright, 
+.floatr { 
+  float: right; 
+  margin: 0 0 5px 10px; }
+.visuallyhidden, 
+.element-invisible, 
+.skip a:link, 
+.skip a:hover, 
+.skip a:visited {
+  position: absolute; 
+  left: -300%; 
+  top: auto; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden; }
+.skip a:active, 
+.skip a:focus { 
+  position: static; 
+  width: auto; 
+  height: auto; } 
+
+/*a:link, a:visited, button {
+ -webkit-transition: color 0.2s ease, background 0.3s ease;
+ -moz-transition: color 0.2s ease, background 0.3s ease;
+ -o-transition: color 0.2s ease, background 0.3s ease;
+ transition: color 0.2s ease, background 0.3s ease; }*/
+
+// Make sure ckeditor behaves and doesn't display a background image or colour
+#cke_contents_edit-body-und-0-value body { background: none !important; }
+
+// Mix admin menu if it's there
+#admin-menu .shortcut-toolbar a { background: inherit; }
+
+// Images - resize your images that are larger than the viewport (remove inline size declarations from markup)
+img, 
+canvas {
+  max-width: 100%;
+  height: auto; } 
+.ie8 img, 
+.ie8 canvas { max-width: none; }
+// Videos - make responsive by modifying wrapper
+.media-wrapper, 
+.embedded-video,
+.media_embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16/9 ratio */
+  padding-top: 30px; /* IE6 workaround*/
+  height: 0 !important;
+  overflow: hidden; }
+.media-wrapper iframe,
+.media-wrapper object,
+.media-wrapper embed,
+.embedded-video iframe,
+.embedded-video object,
+.embedded-video embed,
+// for media embed button in wysiwyg
+.media_embed iframe,
+.media_embed object,
+.media_embed embed  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important; }
+
+/* UI improvments */
+//-------------------------
+#edit-title { font-size: 24px; }
+#system-themes-form img { width: 100px; }
+.form-item .description {
+  font-style: italic;
+  line-height: 1.2em;
+  .font-size(11);
+  margin-top: 5px;
+  color: #777; }
+#edit-delete { color: #c00; }
+// The word "Unpublished" displayed beneath the content.
+.node-unpublished { background-color: #fff; }
+.node-unpublished div.unpublished {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  .font-size(75);
+  line-height: 1; 
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word; }
+
+/* Fix Pager Styles */
+.item-list .pager li { padding: 0; }
+.item-list ul li { margin: 0; }
+.pager li.pager-current {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #eee;
+  border: 1px solid #ddd; }
+
+/* Add Tab styles that aren't hideous */
+/* @group Tabs */
+div.tabs { margin: 0 0 5px 0; }
+ul.primary, 
+ul.secondary { width: 99%; }
+ul.primary {
+  margin: 0 0 .5em 0;
+  padding: 0;
+  border-width: 0;
+  list-style: none;
+  white-space: nowrap;
+  line-height: normal;
+  border-bottom: 1px solid @grayLighter; }
+ul.primary li {
+  float: left;
+  margin: 0;
+  padding: 0; }
+ul.primary li.active a, 
+ul.primary li.active a:hover {
+  border-width: 0;
+  color: @black;
+  background-color: lighten(@grayLight, 10); }
+ul.primary li a {
+  display: block;
+  height: 28px;
+  margin: 0 3px 0 0;
+  padding: 0 0 0 5px;
+  border-width: 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: #777777;
+  background-color: @grayLighter;
+  .border-top-radius(4px);  }
+ul.primary li a:hover {
+  border-width: 0;
+  background-color: lighten(@grayLight, 25); }
+ul.primary li a .tab {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 4px 13px 4px 6px;
+  border-width: 0;
+  line-height: 20px; }
+ul.secondary {
+  margin: 0;
+  padding: 0 0 0 5px;
+  border-bottom: 1px solid silver;
+  list-style: none;
+  white-space: nowrap; }
+ul.secondary li {
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 5px 0;
+  border-right: none; }
+ul.secondary a {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid silver;
+  text-decoration: none;
+  color: #777777; }
+ul.secondary a .active, 
+.active ul.secondary a:hover {
+  border: 1px solid silver;
+  color: @black; }
+ul.secondary a .tab {
+  display: block;
+  height: 18px;
+  margin: 0;
+  padding: 3px 8px;
+  line-height: 18px; }
+/* @end */
+
+// Custom Utilities for Drupal CLF
+//-------------------------
+.inflate {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 0;
+  padding-right: 0; }
+.nopadding {
+  padding-left: 0;
+  padding-right: 0; }
+
+// DEFAULTS FOR CLF
+//-------------------------
+body {
+  background: #cccccc;
+  font-family: @sansFontFamily;
+  min-width: 240px; }
+#main { background-color: @white; }
+#ubc7-unit-identifier.no-umbrella { line-height: 2.25em; }
+
+// Unit Bar link and font colour
+//-------------------------
+#ubc7-unit,
+#ubc7-unit-name a {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 2px #333333; }
+#ubc7-unit-name a:hover,
+#ubc7-unit-name a:active { text-shadow: 1px 2px 2px #333333; }
+
+
+//#ubc7-unit-menu .btn-group .btn { line-height: 44px; }
+// FIX THE PRIMARY LINK ACTIVE STYLES
+//-------------------------
+#ubc7-unit-menu .nav > li > a.active,
+#ubc7-unit-menu .nav > li.active-trail > .btn-group, 
+#ubc7-unit-alternate-navigation .nav > li.active-trail > .btn-group {
+  background:  @ubcSilver;
+  -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125); }
+#ubc7-unit-menu .nav-collapse .nav > li > a:hover, 
+#ubc7-unit-menu .nav-collapse .dropdown-menu a:hover, 
+#ubc7-unit-alternate-navigation .nav-collapse .nav > li > a:hover, 
+#ubc7-unit-alternate-navigation .nav-collapse .dropdown-menu a:hover {
+  color:  #fff;
+  text-decoration: none; 
+  background-color: @ubcBlue !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }  
+#ubc7-unit-menu .nav > li.active-trail:hover > .btn-group {
+  background: @ubcBlue; }
+#ubc7-unit-menu .nav > li.active-trail > .btn-group .btn,
+#ubc7-unit-alternate-navigation .nav > li.active-trail > .btn-group .btn {
+  background: 0; }
+
+// this is the fix for the clf line height issue with no dropdown
+#ubc7-unit-menu .nav > li  > a { padding: 10px 15px !important; }
+
+// target Firefox because it behaves differently @1200px
+@media screen and (min--moz-device-pixel-ratio:0) and (min-width:1200px) {
+  #ubc7-unit-menu .nav > li  > a { padding-top: 11px !important; }
+}
+
+// add box shadow to container elements
+/*#ubc7-header, div#ubc7-unit, #ubc7-unit-menu, ul.breadcrumb, #main, #ubc7-unit-footer, #ubc7-global-footer, #ubc7-minimal-footer {
+-moz-box-shadow: 0px 3px 5px #444;
+-webkit-box-shadow: 0px 3px 5px #444;
+box-shadow: 0px 3px 5px #444; }*/
+
+// FOOTER STYLES
+//-------------------------
+/** Social Icon **/
+#ubc7-unit-social-icons i:hover { color: @ubcGrey;}
+
+// DEFAULT SUBNAV STYLES
+//-------------------------
+.bootstrap-sidenav ul { margin: 0;}
+.bootstrap-sidenav ul > li > a {
+  border: 1px solid @ubcSilver;
+  color: @ubcBlue;
+  display: block;
+  margin: 0 0 -1px;
+  padding: 8px 14px 8px 28px;
+  text-decoration: none; }
+// remove bos shadow from nested lists
+.bootstrap-sidenav .bootstrap-sidenav {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none; }
+
+/* add active style to sidenav */
+.bootstrap-sidenav > .active > a,
+.bootstrap-sidenav a.active { background: @ubcSilver; }
+.bootstrap-sidenav .nav > li > a { padding-left: 28px; }
+
+// Make inline fields behave
+.field-label-inline label { display: inline-block; }
+
+// Fix collapsibe fieldset behaviour
+html.js fieldset.collapsible .fieldset-legend,
+html.js fieldset.collapsed .fieldset-legend { background-image: none; }
+html.js fieldset.collapsible .fieldset-legend a:after,
+html.js fieldset.collapsed .fieldset-legend a:after {
+  position: absolute;  
+  left: 0;
+  top: 0; }
+html.js fieldset.collapsible .fieldset-legend a:after { content: "-"; }
+html.js fieldset.collapsed .fieldset-legend a:after { content: "+"; }
+
+// fix for search block (when used to replace default search
+#ubc7-search #block-search-form .form-actions {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: inherit;
+  border-top: none; }
+#ubc7-search #block-search-form input[type="search"] { margin-bottom: 0; }
+
+
+@media screen and (max-width:979px) {
+// START 768-979 STYLES    
+.inflate {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0; }
+
+// END 768-979 STYLES
+}
+
+.crumbs {
+  background: white;
+}
+
+// PANELS ADJUSTMENTS
+#panels-dnd-main div.panel-region h2.label {
+  background-color: inherit; 
+  margin: .25em 0 .5em 0; }
