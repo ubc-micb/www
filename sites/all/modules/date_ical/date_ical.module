@@ -10,7 +10,7 @@
  * value of the iCal feeds created by Date iCal. It's primarily used for
  * debugging.
  */
-define('DATE_ICAL_VERSION', '3.1');
+define('DATE_ICAL_VERSION', '3.2');
 
 /**
  * Exception class for generic exceptions thrown by this module.
@@ -168,7 +168,7 @@ function date_ical_libraries_info() {
     'download url' => 'http://github.com/iCalcreator/iCalcreator',
     'version arguments' => array(
       'file' => 'iCalcreator.class.php',
-      'pattern' => "/define\( 'ICALCREATOR_VERSION', 'iCalcreator ([\d\.]+)' \);/",
+      'pattern' => "/define.*?ICALCREATOR_VERSION.*?([\d\.]+)/",
       'lines' => 100,
     ),
     'files' => array(
