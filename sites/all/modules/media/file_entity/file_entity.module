@@ -420,12 +420,8 @@ function file_entity_file_formatter_file_field_settings($form, &$form_state, $se
     if (isset($field_formatter_info['module']) && ($function = ($field_formatter_info['module'] . '_field_formatter_settings_form')) && function_exists($function)) {
       $field = NULL;
       $mock_instance['display'][$view_mode] = array(
-        'display' => array(
-          $view_mode => array(
-            'type' => $field_formatter_type,
-            'settings' => $settings,
-          ),
-        ),
+        'type' => $field_formatter_type,
+        'settings' => $settings,
         'entity_type' => 'file',
         'bundle' => $file_type,
       );
