@@ -2383,3 +2383,14 @@ body.adminimal-backend ul.rules-autocomplete .rules-dsac-group {
     float: left;
     width: auto;
 }
+
+/* 
+ * UBC Microbiology and Immunology 
+ *
+ * This is where we implement tweaks to this theme to improve it for our use.
+ */
+
+/* Increase default input field text size to enhance readability */
+input.form-autocomplete, input.form-text, input.form-file, textarea.form-textarea, select.form-select {
+    font-size: 14px;
+}
