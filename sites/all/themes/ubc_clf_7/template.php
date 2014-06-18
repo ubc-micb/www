@@ -154,7 +154,7 @@ function megatron_breadcrumb($variables) {
       //we stop duplicates entering where there is a sub nav based on page jumps
       if ($pos === false){
         $crumbs .= '<li class="breadcrumb-' . $i;
-        $crumbs .=  '">' . $breadcrumb[$i] . '</li> » ';
+        $crumbs .=  '">' . $breadcrumb[$i] . ' <span class="divider">/</span> </li>';
       }
       $i++;
     }

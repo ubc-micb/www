@@ -62,6 +62,14 @@ Unit Bar background gradient and box shadow */
   -webkit-box-shadow: inset 0px -10px 10px -10px #333333;
 }
 
+/* Create a bit more whitespace around the breadcrumbs */
+#ubc7-unit-menu {
+  margin-bottom:5px;
+}
+.full-width .full-width-container .breadcrumb {
+  margin-bottom:5px;
+}
+
 /* Center the content area */
 div#content {
   margin-left: auto;
