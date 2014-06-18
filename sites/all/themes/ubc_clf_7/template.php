@@ -158,7 +158,13 @@ function megatron_breadcrumb($variables) {
       }
       $i++;
     }
-    $crumbs .= '<li class="active">'. drupal_get_title() .'</li></ul>';
+    // Truncate the title if it is too long 
+    $truncate_length = 50;
+    $page_title = drupal_get_title();
+    if(strlen($page_title) > $truncate_length){
+      $page_title = substr($page_title,0,$truncate_length).'...';
+    }
+    $crumbs .= '<li class="active">'. $page_title .'</li></ul>';
     return $crumbs;
   }
   return '';
