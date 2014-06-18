@@ -5,6 +5,7 @@ body{
   background:white;
 }
 
+/* FONT SETTINGS */
 .fancybox-title, 
 .full-width-container,
 .survey,
@@ -14,6 +15,41 @@ footer {
   font-weight:400;
   font-style:normal;
   background:#FFF
+  text-rendering: optimizelegibility;
+}
+.full-width-container h1 {
+  color: #002145;
+  font-size: 270%;
+  line-height: 133.3%;
+  margin: 0 0 2%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.full-width-container h2 {
+  color: #002145;
+  font-size: 235.2%;
+  line-height: 150%;
+  margin: 0 0 1.7%;
+  letter-spacing: 2px;
+}
+.full-width-container h3 {
+  color: #0680A6;
+  font-size: 176.4%;
+  line-height: 166.6%;
+  margin: 0 0 1.3%;
+  letter-spacing: 2px;
+}
+.full-width-container h3 a,
+.full-width-container h4 a,
+.full-width-container h5 a,
+.full-width-container h6 a {
+  text-decoration: underline;
+}
+.full-width-container h3 a:visited, 
+.full-width-container h4 a:visited, 
+.full-width-container h5 a:visited, 
+.full-width-container h6 a:visited {
+  color: #0680a6;
 }
 
 /* UNIT COLOURS
@@ -70,6 +106,25 @@ Typography
 }
 @media screen and (max-width: 979px) { 
   /* START 768-979 STYLES */
+
+  /* Make the header fonts smaller */
+  .full-width-container h1 {
+    font-size: 180%;
+    line-height: 120%;
+    letter-spacing: 2px;
+    margin: 0 0 2%;
+  }
+  .full-width-container h2 {
+    font-size: 160%;
+    line-height: 130%;
+    margin: 0 0 2%;
+  }
+  .full-width-container h3 {
+    font-size: 152.9%;
+    line-height: 146.1%;
+    margin: 0 0 1.7%;
+  }
+
 
   /* Center Breadcrumbs and Content */
   div#content{
