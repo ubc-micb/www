@@ -87,4 +87,25 @@ Drupal.behaviors.adminimal_move_active_primary_tab = {
 	}
 };
 
+// Remove outline when clicking on links.
+Drupal.behaviors.adminimal_link_focus_on_click = {
+  attach: function (context, settings) {
+
+  	// Remove focus outlines on keypress.
+		$("body.adminimal-theme a").keypress(function() {
+			this.blur();
+			this.hideFocus = false;
+			this.style.outline = null;
+		});
+
+  	// Remove focus outlines on mousedown (click).
+		$("body.adminimal-theme a, select, input, textarea, label").mousedown(function() {
+			this.blur();
+			this.hideFocus = true;
+			this.style.outline = 'none';
+		});
+
+  }
+};
+
 })(jQuery);

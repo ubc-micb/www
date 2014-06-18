@@ -1,10 +1,3 @@
-/**
- * Generic elements.
- *//* Remove the webkit outline */
-* {
-  outline-style: none !important;
-}
-
 /* Import the Open Sans webfont from Google CDN */
 @font-face {
   font-family: 'Open Sans';
@@ -2377,20 +2370,12 @@ body.adminimal-backend ul.rules-autocomplete .rules-dsac-group {
 
 .views-ui-dialog .ui-dialog-titlebar-close span {
     display: block;
+    left: 0;
+    top: 0;
 }
 
 .views-ui-dialog #edit-options .collapsible {
     float: left;
     width: auto;
-}
-
-/* 
- * UBC Microbiology and Immunology 
- *
- * This is where we implement tweaks to this theme to improve it for our use.
- */
-
-/* Increase default input field text size to enhance readability */
-input.form-autocomplete, input.form-text, input.form-file, textarea.form-textarea, select.form-select {
-    font-size: 14px;
+    clear: both;
 }
