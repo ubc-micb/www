@@ -64,7 +64,7 @@
   <link rel="apple-touch-icon-precomposed" href="//cdn.ubc.ca/clf/<?php print theme_get_setting('clf_clf_version'); ?>/img/apple-touch-icon-57-precomposed.png">
   <link href="//cdn.ubc.ca/clf/<?php print theme_get_setting('clf_clf_version'); ?>/css/ubc-clf-<?php print theme_get_setting('clf_clf_package'); ?><?php print theme_get_setting('clf_clf_theme_new'); ?>.min.css" rel="stylesheet">
   <!-- Add Open Sans Web font -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   <?php print $styles; ?>
   <?php $clf_scriptsoption = theme_get_setting('clf_scriptsoption');
   if ($clf_scriptsoption == 'head') { print $scripts; }

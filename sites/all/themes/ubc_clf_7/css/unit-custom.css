@@ -5,7 +5,33 @@ body{
   background:white;
 }
 
-/* FONT SETTINGS */
+/* Create a bit more whitespace around the breadcrumbs */
+#ubc7-unit-menu {
+  margin-bottom:5px;
+}
+.full-width .full-width-container .breadcrumb {
+  height:auto;
+  margin-bottom:5px;
+}
+
+/* Center the content area */
+div#content {
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+/* Add a little more whitespace at the bottom of the page */
+div#content section {
+  padding-bottom:20px;
+}
+
+#ubc7-unit-footer {
+  border-top-color: #0680A6;
+}
+
+/* UNIT SPECIFIC
+Typography
+-------------------------------------------------- */
 .fancybox-title, 
 .full-width-container,
 .survey,
@@ -19,11 +45,12 @@ footer {
 }
 .full-width-container h1 {
   color: #002145;
-  font-size: 270%;
+  font-size: 290%;
   line-height: 133.3%;
   margin: 0 0 2%;
   letter-spacing: 5px;
   text-transform: uppercase;
+  border:none;
 }
 .full-width-container h2 {
   color: #002145;
@@ -62,23 +89,6 @@ Unit Bar background gradient and box shadow */
   -webkit-box-shadow: inset 0px -10px 10px -10px #333333;
 }
 
-/* Create a bit more whitespace around the breadcrumbs */
-#ubc7-unit-menu {
-  margin-bottom:5px;
-}
-.full-width .full-width-container .breadcrumb {
-  margin-bottom:5px;
-}
-
-/* Center the content area */
-div#content {
-  margin-left: auto;
-  margin-right: auto; 
-}
-
-/* UNIT SPECIFIC
-Typography
--------------------------------------------------- */
 /* MEDIA QUERIES 
 (these are example queries to get you started - these can be modified to suit)
 -------------------------------------------------- */
