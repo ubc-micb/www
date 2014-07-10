@@ -148,9 +148,32 @@ Unit Bar background gradient and box shadow */
 @media screen and (max-width: 979px) { 
   /* START 768-979 STYLES */
 
+  /* Make the mobile menu more like ubc.ca with darker colors */
+  #ubc7-unit-menu .navbar-inner,
+  #ubc7-unit-menu .nav-collapse li a,
+  #ubc7-unit-alternate-navigation .nav-collapse li a,
+  #ubc7-unit-menu .dropdown .btn-group .btn,
+  #ubc7-unit-alternate-navigation .dropdown .btn-group .btn{
+    background: #002145;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  #ubc7-unit-menu .nav>li>a.active,
+  #ubc7-unit-menu .nav>li.active-trail>.btn-group,
+  #ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group,
+  .dropdown-menu .active>a, 
+  .dropdown-menu .active>a:hover, 
+  .dropdown-menu .active>a:focus {
+    color: #FFF;
+    background: #0680A6!important;
+    box-shadow: 0 0 0 transparent;
+  }
+
+
   /* Make the header fonts smaller */
   .full-width-container h1 {
-    font-size: 180%;
+    font-size: 190%;
     line-height: 120%;
     letter-spacing: 2px;
     margin: 0 0 2%;
