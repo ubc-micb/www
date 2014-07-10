@@ -29,6 +29,28 @@ div#content section {
   border-top-color: #0680A6;
 }
 
+/* My Account Login/Logout Items */
+#login-link {
+  width:70%;
+}
+#login-link img {
+  margin-right: 10px;
+}
+#login-link a {
+  display: inline-block;
+  font-style: normal;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: #315d7b;
+  color: #FFF;
+}
+
 /* UNIT SPECIFIC
 Typography
 -------------------------------------------------- */
