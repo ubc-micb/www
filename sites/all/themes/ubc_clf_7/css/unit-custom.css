@@ -25,6 +25,7 @@ div#content section {
   padding-bottom:20px;
 }
 
+/* Make the footer top border stand out a bit more */
 #ubc7-unit-footer {
   border-top-color: #0680A6;
 }
