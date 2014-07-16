@@ -5,6 +5,41 @@ body{
   background:white;
 }
 
+/* Soften the color of the menu bar to match newer UBC websites */
+#ubc7-unit-menu, 
+#ubc7-unit-menu .navbar-inner,
+#ubc7-unit-menu .btn-group .btn, 
+#ubc7-unit-menu .nav>li>a.active,
+#ubc7-unit-menu .nav>li.active-trail>.btn-group, 
+#ubc7-unit-menu .nav>li.active-trail:hover>.btn-group,
+#ubc7-unit-alternate-navigation .btn-group .btn,
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group,
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group .btn {
+  background-color:#f6f6f6;
+}
+/* Fix menu hover effect colors */
+#ubc7-unit-menu .nav>li>a.active:hover, 
+#ubc7-unit-menu .nav>li.active-trail>.btn-group:hover, 
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group:hover,
+#ubc7-unit-menu .nav>li.active-trail:hover>.btn-group:hover,
+#ubc7-unit-menu .nav>li.active-trail>.btn-group .btn:hover,
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group .btn:hover {
+  background-color:#002145;
+  color:white;
+}
+#ubc7-unit-menu .nav>li.active-trail>.btn-group:hover {
+  background-color: #002145;
+  color: white;
+}
+/* Remove drop shadow on menu items */
+#ubc7-unit-menu .nav>li>a.active,
+#ubc7-unit-menu .nav>li.active-trail>.btn-group,
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
 /* Create a bit more whitespace around the breadcrumbs */
 #ubc7-unit-menu {
   margin-bottom:5px;
@@ -112,17 +147,19 @@ Unit Bar background gradient and box shadow */
   -webkit-box-shadow: inset 0px -10px 10px -10px #333333;
 }
 
+
 /* MEDIA QUERIES 
 (these are example queries to get you started - these can be modified to suit)
 -------------------------------------------------- */
 @media screen and (min-width: 1200px) {
-  /* START 1200 STYLES */
+  /* START 1200 STYLES */  
 
   /* Center Breadcrumbs and Content */
   .full-width .full-width-container .breadcrumb,
-  div#content{
+  div#content {
     max-width: 1170px;
   }
+
   .full-width .full-width-container .breadcrumb {
     margin-left:auto;
     margin-right:auto;
@@ -148,28 +185,35 @@ Unit Bar background gradient and box shadow */
 @media screen and (max-width: 979px) { 
   /* START 768-979 STYLES */
 
-  /* Make the mobile menu more like ubc.ca with darker colors */
-  #ubc7-unit-menu .navbar-inner,
-  #ubc7-unit-menu .nav-collapse li a,
+  /* Align all main level nav items positioning */
+  #ubc7-unit-menu .dropdown .btn-group a.btn,
+  #ubc7-unit-alternate-navigation .dropdown .btn-group a.btn {
+    padding-left:15px;
+  }
+  /* Reduce sub menu item indent a bit */
+  .nav-collapse .dropdown-menu a {
+    padding-left: 25px;
+  }
+  /* Soften the color of the navbar to match newer UBC websites */  
+  #ubc7-unit-menu .nav-collapse li a, 
   #ubc7-unit-alternate-navigation .nav-collapse li a,
-  #ubc7-unit-menu .dropdown .btn-group .btn,
-  #ubc7-unit-alternate-navigation .dropdown .btn-group .btn{
-    background: #002145;
-    color: #FFF;
-    text-transform: uppercase;
-    font-weight: normal;
+  #ubc7-unit-menu .nav-collapse li, 
+  #ubc7-unit-alternate-navigation .nav-collapse li, 
+  #ubc7-unit-menu .dropdown .btn-group .btn, 
+  #ubc7-unit-alternate-navigation .dropdown .btn-group .btn {
+    background-color: #f6f6f6;
+    color: #002145;
   }
-  #ubc7-unit-menu .nav>li>a.active,
-  #ubc7-unit-menu .nav>li.active-trail>.btn-group,
-  #ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group,
-  .dropdown-menu .active>a, 
-  .dropdown-menu .active>a:hover, 
-  .dropdown-menu .active>a:focus {
-    color: #FFF;
-    background: #0680A6!important;
-    box-shadow: 0 0 0 transparent;
-  }
-
+  /* Fix menu hover effect colors */
+  #ubc7-unit-menu .nav-collapse li a:hover, 
+  #ubc7-unit-alternate-navigation .nav-collapse li a:hover,
+  #ubc7-unit-menu .nav-collapse li:hover, 
+  #ubc7-unit-alternate-navigation .nav-collapse li:hover, 
+  #ubc7-unit-menu .dropdown .btn-group .btn:hover, 
+  #ubc7-unit-alternate-navigation .dropdown .btn-group .btn:hover {
+    background-color: #002145;
+    color: white;
+  }  
 
   /* Make the header fonts smaller */
   .full-width-container h1 {
