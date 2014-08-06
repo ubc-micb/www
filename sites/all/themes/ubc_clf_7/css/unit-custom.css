@@ -87,6 +87,27 @@ div#content section {
   color: #FFF;
 }
 
+/* Carousel controls */
+.carousel-control {
+  text-decoration: none;
+  border:none;
+  background:none;
+  font-size: 150px;
+}
+/* Carousel image caption */
+.views-field-field-highlight-image-caption {
+  position: absolute;
+  background-color: rgba(47,93,124, 0.75);
+  color: white;
+  padding: 1em 1em 1em 5%;
+  /* bottom: calc(10% + 174px); */
+  bottom: 1em;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
 /* UNIT SPECIFIC
 Typography
 -------------------------------------------------- */
@@ -164,6 +185,10 @@ Unit Bar background gradient and box shadow */
     margin-left:auto;
     margin-right:auto;
   }
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    font-size: 23px;
+  }
   
   /* END 1200 STYLES */  
 }
@@ -178,6 +203,10 @@ Unit Bar background gradient and box shadow */
   .full-width .full-width-container .breadcrumb {
     margin-left:auto;
     margin-right:auto;
+  }
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    font-size: 19px;
   }
   
   /* END 768-979 STYLES */
@@ -243,6 +272,10 @@ Unit Bar background gradient and box shadow */
     margin-right:20px;
   }
   
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    font-size: 19px;
+  }
   /* END 768-979 STYLES */
 }
 @media screen and (max-width: 767px) {
@@ -251,6 +284,11 @@ Unit Bar background gradient and box shadow */
   /* Center content */
   div#content{
     max-width: 767px;
+  }
+
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    font-size: 13px;
   }
   
   /* END >767 STYLES */
@@ -263,6 +301,11 @@ Unit Bar background gradient and box shadow */
     max-width: 720px;
   }
 
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    font-size: 13px;
+  }
+
   /* END >720 STYLES */
 }
 @media screen and (max-width: 520px) {
@@ -273,6 +316,21 @@ Unit Bar background gradient and box shadow */
     max-width: 520px;
   }  
 
+  .carousel-inner>.item {
+    padding-bottom:60px;
+  }
+
+  /* Carousel controls */
+  .carousel-control {
+    font-size: 100px;
+  }
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    bottom: 0;
+    height: 2.7em;
+    width:95%;
+  }
+
   /* END 520 STYLES */
 }
 @media screen and (max-width: 480px) {
@@ -281,6 +339,12 @@ Unit Bar background gradient and box shadow */
   /* Center content */
   div#content{
     max-width: 480px;
+  }
+
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    font-size: 12px;
+    height: 3em;
   }
 
   /* END 480 STYLES */
