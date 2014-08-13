@@ -40,23 +40,6 @@ body{
   box-shadow: none;
 }
 
-/* Break out the front page to full width */
-body.front div#main {
-  max-width: none;
-}
-body.front .full-width .full-width-container .expand,
-body.front .full-width-container,
-body.front div#content {
-  margin-left:0;
-  margin-right:0;
-  padding-left: 0;
-  padding-right: 0;
-}
-body.front div.inflate {
-  margin-left: 0;
-  margin-right:0;
-}
-
 /* Create a bit more whitespace around the breadcrumbs */
 .full-width .full-width-container .breadcrumb {
   height:auto;
@@ -104,27 +87,6 @@ div#content section {
   color: #FFF;
 }
 
-/* Carousel controls */
-.carousel-control {
-  text-decoration: none;
-  border:none;
-  background:none;
-  font-size: 150px;
-}
-/* Carousel image caption */
-.views-field-field-highlight-image-caption {
-  position: absolute;
-  background-color: rgba(47,93,124, 0.75);
-  border-radius: 0 25px 25px 0;
-  color: white;
-  padding: 1.5em 2.2em 1.5em 5%;
-  /* bottom: calc(10% + 174px); */
-  bottom: 1em;
-  font-size: 12px;
-  font-weight: 300;
-  font-style: normal;
-}
-
 
 /* UNIT SPECIFIC
 Typography
@@ -160,7 +122,7 @@ footer {
   color: #0680A6;
   font-size: 176.4%;
   line-height: 166.6%;
-  margin: 0 0 1.3%;
+  margin: 0 0 .5%;
   letter-spacing: 2px;
 }
 .full-width-container h3 a,
@@ -184,6 +146,72 @@ Unit Bar background gradient and box shadow */
   box-shadow: inset 0px -10px 10px -10px #333333;
   -moz-box-shadow: inset 0px -10px 10px -10px #333333;
   -webkit-box-shadow: inset 0px -10px 10px -10px #333333;
+}
+
+/* FRONT PAGE
+-------------------------------------------------- */
+.panel-pane .pane-content {
+  padding: 0 20px;
+}
+
+.panel-pane {
+  padding: 20px 0;
+}
+
+/* Break out the front page to full width */
+body.front div#main {
+  max-width: none;
+}
+body.front .full-width .full-width-container .expand,
+body.front .full-width-container,
+body.front div#content {
+  margin-left:0;
+  margin-right:0;
+  padding-left: 0;
+  padding-right: 0;
+}
+body.front div.inflate,
+.pane-highlight-carousel,
+.pane-highlight-carousel .pane-content  {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+body.front .panel-pane h2 {
+  color: #002145;
+  font-size: 290%;
+  font-weight: normal;
+  line-height: 133.3%;
+  margin: 0 0 2%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border:none;
+  text-align: center;
+}
+
+/* Carousel controls */
+.carousel-control {
+  text-decoration: none;
+  border:none;
+  background:none;
+  font-size: 150px;
+}
+/* Carousel image caption */
+.views-field-field-highlight-image-caption {
+  position: absolute;
+  background-color: rgba(47,93,124, 0.75);
+  border-radius: 0 25px 25px 0;
+  color: white;
+  padding: 1.5em 2.2em 1.5em 5%;
+  /* bottom: calc(10% + 174px); */
+  bottom: 1em;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.pane-calendar-3{
+  background-color: #C3D0DC
 }
 
 
@@ -317,6 +345,12 @@ Unit Bar background gradient and box shadow */
     font-size: 152.9%;
     line-height: 146.1%;
     margin: 0 0 1.7%;
+  }
+  body.front .panel-pane h2 {
+    font-size: 190%;
+    line-height: 120%;
+    letter-spacing: 2px;
+    margin: 0 0 2%;
   }
   
   /* END >767 STYLES */
