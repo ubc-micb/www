@@ -40,10 +40,24 @@ body{
   box-shadow: none;
 }
 
-/* Create a bit more whitespace around the breadcrumbs */
-#ubc7-unit-menu {
-  margin-bottom:5px;
+/* Break out the front page to full width */
+body.front div#main {
+  max-width: none;
 }
+body.front .full-width .full-width-container .expand,
+body.front .full-width-container,
+body.front div#content {
+  margin-left:0;
+  margin-right:0;
+  padding-left: 0;
+  padding-right: 0;
+}
+body.front div.inflate {
+  margin-left: 0;
+  margin-right:0;
+}
+
+/* Create a bit more whitespace around the breadcrumbs */
 .full-width .full-width-container .breadcrumb {
   height:auto;
   margin-bottom:5px;
@@ -53,6 +67,9 @@ body{
 div#content {
   margin-left: auto;
   margin-right: auto; 
+}
+div#main {
+  padding:0px;
 }
 
 /* Add a little more whitespace at the bottom of the page */
@@ -178,14 +195,20 @@ Unit Bar background gradient and box shadow */
 
   /* Center Breadcrumbs and Content */
   .full-width .full-width-container .breadcrumb,
-  div#content {
+  div#main {
     max-width: 1170px;
   }
-
-  .full-width .full-width-container .breadcrumb {
+  .full-width .full-width-container .breadcrumb,
+  div#main  {
     margin-left:auto;
     margin-right:auto;
   }
+
+  /* Create a bit more whitespace around the breadcrumbs */
+  #ubc7-unit-menu {
+    margin-bottom:5px;
+  }
+
   /* Carousel image caption */
   .views-field-field-highlight-image-caption {
     font-size: 23px;
@@ -198,13 +221,15 @@ Unit Bar background gradient and box shadow */
 
   /* Center Breadcrumbs and Content */
   .full-width .full-width-container .breadcrumb,
-  div#content{
+  div#main{
     max-width: 940px;
   }
-  .full-width .full-width-container .breadcrumb {
+  .full-width .full-width-container .breadcrumb,
+  div#main  {
     margin-left:auto;
     margin-right:auto;
   }
+
   /* Carousel image caption */
   .views-field-field-highlight-image-caption {
     font-size: 19px;
@@ -245,6 +270,37 @@ Unit Bar background gradient and box shadow */
     color: white;
   }  
 
+  /* Center Breadcrumbs and Content */
+  .full-width .full-width-container .breadcrumb {
+    margin-left: -20px;
+    margin-right: 20px;
+  }
+
+  body.front .full-width-container {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    font-size: 19px;
+  }
+
+  /* END 768-979 STYLES */
+}
+@media screen and (max-width: 767px) {
+  /* START >767 STYLES */
+
+  /* Center content */
+  div#content{
+    max-width: 767px;
+  }
+
+  /* Carousel image caption */
+  .views-field-field-highlight-image-caption {
+    font-size: 13px;
+  }
+
   /* Make the header fonts smaller */
   .full-width-container h1 {
     font-size: 190%;
@@ -261,35 +317,6 @@ Unit Bar background gradient and box shadow */
     font-size: 152.9%;
     line-height: 146.1%;
     margin: 0 0 1.7%;
-  }
-
-
-  /* Center Breadcrumbs and Content */
-  div#content{
-    max-width: 940px;
-  }
-  .full-width .full-width-container .breadcrumb {
-    margin-left:-20px;
-    margin-right:20px;
-  }
-  
-  /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
-    font-size: 19px;
-  }
-  /* END 768-979 STYLES */
-}
-@media screen and (max-width: 767px) {
-  /* START >767 STYLES */
-
-  /* Center content */
-  div#content{
-    max-width: 767px;
-  }
-
-  /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
-    font-size: 13px;
   }
   
   /* END >767 STYLES */
@@ -330,6 +357,8 @@ Unit Bar background gradient and box shadow */
     bottom: 0;
     height: 2.7em;
     width:95%;
+    border-radius: 0;
+    padding: 1em 1em 1em 5%;
   }
 
   /* END 520 STYLES */
