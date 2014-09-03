@@ -189,6 +189,11 @@ body.front .panel-pane h2 {
   text-align: center;
 }
 
+/* Remove extra padding at bottom of page before footer */
+body.front div#content section {
+  padding-bottom: 0px;
+}
+
 /* Carousel controls */
 .carousel-control {
   text-decoration: none;
