@@ -215,8 +215,17 @@ body.front div#content section {
   font-style: normal;
 }
 
-.pane-calendar-3{
-  background-color: #C3D0DC
+/* Front page news listing */
+.front-news .pane-content{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.front-news .news-title a {
+  text-decoration: none;
+}
+.front-news .row-fluid > div {
+  padding: 10px 5px 25px 5px;
+}
 }
 
 
