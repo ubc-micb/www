@@ -226,6 +226,83 @@ body.front div#content section {
 .front-news .row-fluid > div {
   padding: 10px 5px 25px 5px;
 }
+
+/* Front page events listing */
+.front-events {
+  background-color: #C3D0DC;
+}
+.front-events .pane-content {
+  max-width: 1170px;
+  margin: 0 auto;  
+}
+.front-events .event-title,
+.front-events .event-date,
+.front-events .event-presenter,
+.front-events .event-details {
+  margin: 0 0 4px 70px;
+  display: block;
+}
+.front-events .event-title a {
+  text-decoration: none;
+}
+.front-events .row-fluid > div {
+  margin: 10px 0 30px 0;
+  padding-right: 10px;
+}
+
+/* Date Box for events */
+.date-box {  
+  /* background-color: #f7c23d; */
+  color: #FFFFFF;
+  float: left;
+  /* margin: 5px 10px 0 0;
+  padding: 2px 0 0;
+  */
+  margin:0;
+  padding:0;
+  text-align: center;
+  width:100%;
+  /* width: 50px; */
+} 
+/* Short Month PHP date format (ex. SEP) */
+.date-box .dateM {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+/* Day of month PHP date format (ex. 3) */
+.date-box .datej {
+  font-size: 1.4em;
+  margin-bottom: 7px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Hexagonal wrapper.  Used on the events date box.  Could be used on other things */
+.hex {
+  float:left;
+  margin-top: 8px;
+}
+.hex-left {
+  float: left;
+  border-right: 15px solid #6C6;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+}
+.hex-center {
+  float: left;
+  width: 30px;
+  height: 52px;
+  background-color: #6C6;
+}
+.hex-right {
+  float: left;
+  border-left: 15px solid #6C6;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
 }
 
 
@@ -423,6 +500,43 @@ body.front div#content section {
   .views-field-field-highlight-image-caption {
     font-size: 12px;
     height: 3em;
+  }
+
+  /* Flatten the event date box and move above event info */
+  body.front .date-box {
+    float:none;
+    padding: 8px 5px 5px 5px;
+    width: 6.5em;
+    text-align: left;
+  }
+  .date-box .dateM,
+  .date-box .datej {
+    display: inline;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 3px;
+  }  
+  /* Hide the hex wrapper of the date box. */
+  .hex {
+    float:none;
+    display:block;
+    margin-bottom:10px;
+  }
+  .hex-left,
+  .hex-right {
+    display:none;
+  }
+  .hex-center {
+    float: none;
+    width: 6.5em;
+    height: auto;
+  } 
+  /* Move front page event info left into space left by moving the date box */
+  .front-events .event-title,
+  .front-events .event-date,
+  .front-events .event-presenter,
+  .front-events .event-details {
+    margin: 0 0 4px 8px;
   }
 
   /* END 480 STYLES */
