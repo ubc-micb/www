@@ -84,7 +84,6 @@ body{
   background-color: #d7e0e7
 }
 
-
 /* Center the content area */
 div#content {
   margin-left: auto;
@@ -92,6 +91,36 @@ div#content {
 }
 div#main {
   padding:0px;
+}
+
+/* Improve Drupal Status Message Theming
+  Drupal has 3 levels of messages:
+  - Error
+  - Warning
+  - Status
+ */
+.alert,
+.alert>h4 {
+  color:white;
+}
+.alert {
+  border-radius: 4px;
+}
+/* Remove underline on close alert link */
+.alert a.close {
+  text-decoration: none;
+}
+/* Error message */
+.alert-error {
+  background-color: #DF382C;
+}
+/* Warning message */
+.alert-warning {
+  background-color: #ECA918;
+}
+/* Status message */
+.alert-status {
+  background-color: #38B44A;
 }
 
 /* Add a little more whitespace at the bottom of the page */
