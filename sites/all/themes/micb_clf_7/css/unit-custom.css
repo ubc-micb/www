@@ -366,6 +366,10 @@ body.front div#content section {
   #ubc7-unit-menu {
     margin-bottom:5px;
   }
+  /* Remove the whitespace on the front page as there are no breadcrumbs to show */  
+  body.front #ubc7-unit-menu {
+    margin-bottom:0;
+  }
 
   /* Carousel image caption */
   .views-field-field-highlight-image-caption {
