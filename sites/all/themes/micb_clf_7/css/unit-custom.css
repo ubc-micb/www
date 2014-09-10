@@ -46,6 +46,45 @@ body{
   margin-bottom:5px;
 }
 
+/* SIDEBAR NAVIGATION */
+/* Align the sidebar navigation menu with the title of the page */
+.bootstrap-sidenav {
+  margin-top:10px;
+}
+/* Right arrow for menu items */
+.bootstrap-sidenav>.active>a, .bootstrap-sidenav a {
+  background-image: url('../img/page-menu-arrow.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+/* Down arrow for menu items with child items */
+.bootstrap-sidenav .collapsed>a,
+.bootstrap-sidenav .expanded>a {
+  background-image: url('../img/page-menu-child-arrow.png');
+}
+/* First level menu active link */
+.bootstrap-sidenav>.active>a, 
+.bootstrap-sidenav a.active {
+  background-color: #80C4E6;
+  border-color: #80C4E6;
+  color:white;
+}
+.bootstrap-sidenav>.active>a {
+  padding: 8px 14px;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: #d7e0e7;
+}
+/* Second level of expanded menu */ 
+.bootstrap-sidenav .bootstrap-sidenav {
+  background-color: #edf1f4
+}
+/* Third level of expanded menu */
+.bootstrap-sidenav .bootstrap-sidenav .bootstrap-sidenav {
+  background-color: #d7e0e7
+}
+
+
 /* Center the content area */
 div#content {
   margin-left: auto;
