@@ -154,17 +154,11 @@ function megatron_breadcrumb($variables) {
       //we stop duplicates entering where there is a sub nav based on page jumps
       if ($pos === false){
         $crumbs .= '<li class="breadcrumb-' . $i;
-        $crumbs .=  '">' . $breadcrumb[$i] . ' <span class="divider">/</span> </li>';
+        $crumbs .=  '">' . $breadcrumb[$i] . '</li> » ';
       }
       $i++;
     }
-    // Truncate the title if it is too long 
-    $truncate_length = 50;
-    $page_title = drupal_get_title();
-    if(strlen($page_title) > $truncate_length){
-      $page_title = substr($page_title,0,$truncate_length).'...';
-    }
-    $crumbs .= '<li class="active">'. $page_title .'</li></ul>';
+    $crumbs .= '<li class="active">'. drupal_get_title() .'</li></ul>';
     return $crumbs;
   }
   return '';
@@ -656,8 +650,8 @@ function megatron_preprocess_table(&$variables) {
     $variables['attributes']['class'] = array('table', 'table-striped');
   }
   else {
-    $variables['attributes']['class'] = array('table');
-    $variables['attributes']['class'] = array('table-striped');
+    $variables['attributes']['class'] = 'table';
+    $variables['attributes']['class'] = 'table-striped';
   }
 }
 

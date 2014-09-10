@@ -1,0 +1,38 @@
+name = UBC CLF Microbiology and Immunology Theme
+description = A sub-theme of the responsive <a href="http://clf.ubc.ca/" title="Discover the UBC CLF" target="_blank">UBC CLF</a> (Common Look and Feel) v.7 theme, developed by UBC IT Web Services Department.  The CLF is developed, managed and distributed by UBC Communications &amp; Marketing. To find out more about the CLF, requirements and possible customizations please see <a href="http://brand.ubc.ca/clf" title="Discover the UBC CLF Brand" target="_blank">brand.ubc.ca/clf</a>.<br /><br />For more information, support or to report an issue with this theme, please contact <a href="mailto:itsupport@microbiology.ubc.ca?Subject=Help%20with%20Drupal%20CLF%20Theme" title="Contact UBC Microbiology and Immunology IT Support">UBC Microbiology and Immunology IT Support</a>.<br /><br /><ul><li><a href="https://github.com/ubc-micb/www/tree/master/sites/all/themes/micb_clf_7" title="Microbiology Theme on GitHub" target="_blank">UBC CLF Microbiology and Immunology theme on GitHub</a></li><li><a href="https://github.com/ubc-web-services/Megatron" title="UBC CLF Repository on GitHub" target="_blank">UBC CLF Megatron parent theme on GitHub</a></li></ul>
+version = 1.0
+core = 7.x
+base theme = megatron
+
+; Override the unit css file in parent theme with ours
+stylesheets[all][] = css/unit-custom.css
+
+;
+; IMPORTANT! You must redefine theme regions, theme settings, and module settings as they are not inherited from parent theme.  
+; CSS and JS files will be inherited. Confirm these are the same when upgrading parent theme.  
+; Below are all settings copied over from the Megatron CLF parent theme.
+; Read more here: https://www.drupal.org/node/225125
+;
+
+regions[search]         = 'Search'
+;regions[navigation]    = 'Navigation'
+regions[highlighted]    = 'Content: Above'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'First Sidebar'
+regions[sidebar_second] = 'Second Sidebar'
+regions[prefooter]      = 'Content: Below'
+
+plugins[panels][layouts] = panels-layouts
+
+breakpoints[mobile] = (min-width: 0px)
+breakpoints[narrow] = (min-width: 480px)
+breakpoints[tablet] = (min-width: 768px)
+breakpoints[desktop] = (min-width: 980px)
+breakpoints[widescreen] = (min-width: 1200px)
+
+;settings[toggle_name] = 0
+settings[clf_clf_version] = '7.0.4'
+settings[clf_clf_package] = 'full'
+settings[clf_layout] = ''
+settings[clf_scriptsoption] = 'footer'
