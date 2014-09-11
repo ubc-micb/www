@@ -105,6 +105,7 @@ div#main {
 }
 .alert {
   border-radius: 4px;
+  border:none;
 }
 /* Remove underline on close alert link */
 .alert a.close {
@@ -121,6 +122,13 @@ div#main {
 /* Status message */
 .alert-status {
   background-color: #38B44A;
+}
+
+.alert [class^="icon-"], 
+.alert [class*=" icon-"] {
+  font-size: 40px;
+  margin: 0 20px 20px 0;
+  float: left;
 }
 
 /* Add a little more whitespace at the bottom of the page */

@@ -42,3 +42,45 @@ function micb_clf_7_breadcrumb($variables) {
   }
   return '';
 }
+
+/** STATUS MESSAGES
+Returns HTML for status and/or error messages, grouped by type.
+---------------------------------------------------------- */
+function micb_clf_7_status_messages($vars) {
+  $display = $vars['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+  );
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $output .= "<div class=\"alert alert-block alert-$type\">\n";
+    $output .= "  <a class=\"close\" data-dismiss=\"alert\" href=\"#\">x</a>\n";
+    if (!empty($status_heading[$type])) {
+      if($type == 'error'){
+        $output .= '<i class="icon-exclamation-sign"></i>';
+      }
+      elseif($type == 'warning'){
+        $output .= '<i class="icon-warning-sign"></i>';
+      }
+      else{
+        $output .= '<i class="icon-info-sign"></i>';
+      }
+      $output .= '<h4 class="alert-heading">' . $status_heading[$type] . "</h4>\n";
+    }
+    if (count($messages) > 1) {
+      $output .= " <ul>\n";
+      foreach ($messages as $message) {
+        $output .= '  <li>' . $message . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= $messages[0];
+    }
+    $output .= "</div>\n";
+  }
+  return $output;
+}
