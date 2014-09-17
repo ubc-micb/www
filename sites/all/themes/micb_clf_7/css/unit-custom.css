@@ -181,6 +181,45 @@ div#content section {
   color: #FFF;
 }
 
+/* Seminar Events */
+.seminar-event {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  border-width: 5px;
+  border-style: groove;
+  padding: 15px;
+  text-align: center;
+}
+.seminar-event .ubc,
+.seminar-event .dept,
+.seminar-event .presenter,
+.seminar-event .presenter-title,
+.seminar-event .seminar-title,
+.seminar-event .date,
+.seminar-event .host {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.seminar-event .ubc,
+.seminar-event .seminar-title {
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: bold;
+}
+.seminar-event .dept,
+.seminar-event .title {
+  font-size: 16px;
+}
+.seminar-event .presenter{
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: bold;
+}
+.seminar-event .date,
+.seminar-event .host {
+  font-size: 19px;
+}
+
 
 /* UNIT SPECIFIC
 Typography
