@@ -120,15 +120,16 @@ div#main {
  */
 .alert,
 .alert>h4 {
-  color:white;
+  color: white;
 }
 .alert {
   border-radius: 4px;
-  border:none;
+  border: none;
 }
 /* Remove underline on close alert link */
 .alert a.close {
   text-decoration: none;
+  color: white;
 }
 /* Error message */
 .alert-error {
@@ -142,7 +143,7 @@ div#main {
 .alert-status {
   background-color: #38B44A;
 }
-
+/* Enlarge the glyphicons used in messages and move them to the left */
 .alert [class^="icon-"], 
 .alert [class*=" icon-"] {
   font-size: 40px;
