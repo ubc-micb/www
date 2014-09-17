@@ -165,9 +165,6 @@ div#content section {
 #login-link {
   width:70%;
 }
-#login-link img {
-  margin-right: 10px;
-}
 #login-link a {
   display: inline-block;
   font-style: normal;
@@ -180,6 +177,7 @@ div#content section {
   font-weight: 300;
   text-transform: uppercase;
   background-color: #315d7b;
+  border-radius:4px;
   color: #FFF;
 }
 
