@@ -51,23 +51,42 @@ body{
 .bootstrap-sidenav {
   margin-top:10px;
 }
-/* Right arrow for menu items */
-.bootstrap-sidenav>.active>a, .bootstrap-sidenav a {
-  background-image: url('../img/page-menu-arrow.png');
+/* Arrow styles */
+.bootstrap-sidenav a,
+.bootstrap-sidenav .collapsed>a,
+.bootstrap-sidenav .expanded>a, 
+.bootstrap-sidenav>.active-trail>a,
+.bootstrap-sidenav>.active>a
+{
   background-position: right center;
   background-repeat: no-repeat;
 }
-/* Down arrow for menu items with child items */
-.bootstrap-sidenav .collapsed>a,
-.bootstrap-sidenav .expanded>a {
-  background-image: url('../img/page-menu-child-arrow.png');
+
+/* Right arrow for menu items */
+.bootstrap-sidenav a,
+.bootstrap-sidenav .collapsed>a {
+  background-image: url('../img/page-menu-arrow.png');
 }
+/* Down arrow for menu items with child items */
+.bootstrap-sidenav .expanded>a {
+  background-image: url('../img/page-menu-arrow-child.png');
+}
+/* Down arrow for active trail menu items */
+.bootstrap-sidenav>.active-trail>a {
+  background-image: url('../img/page-menu-arrow-active-trail.png');
+}
+/* Right arrow for active menu items */
+.bootstrap-sidenav>.active>a {
+  background-image: url('../img/page-menu-arrow-active.png');
+}
+
 /* First level menu active link */
 .bootstrap-sidenav>.active>a, 
 .bootstrap-sidenav a.active {
-  background-color: #80C4E6;
-  border-color: #80C4E6;
+  background-color: #0088cc;
+  border-color: #0088cc;
   color:white;
+  font-weight: bold;
 }
 .bootstrap-sidenav>.active>a {
   padding: 8px 14px;
