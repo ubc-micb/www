@@ -271,6 +271,22 @@ footer {
   color: #0680a6;
 }
 
+/* JEMI */
+.jemi-header{
+  padding-bottom: 25px;
+}
+.jemi-volume{
+  color: navy;
+  font-size: medium;
+  font-weight: bold;
+}
+.jemi-body{
+  padding-top: 15px;
+}
+.jemi-body p{
+  padding-top: 5px;
+}
+
 /* UNIT COLOURS
 Unit Bar background gradient and box shadow */
 #ubc7-unit {
