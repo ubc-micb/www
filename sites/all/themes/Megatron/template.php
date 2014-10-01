@@ -341,13 +341,13 @@ function megatron_menu_navigation_links($tree, $lvl = 0) {
           'link_path' => $item['link']['link_path'],
           'href' => $item['link']['href'],
         );
-    	  
-    	  // Don't use levels deeper than 1
-    	  if($lvl < 1)
-    		$new_item['below'] = megatron_menu_navigation_links($item['below'], $lvl+1);
-    	  
-    	  $result['menu-'. $item['link']['mlid'] . $class . ' ' .$classtwo] = $new_item;
-    	}
+        
+        // Don't use levels deeper than 1
+        if($lvl < 1)
+        $new_item['below'] = megatron_menu_navigation_links($item['below'], $lvl+1);
+        
+        $result['menu-'. $item['link']['mlid'] . $class . ' ' .$classtwo] = $new_item;
+      }
     }
   }
   
@@ -366,12 +366,12 @@ function megatron_preprocess_megatron_btn_dropdown(&$variables) {
   
   // Check if its a array of links so we need to theme it first here.
   if(is_array($variables['links'])) {
-	$variables['links'] = theme('links', array(
-	  'links' => $variables['links'],
-	  'attributes' => array(
-		'class' => array('dropdown-menu'),
-	  ),
-	));
+  $variables['links'] = theme('links', array(
+    'links' => $variables['links'],
+    'attributes' => array(
+    'class' => array('dropdown-menu'),
+    ),
+  ));
   }
 }  
 
@@ -384,28 +384,28 @@ function megatron_megatron_btn_dropdown($variables) {
   
   // Type class
   if(isset($variables['type']))
-	$type_class = ' btn-'. $variables['type'];
+  $type_class = ' btn-'. $variables['type'];
   
   // Start markup
   $output = '<div'. drupal_attributes($variables['attributes']) .'>';
   
   // Add as string if its not a link
   if(is_array($variables['label'])) {
-	$output .= l($variables['label']['title'], $$variables['label']['href'], $variables['label']);
+  $output .= l($variables['label']['title'], $$variables['label']['href'], $variables['label']);
   }
   
   $output .= '<a class="btn '. $type_class .' dropdown-toggle" data-toggle="dropdown" href="#">';
   
   // Its a link so create one
   if(is_string($variables['label'])) {
-	$output .= check_plain($variables['label']);
+  $output .= check_plain($variables['label']);
   }
   
-  // Finish markup 	
+  // Finish markup  
   $output .= '
   <div class="ubc7-arrow down-arrow"></div>
-	</a>
-	' . $variables['links'] . '
+  </a>
+  ' . $variables['links'] . '
   </div>';
   
   return $output;
@@ -657,8 +657,8 @@ function megatron_preprocess_table(&$variables) {
     $variables['attributes']['class'] = array('table', 'table-striped');
   }
   else {
-    $variables['attributes']['class'] = 'table';
-    $variables['attributes']['class'] = 'table-striped';
+    $variables['attributes']['class'][] = 'table';
+    $variables['attributes']['class'][] = 'table-striped';
   }
 }
 
@@ -744,9 +744,9 @@ function _megatron_alter($files, $type) {
   
   foreach($files as $key => $value) {
     if(isset($files[$key][$type])) {
-	  foreach($files[$key][$type] as $file => $name) {
-		  $output[$name] = FALSE;
-	  }
+    foreach($files[$key][$type] as $file => $name) {
+      $output[$name] = FALSE;
+    }
     }
   }
   return $output;
@@ -784,59 +784,59 @@ function megatron_megatron_links($variables) {
       $output .= '>' . check_plain($heading['text']) . '</' . $heading['level'] . '>';
     }
 
-	
+  
     foreach ($links as $key => $link) {
       $children = array();
       if(isset($link['below']))
       $children = $link['below'];
       
-	    $attributes = array('class' => array($key));
-	  
+      $attributes = array('class' => array($key));
+    
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page()))
            && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $attributes['class'][] = 'active';
       }
-	    if(count($children) > 0) {
-		    $attributes['class'][] = 'dropdown';
-		    $link['attributes']['class'][] = 'btn';
+      if(count($children) > 0) {
+        $attributes['class'][] = 'dropdown';
+        $link['attributes']['class'][] = 'btn';
       }
-	    
-  	  if(!isset($link['attributes']))
-  		$link['attributes'] = array();
-  	  $class = (count($children) > 0) ? 'dropdown' : NULL;
-  	  $output .= '<li ' . drupal_attributes($attributes) . '>';
-	  
-	    
-  	  if (isset($link['href'])) {
-  		  if(count($children) > 0) { 
-  		    $link['html'] = TRUE;
-  		    $output .=  '<div class="btn-group">' .l($link['title'], $link['href'], $link);
-  		    $output .=  '<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="ubc7-arrow blue down-arrow"></span></button>';
-  		  }else{
-  		    // Pass in $link as $options, they share the same keys.
-  		    $output .= l($link['title'], $link['href'], $link);
-  		  }
-  	  }
-  	  elseif (!empty($link['title'])) {
-  	   // Some links are actually not links, but we wrap these in <span> for adding title and class attributes.
-  	   if (empty($link['html'])) {
-  		   $link['title'] = check_plain($link['title']);
-  	   }
-  	   $span_attributes = '';
-  	   if (isset($link['attributes'])) {
-  		   $span_attributes = drupal_attributes($link['attributes']);
-  	   }
-	     $output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
+      
+      if(!isset($link['attributes']))
+      $link['attributes'] = array();
+      $class = (count($children) > 0) ? 'dropdown' : NULL;
+      $output .= '<li ' . drupal_attributes($attributes) . '>';
+    
+      
+      if (isset($link['href'])) {
+        if(count($children) > 0) { 
+          $link['html'] = TRUE;
+          $output .=  '<div class="btn-group">' .l($link['title'], $link['href'], $link);
+          $output .=  '<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="ubc7-arrow blue down-arrow"></span></button>';
+        }else{
+          // Pass in $link as $options, they share the same keys.
+          $output .= l($link['title'], $link['href'], $link);
+        }
+      }
+      elseif (!empty($link['title'])) {
+       // Some links are actually not links, but we wrap these in <span> for adding title and class attributes.
+       if (empty($link['html'])) {
+         $link['title'] = check_plain($link['title']);
+       }
+       $span_attributes = '';
+       if (isset($link['attributes'])) {
+         $span_attributes = drupal_attributes($link['attributes']);
+       }
+       $output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
      }
-	  	  
-	  if(count($children) > 0) {
-		  $attributes = array();
+        
+    if(count($children) > 0) {
+      $attributes = array();
       $attributes['class'] = array('dropdown-menu');
-		  $output .= theme('megatron_links', array('links' => $children, 'attributes' => $attributes));
-		  $output .= '</div>';
-	  }
-	  
-	  $output .= "</li>\n";	
+      $output .= theme('megatron_links', array('links' => $children, 'attributes' => $attributes));
+      $output .= '</div>';
+    }
+    
+    $output .= "</li>\n"; 
     }
 
     $output .= '</ul>';
