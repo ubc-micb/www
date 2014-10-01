@@ -302,6 +302,7 @@ div#content section {
 body.node-type-article .full-width-container h1 {
   font-size:220%;
 }
+/* Article node theming */
 .article-return-link {
   text-decoration: none;
   font-weight: bold;
@@ -313,6 +314,32 @@ body.node-type-article .full-width-container h1 {
   width: 120px;
 }
 .article-return-link:hover {
+  background-color: #d9d9d9;
+}
+/* Article Slideshow (Recent Publications) view theming */
+.view-article-slideshow img {
+  max-width: 650px;
+}
+.view-article-slideshow .views-row {
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+  border-bottom: 1px dashed #cccccc;
+}
+.view-article-slideshow .views-row-last {
+  border: none;
+}
+.view-article-slideshow .read-more a {
+  padding: 5px;
+  background: #eeeeee;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  width: 80px;
+  text-align: center;
+  margin-top: 20px;
+}
+.view-article-slideshow .read-more a:hover {
   background-color: #d9d9d9;
 }
 
@@ -665,6 +692,12 @@ body.front div#content section {
     padding: 1em 1em 1em 5%;
   }
 
+  /* ARTICLES */
+  /* Make the images in the articles small enough to not cause horizontal scrolling */
+  .view-article-slideshow img {
+    max-width: 500px;
+  }
+
   /* END 520 STYLES */
 }
 @media screen and (max-width: 480px) {
@@ -716,6 +749,12 @@ body.front div#content section {
   .front-events .event-presenter,
   .front-events .event-details {
     margin: 0 0 4px 8px;
+  }
+
+  /* ARTICLES */
+  /* Make the images in the articles small enough to not cause horizontal scrolling */
+  .view-article-slideshow img {
+    max-width: 300px;
   }
 
   /* END 480 STYLES */
