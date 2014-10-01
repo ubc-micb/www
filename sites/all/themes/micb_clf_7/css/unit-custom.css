@@ -5,6 +5,67 @@ body{
   background:white;
 }
 
+/* UNIT SPECIFIC
+Typography
+-------------------------------------------------- */
+.fancybox-title, 
+.full-width-container,
+.survey,
+.ubc-menu,
+footer {
+  font-family:'Open Sans', 'Arial', sans-serif;
+  font-weight:400;
+  font-style:normal;
+  background:#FFF
+  text-rendering: optimizelegibility;
+}
+.full-width-container h1 {
+  color: #002145;
+  font-size: 290%;
+  line-height: 133.3%;
+  margin: 0 0 2%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border:none;
+}
+.full-width-container h2 {
+  color: #002145;
+  font-size: 235.2%;
+  line-height: 150%;
+  margin: 0 0 1.7%;
+  letter-spacing: 2px;
+}
+.full-width-container h3 {
+  color: #0680A6;
+  font-size: 176.4%;
+  line-height: 166.6%;
+  margin: 0 0 .5%;
+  letter-spacing: 2px;
+}
+.full-width-container h3 a,
+.full-width-container h4 a,
+.full-width-container h5 a,
+.full-width-container h6 a {
+  text-decoration: underline;
+}
+.full-width-container h3 a:visited, 
+.full-width-container h4 a:visited, 
+.full-width-container h5 a:visited, 
+.full-width-container h6 a:visited {
+  color: #0680a6;
+}
+
+/* UNIT COLOURS
+Unit Bar background gradient and box shadow */
+#ubc7-unit {
+  background: #245b7b;
+  /* replace with unit colour (or use theme settings) */
+  box-shadow: inset 0px -10px 10px -10px #333333;
+  -moz-box-shadow: inset 0px -10px 10px -10px #333333;
+  -webkit-box-shadow: inset 0px -10px 10px -10px #333333;
+}
+
+/* NAVIGATION */
 /* Soften the color of the menu bar to match newer UBC websites */
 #ubc7-unit-menu, 
 #ubc7-unit-menu .navbar-inner,
@@ -220,82 +281,42 @@ div#content section {
   font-size: 19px;
 }
 
-
-/* UNIT SPECIFIC
-Typography
--------------------------------------------------- */
-.fancybox-title, 
-.full-width-container,
-.survey,
-.ubc-menu,
-footer {
-  font-family:'Open Sans', 'Arial', sans-serif;
-  font-weight:400;
-  font-style:normal;
-  background:#FFF
-  text-rendering: optimizelegibility;
-}
-.full-width-container h1 {
-  color: #002145;
-  font-size: 290%;
-  line-height: 133.3%;
-  margin: 0 0 2%;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  border:none;
-}
-.full-width-container h2 {
-  color: #002145;
-  font-size: 235.2%;
-  line-height: 150%;
-  margin: 0 0 1.7%;
-  letter-spacing: 2px;
-}
-.full-width-container h3 {
-  color: #0680A6;
-  font-size: 176.4%;
-  line-height: 166.6%;
-  margin: 0 0 .5%;
-  letter-spacing: 2px;
-}
-.full-width-container h3 a,
-.full-width-container h4 a,
-.full-width-container h5 a,
-.full-width-container h6 a {
-  text-decoration: underline;
-}
-.full-width-container h3 a:visited, 
-.full-width-container h4 a:visited, 
-.full-width-container h5 a:visited, 
-.full-width-container h6 a:visited {
-  color: #0680a6;
-}
-
 /* JEMI */
-.jemi-header{
+.jemi-header {
   padding-bottom: 25px;
 }
-.jemi-volume{
+.jemi-volume {
   color: navy;
   font-size: medium;
   font-weight: bold;
 }
-.jemi-body{
+.jemi-body {
   padding-top: 15px;
 }
-.jemi-body p{
+.jemi-body p {
   padding-top: 5px;
 }
 
-/* UNIT COLOURS
-Unit Bar background gradient and box shadow */
-#ubc7-unit {
-  background: #245b7b;
-  /* replace with unit colour (or use theme settings) */
-  box-shadow: inset 0px -10px 10px -10px #333333;
-  -moz-box-shadow: inset 0px -10px 10px -10px #333333;
-  -webkit-box-shadow: inset 0px -10px 10px -10px #333333;
+/* ARTICLES */
+/* Make the titles a bit smaller as they are usually very long compared to other pages */
+body.node-type-article .full-width-container h1 {
+  font-size:220%;
 }
+.article-return-link {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #eeeeee;
+  padding: 5px;
+  margin: 15px 0 20px 0;
+  display: block;
+  border-radius: 5px;
+  width: 120px;
+}
+.article-return-link:hover {
+  background-color: #d9d9d9;
+}
+
+
 
 /* FRONT PAGE
 -------------------------------------------------- */
@@ -595,6 +616,11 @@ body.front div#content section {
     line-height: 120%;
     letter-spacing: 2px;
     margin: 0 0 2%;
+  }
+
+  /* Make the article titles a bit smaller as they are usually very long compared to other pages */
+  body.node-type-article .full-width-container h1 {
+    font-size:150%;
   }
   
   /* END >767 STYLES */
