@@ -32,7 +32,7 @@ function micb_clf_7_breadcrumb($variables) {
       $i++;
     }
     // Truncate the title if it is too long 
-    $truncate_length = 50;
+    $truncate_length = 40;
     $page_title = drupal_get_title();
     if(strlen($page_title) > $truncate_length){
       $page_title = substr($page_title,0,$truncate_length).'...';
