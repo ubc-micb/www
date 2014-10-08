@@ -219,6 +219,68 @@ div#main {
   margin-left: 72px;
 }
 
+/* Hexagonal wrapper.  Used on events date box. */
+.hex {
+  float:left;
+  margin-top: 8px;
+}
+.hex-left {
+  float: left;
+  border-right: 15px solid #6C6;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+}
+.hex-center {
+  float: left;
+  width: 30px;
+  height: 52px;
+  background-color: #6C6;
+}
+.hex-right {
+  float: left;
+  border-left: 15px solid #6C6;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+}
+
+/* Date Box for events */
+.date-box {  
+  /* background-color: #f7c23d; */
+  color: #FFFFFF;
+  float: left;
+  /* margin: 5px 10px 0 0;
+  padding: 2px 0 0;
+  */
+  margin:0;
+  padding:0;
+  text-align: center;
+  width:100%;
+  /* width: 50px; */
+} 
+/* Short Month PHP date format (ex. SEP) */
+.date-box .dateM {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+/* Day of month PHP date format (ex. 3) */
+.date-box .datej {
+  font-size: 1.4em;
+  margin-bottom: 7px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+/* Start time PHP date format (ex. 12:32 PM) */
+.date-box .dategiA {
+  font-size: .9em;
+  margin-bottom: 7px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
 
 /* Add a little more whitespace at the bottom of the page */
 div#content section {
@@ -252,9 +314,9 @@ div#content section {
 
 /* Seminar Events */
 .seminar-event {
-  width: 80%;
+  width: 90%;
   margin: 0 auto 0 auto;
-  padding: 15px;
+  padding: 0 15px 0 15px;
   text-align: center;
 }
 .seminar-event .ubc,
@@ -285,6 +347,28 @@ div#content section {
 .seminar-event .date,
 .seminar-event .host {
   font-size: 19px;
+}
+
+/* CALENDAR */
+/* Upcomming page view */
+body.page-news-events .feed-icon {
+  margin:0 auto 10px auto;
+}
+body.page-news-events .views-row {
+  margin: 10px 0;
+  padding: 15px 10px 25px 20px;
+}
+body.page-news-events .views-row-last {
+  border-bottom: none;
+}
+body.page-news-events .calendar-info {
+  margin-left: 80px;
+  padding-left: 20px;
+  border-left: 4px solid #efefef;
+
+}
+body.page-news-events .calendar-presenter-title {
+  font-style: italic;
 }
 
 /* JEMI */
@@ -442,7 +526,7 @@ body.front div#content section {
 .front-events .event-date,
 .front-events .event-presenter,
 .front-events .event-details {
-  margin: 0 0 4px 70px;
+  margin: 0 0 4px 0;
   display: block;
 }
 .front-events .event-title a {
@@ -452,6 +536,11 @@ body.front div#content section {
   margin: 10px 0 30px 0;
   padding: 0 20px 0 20px;
 }
+.front-events .row-fluid > div .event-info {
+  margin-left: 70px;
+  border-left: 3px solid #a3afba;
+  padding-left: 10px;
+}
 .front-events .row-fluid > div:first-child {
   padding: 0 20px 0 0; 
 }
@@ -459,60 +548,6 @@ body.front div#content section {
   padding: 0 0 0 20px; 
 }
 
-/* Date Box for events */
-.date-box {  
-  /* background-color: #f7c23d; */
-  color: #FFFFFF;
-  float: left;
-  /* margin: 5px 10px 0 0;
-  padding: 2px 0 0;
-  */
-  margin:0;
-  padding:0;
-  text-align: center;
-  width:100%;
-  /* width: 50px; */
-} 
-/* Short Month PHP date format (ex. SEP) */
-.date-box .dateM {
-  display: block;
-  text-align: center;
-  font-size: 1em;
-  text-transform: uppercase;
-  margin-top: 3px;
-}
-/* Day of month PHP date format (ex. 3) */
-.date-box .datej {
-  font-size: 1.4em;
-  margin-bottom: 7px;
-  display: block;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* Hexagonal wrapper.  Used on the events date box.  Could be used on other things */
-.hex {
-  float:left;
-  margin-top: 8px;
-}
-.hex-left {
-  float: left;
-  border-right: 15px solid #6C6;
-  border-top: 26px solid transparent;
-  border-bottom: 26px solid transparent;
-}
-.hex-center {
-  float: left;
-  width: 30px;
-  height: 52px;
-  background-color: #6C6;
-}
-.hex-right {
-  float: left;
-  border-left: 15px solid #6C6;
-  border-top: 26px solid transparent;
-  border-bottom: 26px solid transparent;
-}
 
 
 /* MEDIA QUERIES 
@@ -523,7 +558,8 @@ body.front div#content section {
 
   /* Center Breadcrumbs and Content */
   .full-width .full-width-container .breadcrumb,
-  div#main {
+  div#main,
+  body.page-news-events .feed-icon {
     max-width: 1170px;
   }
   .full-width .full-width-container .breadcrumb,
@@ -566,7 +602,7 @@ body.front div#content section {
   .views-field-field-highlight-image-caption {
     font-size: 19px;
   }
-  
+
   /* END 768-979 STYLES */
 }
 @media screen and (max-width: 979px) { 
@@ -618,6 +654,13 @@ body.front div#content section {
     font-size: 19px;
   }
 
+  /* CALENDAR */
+  /* Upcoming Events list */
+  /* Center the ical feed button on smaller screens */
+  body.page-news-events .feed-icon {
+    text-align: center;
+  }
+
   /* END 768-979 STYLES */
 }
 @media screen and (max-width: 767px) {
@@ -659,9 +702,18 @@ body.front div#content section {
 
   /* Front Events List */
   /* Reset the padding for event items */
+  .front-events .row-fluid > div,
   .front-events .row-fluid > div:first-child,
   .front-events .row-fluid > div:last-child  {
-    padding: 0 20px 0 20px; 
+    padding: 0;
+  }
+
+  /* CALENDAR */
+  /* Upcoming Events List */
+  /* Reset padding on smaller screens */
+  body.page-news-events .views-row {
+    padding: 0;
+    margin: 0 0 40px 0;
   }
 
   /* Make the article titles a bit smaller as they are usually very long compared to other pages */
@@ -683,6 +735,7 @@ body.front div#content section {
   .views-field-field-highlight-image-caption {
     font-size: 13px;
   }
+
 
   /* END >720 STYLES */
 }
@@ -717,6 +770,7 @@ body.front div#content section {
     max-width: 500px;
   }
 
+
   /* END 520 STYLES */
 }
 @media screen and (max-width: 480px) {
@@ -732,15 +786,8 @@ body.front div#content section {
     font-size: 12px;
     height: 3em;
   }
-
-  /* Front Events Listing */
-  /* Flatten the event date box and move above event info */
-  body.front .date-box {
-    float:none;
-    padding: 8px 5px 5px 5px;
-    width: 6.5em;
-    text-align: left;
-  }
+  
+  /* Shrink Date Box */
   .date-box .dateM,
   .date-box .datej {
     display: inline;
@@ -763,17 +810,68 @@ body.front div#content section {
     width: 6.5em;
     height: auto;
   } 
+  
+  /* Front Events Listing */
+  /* Flatten the event date box and move above event info */
+  body.front .date-box {
+    float:none;
+    padding: 8px 5px 5px 5px;
+    width: 6.5em;
+    text-align: left;
+  }
   /* Move front page event info left into space left by moving the date box */
   .front-events .event-title,
   .front-events .event-date,
   .front-events .event-presenter,
   .front-events .event-details {
-    margin: 0 0 4px 8px;
+    margin: 0 0 4px 0;
   }
   /* Reset the padding for event items */
-  .front-events .row-fluid > div:first-child,
-  .front-events .row-fluid > div:last-child  {
-    padding: 0 20px 0 20px; 
+  .front-events .row-fluid > div {
+    border-bottom: 3px solid #a3afba;
+    margin: 0;
+    padding: 15px 0 15px 0;
+  }
+  .front-events .row-fluid > div:first-child {
+    padding: 0 0 15px 0;
+  }
+  .front-events .row-fluid > div:last-child {
+    border: none;
+    padding: 15px 0 15px 0;
+  }
+  .front-events .row-fluid > div .event-info {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: none;
+  }
+
+  /* CALENDAR */
+  /* Upcomming page view */
+  /* Reset padding on smaller screens */
+  body.page-news-events .views-row {
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: 2px solid #efefef;
+  }
+  body.page-news-events .views-row-first {
+    padding-top: 0;
+  }
+  body.page-news-events .views-row-last {
+    border: none;
+  }
+  /* Move event info left into space left by moving the date box */
+  body.page-news-events .calendar-info {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: none;
+  }
+
+  /* Flatten the event date box and move above event info */
+  body.page-news-events .date-box {
+    float:none;
+    padding: 8px 5px 5px 5px;
+    width: 7.5em;
+    text-align: left;
   }
 
   /* ARTICLES */
