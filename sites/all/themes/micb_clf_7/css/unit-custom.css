@@ -351,23 +351,24 @@ div#content section {
 
 /* CALENDAR */
 /* Upcomming page view */
-body.page-news-events .feed-icon {
+.seminar-events-calendar .feed-icon {
   margin:0 auto 10px auto;
 }
-body.page-news-events .views-row {
+.seminar-events-calendar .views-row {
   margin: 10px 0;
   padding: 15px 10px 25px 20px;
+  overflow: scroll;
 }
-body.page-news-events .views-row-last {
+.seminar-events-calendar .views-row-last {
   border-bottom: none;
 }
-body.page-news-events .calendar-info {
+.seminar-events-calendar .calendar-info {
   margin-left: 80px;
   padding-left: 20px;
   border-left: 4px solid #efefef;
 
 }
-body.page-news-events .calendar-presenter-title {
+.seminar-events-calendar .calendar-presenter-title {
   font-style: italic;
 }
 
@@ -559,7 +560,7 @@ body.front div#content section {
   /* Center Breadcrumbs and Content */
   .full-width .full-width-container .breadcrumb,
   div#main,
-  body.page-news-events .feed-icon {
+  .seminar-events-calendar .feed-icon {
     max-width: 1170px;
   }
   .full-width .full-width-container .breadcrumb,
@@ -657,7 +658,7 @@ body.front div#content section {
   /* CALENDAR */
   /* Upcoming Events list */
   /* Center the ical feed button on smaller screens */
-  body.page-news-events .feed-icon {
+  .seminar-events-calendar .feed-icon {
     text-align: center;
   }
 
@@ -711,7 +712,7 @@ body.front div#content section {
   /* CALENDAR */
   /* Upcoming Events List */
   /* Reset padding on smaller screens */
-  body.page-news-events .views-row {
+  .seminar-events-calendar .views-row {
     padding: 0;
     margin: 0 0 40px 0;
   }
@@ -848,26 +849,26 @@ body.front div#content section {
   /* CALENDAR */
   /* Upcomming page view */
   /* Reset padding on smaller screens */
-  body.page-news-events .views-row {
+  .seminar-events-calendar .views-row {
     padding: 20px 0;
     margin: 0;
     border-bottom: 2px solid #efefef;
   }
-  body.page-news-events .views-row-first {
+  .seminar-events-calendar .views-row-first {
     padding-top: 0;
   }
-  body.page-news-events .views-row-last {
+  .seminar-events-calendar .views-row-last {
     border: none;
   }
   /* Move event info left into space left by moving the date box */
-  body.page-news-events .calendar-info {
+  .seminar-events-calendar .calendar-info {
     padding-left: 0;
     margin-left: 0;
     border-left: none;
   }
 
   /* Flatten the event date box and move above event info */
-  body.page-news-events .date-box {
+  .seminar-events-calendar .date-box {
     float:none;
     padding: 8px 5px 5px 5px;
     width: 7.5em;
