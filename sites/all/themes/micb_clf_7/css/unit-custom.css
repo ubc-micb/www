@@ -388,6 +388,20 @@ div#content section {
   padding-top: 5px;
 }
 
+/* NEWS */
+.view-news .views-row {
+  padding: 10px;
+  overflow: scroll;
+  margin-bottom: 10px;
+}
+.view-news .views-row-even {
+  background: #efefef;
+  border-radius: 4px;
+}
+.view-news .views-field-created {
+  margin-bottom: 5px;
+}
+
 /* ARTICLES */
 /* Make the titles a bit smaller as they are usually very long compared to other pages */
 body.node-type-article .full-width-container h1 {
@@ -504,6 +518,9 @@ body.front div#content section {
 }
 
 /* Front page news listing */
+.front-news .views-row {
+  overflow: scroll;
+}
 .front-news .pane-content{
   max-width: 1170px;
   margin: 0 auto;
@@ -518,6 +535,9 @@ body.front div#content section {
 /* Front page events listing */
 .front-events {
   background-color: #C3D0DC;
+}
+.front-events .views-row {
+  overflow: scroll;
 }
 .front-events .pane-content {
   max-width: 1170px;
