@@ -254,8 +254,6 @@ div#content section {
 .seminar-event {
   width: 80%;
   margin: 0 auto 0 auto;
-  border-width: 5px;
-  border-style: groove;
   padding: 15px;
   text-align: center;
 }
