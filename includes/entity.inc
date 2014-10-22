@@ -46,7 +46,7 @@ interface DrupalEntityControllerInterface {
 class DrupalDefaultEntityController implements DrupalEntityControllerInterface {
 
   /**
-   * Static cache of entities, keyed by entity ID.
+   * Static cache of entities.
    *
    * @var array
    */

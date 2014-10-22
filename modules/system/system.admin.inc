@@ -950,11 +950,7 @@ function system_sort_modules_by_info_name($a, $b) {
 }
 
 /**
- * Sorts themes by their names, with the default theme listed first.
- *
- * Callback for uasort() within system_themes_page().
- *
- * @see system_sort_modules_by_info_name().
+ * Array sorting callback; sorts modules or themes by their name.
  */
 function system_sort_themes($a, $b) {
   if ($a->is_default) {
