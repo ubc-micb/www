@@ -553,6 +553,10 @@ body.front div#content section {
 .front-events .event-title a {
   text-decoration: none;
 }
+.front-events .row-fluid > div,
+.front-events .row-fluid > div .event-info {
+  min-height: 250px;
+}
 .front-events .row-fluid > div {
   margin: 10px 0 30px 0;
   padding: 0 20px 0 20px;
@@ -675,6 +679,15 @@ body.front div#content section {
     font-size: 19px;
   }
 
+  /* Front Events List */
+  /* Reset the side padding for event items */
+  .front-events .row-fluid > div,
+  .front-events .row-fluid > div:first-child,
+  .front-events .row-fluid > div:last-child  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   /* CALENDAR */
   /* Upcoming Events list */
   /* Center the ical feed button on smaller screens */
@@ -728,6 +741,11 @@ body.front div#content section {
   .front-events .row-fluid > div:last-child  {
     padding: 0;
   }
+  .front-events .row-fluid > div,
+  .front-events .row-fluid > div .event-info {
+    min-height: 0;
+  }
+
 
   /* CALENDAR */
   /* Upcoming Events List */
@@ -864,6 +882,10 @@ body.front div#content section {
     padding-left: 0;
     margin-left: 0;
     border-left: none;
+  }
+  .front-events .row-fluid > div,
+  .front-events .row-fluid > div .event-info {
+    min-height: 0;
   }
 
   /* CALENDAR */
