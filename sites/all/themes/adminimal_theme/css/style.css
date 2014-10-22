@@ -52,7 +52,7 @@ legend {
 h1,h2,h3,h4,h5,h6 {
   font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
   font-weight: 300;
-  margin: 10px 0;
+  margin: 0 0 20px;
 }
 
 h1 {
@@ -76,7 +76,7 @@ h5,h6 {
 }
 
 p {
-  margin: 1em 0;
+  margin: 0 0 20px;
 }
 
 dl {
@@ -626,12 +626,12 @@ table.system-status-report tr.warning {
   background-color: #fffbe2;
 }
 
-.adminimal-backend table tr.error {
+.adminimal-theme table tr.error {
   color: #C70000;
   background-color: #FFDDDD;
 }
 
-.adminimal-backend table tr.error td {
+.adminimal-theme table tr.error td {
   color: #C70000;
 }
 
@@ -640,7 +640,7 @@ fieldset {
   border: solid 1px #ddd;
   border-top: 3px solid #0074BD;
   padding: 12px;
-  margin: 18px 0;
+  margin: 0 0 20px;
 }
 
 fieldset legend {
@@ -658,7 +658,7 @@ fieldset legend {
  */
 .form-item {
   padding: 0 1em 0 0;
-  margin: 0 0 10px;
+  margin: 0 0 20px;
 }
 
 .filter-wrapper .form-item,div.teaser-checkbox .form-item,.form-item .form-item {
@@ -680,8 +680,8 @@ fieldset legend {
   font-size: 20px;
   font-weight: 300;
   margin: 0;
-  margin: 0 0.5em 0 0;
-  padding: 0.5em 0;
+  margin: 0 0 10px;
+  line-height: 40px;
   width: initial;
 }
 
@@ -700,7 +700,7 @@ fieldset legend {
 }
 
 .form-managed-file .form-file,.form-managed-file .form-submit {
-  margin: 0 1em;
+  margin-right: 1em;
 }
 
 input.empty {
@@ -811,35 +811,58 @@ body.page-admin-modules .module-filter-clear {
 }
 
 .module-filter-clear a {
-    background: url(../images/x.svg) scroll no-repeat 0 0;
-    display: block;
-    font-size: 0;
-    height: 29px;
-    margin-left: 0;
-    width: 29px;
+  background: url(../images/x.svg) scroll no-repeat 0 0;
+  display: block;
+  font-size: 0;
+  height: 29px;
+  margin-left: 0;
+  width: 29px;
 }
 
 .module-filter-clear a:hover {
-    background: url(../images/x-hover.svg) scroll no-repeat 0 0;
+  background: url(../images/x-hover.svg) scroll no-repeat 0 0;
 }
 
 html.js .toggle-enable {
   border-radius: 0 !important;
   box-shadow: none !important;
-  background-image: -moz-linear-gradient(left center , #555 50%, #0074BD 50%, #0074BD 100%);
+  background: #555555; /* Old browsers */
+  background: -moz-linear-gradient(left,  #555555 50%, #008000 50%, #008000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%,#555555), color-stop(50%,#008000), color-stop(100%,#008000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #555555 50%,#008000 50%,#008000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #555555 50%,#008000 50%,#008000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #555555 50%,#008000 50%,#008000 100%); /* IE10+ */
+  background: linear-gradient(to right,  #555555 50%,#008000 50%,#008000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#008000',GradientType=1 ); /* IE6-9 */
 }
 
 html.js .toggle-enable.enabled {
-  background-image: -moz-linear-gradient(left center , #0074BD 50%, #008000 50%, #008000 100%);
+  background: #008000; /* Old browsers */
+  background: -moz-linear-gradient(left,  #555555 50%, #008000 50%, #008000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%,#555555), color-stop(50%,#008000), color-stop(100%,#008000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #555555 50%,#008000 50%,#008000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #555555 50%,#008000 50%,#008000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #555555 50%,#008000 50%,#008000 100%); /* IE10+ */
+  background: linear-gradient(to right,  #555555 50%,#008000 50%,#008000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#008000',GradientType=1 ); /* IE6-9 */
 }
 
 html.js .toggle-enable.enabled.disabled {
-    background-image: -moz-linear-gradient(left center , #0074BD 50%, #EF6114 50%, #EF6114 100%);
+  background: #ef6114; /* Old browsers */
+  background: -moz-linear-gradient(left,  #0074bd 50%, #ef6114 50%, #ef6114 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%,#0074bd), color-stop(50%,#ef6114), color-stop(100%,#ef6114)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #0074bd 50%,#ef6114 50%,#ef6114 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #0074bd 50%,#ef6114 50%,#ef6114 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #0074bd 50%,#ef6114 50%,#ef6114 100%); /* IE10+ */
+  background: linear-gradient(to right,  #0074bd 50%,#ef6114 50%,#ef6114 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0074bd', endColorstr='#ef6114',GradientType=1 ); /* IE6-9 */
 }
 
 html.js .toggle-enable.enabled.disabled div:after {
-  content: "\26A1";
-  font-size: 18px;
+  content: "";
+  background: url("images/module-filter-sprite.svg") no-repeat scroll 1px -50px transparent;
+  width: 25px;
+  height: 25px;
 }
 
 html.js .toggle-enable.disabled div {
@@ -852,11 +875,17 @@ html.js .toggle-enable div {
 }
 
 html.js .toggle-enable div:before {
-    content: "\2717";
+    content: "";
+    background: url("images/module-filter-sprite.svg") no-repeat scroll 0px -100px transparent;
+    width: 25px;
+    height: 25px;
 }
 
 html.js .toggle-enable div:after {
-    content: "\2713";
+    content: "";
+    background: url("images/module-filter-sprite.svg") no-repeat scroll 1px 0px transparent;
+    width: 25px;
+    height: 25px;
 }
 
 html.js .toggle-enable div:after, html.js .toggle-enable div:before {
@@ -877,7 +906,7 @@ html.js input.throbbing {
 }
 
 ul.action-links {
-  margin: 1em 0;
+  margin: 0 0 20px;
   list-style-type: none;
   overflow: hidden;
 }
@@ -1271,24 +1300,24 @@ div.warning {
 }
 
 /* Disable overlay message */
-body.adminimal-backend #overlay-disable-message {
+body.adminimal-theme #overlay-disable-message {
   background-color: #addafc;
 }
 
-body.adminimal-backend #overlay-disable-message a,#overlay-disable-message a:visited {
+body.adminimal-theme #overlay-disable-message a,#overlay-disable-message a:visited {
   color: #000;
 }
 
-body.adminimal-backend #overlay-disable-message a:focus,#overlay-disable-message a:active {
+body.adminimal-theme #overlay-disable-message a:focus,#overlay-disable-message a:active {
   outline: none;
   text-decoration: underline;
 }
 
-body.adminimal-backend .overlay-disable-message-focused a {
+body.adminimal-theme .overlay-disable-message-focused a {
   padding: 0.4em 0.6em;
 }
 
-body.adminimal-backend .overlay-disable-message-focused #overlay-dismiss-message {
+body.adminimal-theme .overlay-disable-message-focused #overlay-dismiss-message {
   background-color: #59a0d8;
   color: #fff;
   -moz-border-radius: 8px;
@@ -1296,23 +1325,23 @@ body.adminimal-backend .overlay-disable-message-focused #overlay-dismiss-message
   border-radius: 8px;
 }
 
-body.adminimal-backend #ctools-export-ui-list-form.form-submit {
+body.adminimal-theme #ctools-export-ui-list-form.form-submit {
   float: left;
   margin-top: 36px;
 }
 
-body.adminimal-backend a.imce-filefield-opener {
+body.adminimal-theme a.imce-filefield-opener {
   margin: 5px 0;
 }
 
-body.adminimal-backend div.autocomplete-deluxe-multiple {
+body.adminimal-theme div.autocomplete-deluxe-multiple {
   background: none repeat scroll 0 0 #FFFFFF;
   padding: 0;
   width: auto;
   min-width: 500px;
 }
 
-body.adminimal-backend .autocomplete-deluxe-item {
+body.adminimal-theme .autocomplete-deluxe-item {
   background: none repeat scroll 0 0 #555555;
   border: 0 none;
   border-radius: 0 0 0 0;
@@ -1323,7 +1352,7 @@ body.adminimal-backend .autocomplete-deluxe-item {
   padding: 7px 20px 7px 10px;
 }
 
-body.adminimal-backend .autocomplete-deluxe-item-delete {
+body.adminimal-theme .autocomplete-deluxe-item-delete {
   background: url("../images/ui-icons-ffffff-256x240.png") no-repeat scroll -100px -130px transparent;
   display: block;
   font-size: 1px;
@@ -1334,7 +1363,7 @@ body.adminimal-backend .autocomplete-deluxe-item-delete {
   width: 12px;
 }
 
-body.adminimal-backend ul.ui-autocomplete {
+body.adminimal-theme ul.ui-autocomplete {
   max-height: 300px;
   max-width: 300px;
   overflow-x: hidden;
@@ -1345,41 +1374,49 @@ body.adminimal-backend ul.ui-autocomplete {
   margin-left: -2px;
 }
 
-body.adminimal-backend div.autocomplete-deluxe-container input.autocomplete-deluxe-form-single {
+body.adminimal-theme div.autocomplete-deluxe-container input.autocomplete-deluxe-form-single {
 	background: #fff;
 }
 
-body.adminimal-backend .ui-autocomplete .ui-menu-item a {
+body.adminimal-theme .ui-autocomplete .ui-menu-item a {
   display: block;
   line-height: 1.5;
   padding: 5px 10px;
   text-decoration: none;
   color: #777;
+  font-size: 12px;
 }
 
-body.adminimal-backend ul.ui-autocomplete li.ui-menu-item .ui-state-focus {
+body.adminimal-theme ul.ui-autocomplete li.ui-menu-item .ui-state-focus {
 	background: inherit;
 	color: inherit;
 }
 
-body.adminimal-backend .ui-menu .ui-menu-item a.ui-state-focus {
+body.adminimal-theme .ui-menu .ui-menu-item a.ui-state-focus {
 	margin: 0;
+	font-size: 12px;
 }
 
-body.adminimal-backend .autocomplete-deluxe-highlight-char {
+body.adminimal-theme .autocomplete-deluxe-highlight-char {
   color: #000;
   font-weight: normal;
   text-decoration: underline;
+  font-size: 12px;
 }
 
-body.adminimal-backend .ui-autocomplete .ui-menu-item a.ui-state-focus:hover {
+body.adminimal-theme .ui-autocomplete .ui-menu-item a.ui-state-focus:hover,
+body.adminimal-theme .ui-autocomplete .ui-menu-item a.ui-state-hover {
   background-color: #0074BD;
   color: #fff;
   cursor: pointer;
+  font-size: 12px;
+  margin: 0;
 }
 
-body.adminimal-backend a.ui-state-focus:hover .autocomplete-deluxe-highlight-char {
+body.adminimal-theme a.ui-state-focus:hover .autocomplete-deluxe-highlight-char,
+body.adminimal-theme .ui-autocomplete .ui-menu-item a.ui-state-hover .autocomplete-deluxe-highlight-char {
   color: #caf631;
+  font-size: 12px;
 }
 
 body.adminimal-theme .ctools-dropbutton-processed {
@@ -1395,6 +1432,7 @@ body div.warning {
   background-image: url("images/warning.svg");
   background-position: 12px 50%;
   background-color: transparent;
+  background-repeat: no-repeat;
   color: #555;
   border-top: 1px solid #ff9421;
   border-left: none;
@@ -1410,6 +1448,7 @@ body div.error {
   background-image: url("images/error.svg");
   background-color: transparent;
   background-position: 12px 50%;
+  background-repeat: no-repeat;
   color: #555;
   border-top: 1px solid #e55454;
   border-left: none;
@@ -1425,6 +1464,7 @@ body div.status {
   background-image: url("images/status.svg");
   background-position: 12px 50%;
   background-color: transparent;
+  background-repeat: no-repeat;
   color: #555;
   border-top: 1px solid #61a643;
   border-left: none;
@@ -1495,10 +1535,10 @@ div.exposed-filters input#edit-submit:active {
 }
 
 /* Green Button */
-input[id^="edit-submit"],
+input[type="submit"][id^="edit-submit"],
 input#edit-actions-submit,
 input[id^="save-continue"],
-input[id^="edit-save"],
+input[type="submit"][id^="edit-save"],
 input#edit-save,
 input#edit-submit,
 input#edit-actions-save,
@@ -1517,10 +1557,10 @@ input#edit-actions-save,
   background: #4d8f46;
 }
 
-input[id^="edit-submit"]:hover,
+input[type="submit"][id^="edit-submit"]:hover,
 input#edit-actions-submit:hover,
 input[id^="save-continue"]:hover,
-input[id^="edit-save"]:hover,
+input[type="submit"][id^="edit-save"]:hover,
 input#edit-save:hover,
 input#edit-submit:hover,
 input#edit-actions-save:hover,
@@ -1534,7 +1574,7 @@ input#edit-actions-save:hover,
 input#edit-submit:active,
 input#edit-actions-submit:active,
 input[id^="save-continue"]:active,
-input[id^="edit-save"]:active,
+input[type="submit"][id^="edit-save"]:active,
 input#edit-save:active,
 input#edit-submit:active,
 input#edit-actions-save:active {
@@ -1597,7 +1637,7 @@ body.page-admin-modules-uninstall input#edit-submit:active {
 input#edit-preview,
 input#edit-next,
 input#preview-submit,
-input[id^="edit-return"] {
+input[type="submit"][id^="edit-return"] {
   cursor: pointer;
   border-radius: 0;
   border: none;
@@ -1615,7 +1655,7 @@ input[id^="edit-return"] {
 input#edit-preview:hover,
 input#edit-next:hover,
 input#preview-submit:hover,
-input[id^="edit-return"]:hover {
+input[type="submit"][id^="edit-return"]:hover {
   background: #004c99;
   border-radius: 0;
   border: none;
@@ -1625,7 +1665,7 @@ input[id^="edit-return"]:hover {
 input#edit-preview:active,
 input#edit-next:active,
 input#preview-submit:active,
-input[id^="edit-return"]:active {
+input[type="submit"][id^="edit-return"]:active {
   box-shadow: 0 2px 2px rgba(0,0,0,0.75) inset;
   background: #333;
   border-radius: 0;
@@ -1689,16 +1729,16 @@ div.admin-panel {
 }
 
 /* Table hover style */
-.adminimal-backend tr.even:hover, .adminimal-backend tr.odd:hover {
+.adminimal-theme tr.even:hover, .adminimal-theme tr.odd:hover {
   background: #FFFFBF;
 }
 
 /* Tokens */
-.adminimal-backend .token-tree {
+.adminimal-theme .token-tree {
   margin-left: 0;
 }
 
-.adminimal-backend table.token-tree span.expander {
+.adminimal-theme table.token-tree span.expander {
   margin-left: -5px;
 }
 
@@ -1854,6 +1894,10 @@ body.adminimal-theme .token-tree th {
 
 .views-exposed-widget .views-submit-button{
   clear: both;
+}
+
+#views-ui-config-item-form .dependent-options {
+  margin-left: 18px; /* Restore views default from being overridden by .form-item */
 }
 
 .views-exposed-form label{
@@ -2189,7 +2233,7 @@ div.krumo-wrapper li {
     position: relative;
 }
 
-body.adminimal-backend div.dev-query {
+body.adminimal-theme div.dev-query {
     background: none repeat scroll 0 0 #000000;
     bottom: 0;
     color: #82eb12;
@@ -2201,13 +2245,13 @@ body.adminimal-backend div.dev-query {
 
 /* Ckeditor Styling */
 
-body.adminimal-backend .cke_reset_all,body.adminimal-backend  .cke_reset_all * {
+body.adminimal-theme .cke_reset_all,body.adminimal-theme  .cke_reset_all * {
   border-radius: 0;
   font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
   text-shadow: none;
 }
 
-body.adminimal-backend .ckeditor_links {
+body.adminimal-theme .ckeditor_links {
   border-left: 1px solid #DDDDDD;
   border-right: 1px solid #DDDDDD;
   display: block;
@@ -2215,124 +2259,124 @@ body.adminimal-backend .ckeditor_links {
   width: auto;
 }
 
-body.adminimal-backend .ckeditor_links:hover {
+body.adminimal-theme .ckeditor_links:hover {
   background: #eee;
   text-decoration: none;
 }
 
-body.adminimal-backend .cke_chrome {
+body.adminimal-theme .cke_chrome {
   box-shadow: none;
 }
 
-body.adminimal-backend .cke_top {
+body.adminimal-theme .cke_top {
   background: #eee;
 }
 
-body.adminimal-backend .cke_toolgroup {
+body.adminimal-theme .cke_toolgroup {
   background: #fff;
   border: 1px solid #ccc;
 }
 
 
-body.adminimal-backend .cke_combo_button {
+body.adminimal-theme .cke_combo_button {
   background: #fff;
   border: 1px solid #ccc;
 }
 
-body.adminimal-backend .cke_combo_off a.cke_combo_button:hover {
+body.adminimal-theme .cke_combo_off a.cke_combo_button:hover {
   background: #fff;
   border: 1px solid #0074BD;
 }
 
-body.adminimal-backend .cke_button_on {
+body.adminimal-theme .cke_button_on {
   background: #fff;
   box-shadow: none;
   border-bottom: 3px solid #0074BD;
 }
 
-body.adminimal-backend .cke_bottom {
+body.adminimal-theme .cke_bottom {
   background: #eee;
 }
 
-body.adminimal-backend .cke_combo_off a.cke_combo_button:active,body.adminimal-backend  .cke_combo_on a.cke_combo_button {
+body.adminimal-theme .cke_combo_off a.cke_combo_button:active,body.adminimal-theme  .cke_combo_on a.cke_combo_button {
   border: 1px solid #0074BD;
   border-bottom-width: 3px;
   background: #fff;
   box-shadow: none;
 }
 
-body.adminimal-backend a.cke_button_on:hover,body.adminimal-backend  a.cke_button_on:focus,body.adminimal-backend  a.cke_button_on:active {
+body.adminimal-theme a.cke_button_on:hover,body.adminimal-theme  a.cke_button_on:focus,body.adminimal-theme  a.cke_button_on:active {
   box-shadow: none;
 }
 
-body.adminimal-backend a.cke_button_off:hover,
-body.adminimal-backend a.cke_button_off:focus, a.cke_button_off:active,
-body.adminimal-backend a.cke_button_disabled:hover,
-body.adminimal-backend a.cke_button_disabled:focus,
-body.adminimal-backend a.cke_button_disabled:active {
+body.adminimal-theme a.cke_button_off:hover,
+body.adminimal-theme a.cke_button_off:focus, a.cke_button_off:active,
+body.adminimal-theme a.cke_button_disabled:hover,
+body.adminimal-theme a.cke_button_disabled:focus,
+body.adminimal-theme a.cke_button_disabled:active {
   background: #eee;
   box-shadow: none;
   border-color: #0074BD;
 }
 
-body.adminimal-backend .cke_reset_all label {
+body.adminimal-theme .cke_reset_all label {
   display: inline-block;
   margin-top: 5px;
   padding-bottom: 2px;
   position: relative;
 }
 
-body.adminimal-backend .cke_dialog_body label.cke_required {
+body.adminimal-theme .cke_dialog_body label.cke_required {
   font-weight: normal;
 }
 
-body.adminimal-backend .cke_reset_all .cke_dialog_body {
+body.adminimal-theme .cke_reset_all .cke_dialog_body {
   font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
   border: 1px solid #CCCCCC;
 }
 
-body.adminimal-backend .cke_reset_all fieldset {
+body.adminimal-theme .cke_reset_all fieldset {
   border: 1px solid #DDDDDD;
   border-top: 3px solid #0074BD;
   padding: 10px;
 }
 
-body.adminimal-backend .cke_reset_all legend {
+body.adminimal-theme .cke_reset_all legend {
   font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 100;
   padding: 0 0.5em;
 }
 
-body.adminimal-backend .cke_combopanel {
+body.adminimal-theme .cke_combopanel {
   height: 170px;
   width: 170px;
   border: 1px solid #DDDDDD;
   margin-top: 3px;
 }
 
-body.adminimal-backend .cke_dialog_footer {
+body.adminimal-theme .cke_dialog_footer {
   background: #eee;
 }
 
-body.adminimal-backend a.cke_dialog_tab:hover {
+body.adminimal-theme a.cke_dialog_tab:hover {
   text-decoration: none;
   background: #fff;
   color: #0074BD;
 }
 
-body.adminimal-backend select.cke_dialog_ui_input_select {
+body.adminimal-theme select.cke_dialog_ui_input_select {
   box-shadow: none;
 }
 
-body.adminimal-backend input.cke_dialog_ui_input_text,
-body.adminimal-backend input.cke_dialog_ui_input_password,
-body.adminimal-backend textarea.cke_dialog_ui_input_textarea {
+body.adminimal-theme input.cke_dialog_ui_input_text,
+body.adminimal-theme input.cke_dialog_ui_input_password,
+body.adminimal-theme textarea.cke_dialog_ui_input_textarea {
   box-shadow: none;
   border-color: #CCCCCC;
 }
 
-body.adminimal-backend .cke_dialog_title {
+body.adminimal-theme .cke_dialog_title {
   background: #333333;
   border-bottom: none;
   border-radius: 0;
@@ -2342,20 +2386,20 @@ body.adminimal-backend .cke_dialog_title {
   text-shadow: none;
 }
 
-body.adminimal-backend .cke_dialog_ui_vbox_child label {
+body.adminimal-theme .cke_dialog_ui_vbox_child label {
   top: -2px;
 }
 
-body.adminimal-backend input.cke_dialog_ui_input_text:focus,
-body.adminimal-backend input.cke_dialog_ui_input_password:focus,
-body.adminimal-backend textarea.cke_dialog_ui_input_textarea:focus,
-body.adminimal-backend select.cke_dialog_ui_input_select:focus {
+body.adminimal-theme input.cke_dialog_ui_input_text:focus,
+body.adminimal-theme input.cke_dialog_ui_input_password:focus,
+body.adminimal-theme textarea.cke_dialog_ui_input_textarea:focus,
+body.adminimal-theme select.cke_dialog_ui_input_select:focus {
   border-color: #0074BD;
 }
 
-body.adminimal-backend a.cke_dialog_ui_button:focus,
-body.adminimal-backend a.cke_dialog_ui_button:hover,
-body.adminimal-backend a.cke_dialog_ui_button:active {
+body.adminimal-theme a.cke_dialog_ui_button:focus,
+body.adminimal-theme a.cke_dialog_ui_button:hover,
+body.adminimal-theme a.cke_dialog_ui_button:active {
   border-color: #0074BD;
   box-shadow: none;
   text-decoration: none;
@@ -2363,35 +2407,35 @@ body.adminimal-backend a.cke_dialog_ui_button:active {
   background: #0074BD;
 }
 
-body.adminimal-backend a.cke_dialog_ui_button {
+body.adminimal-theme a.cke_dialog_ui_button {
   background: #eee;
   padding: 4px 0;
 }
 
-body.adminimal-backend a.cke_dialog_ui_button:focus span,
-body.adminimal-backend a.cke_dialog_ui_button:hover span,
-body.adminimal-backend a.cke_dialog_ui_button:active span {
+body.adminimal-theme a.cke_dialog_ui_button:focus span,
+body.adminimal-theme a.cke_dialog_ui_button:hover span,
+body.adminimal-theme a.cke_dialog_ui_button:active span {
   color: #fff;
 }
 
-body.adminimal-backend .cke_ltr .cke_dialog_close_button {
+body.adminimal-theme .cke_ltr .cke_dialog_close_button {
   background: url("images/x-white.png") scroll no-repeat 50% 2px #B73939;
   right: 10px;
   top: 1px;
   width: 45px;
 }
 
-body.adminimal-backend .cke_ltr .cke_dialog_close_button:hover {
+body.adminimal-theme .cke_ltr .cke_dialog_close_button:hover {
   background-color: #e55454;
 }
 
-body.adminimal-backend a.cke_dialog_ui_button_ok {
+body.adminimal-theme a.cke_dialog_ui_button_ok {
   background: #4D8F46;
   border-color: #4D8F46;
   box-shadow: none;
 }
 
-body.adminimal-backend a.cke_dialog_ui_button_ok:hover {
+body.adminimal-theme a.cke_dialog_ui_button_ok:hover {
   background: #0A6700;
   border-color: #0A6700;
 }
@@ -2404,156 +2448,253 @@ body.adminimal-backend a.cke_dialog_ui_button_ok:hover {
   padding: 10px 15px;
 }
 
-body.adminimal-backend ul.rules-operations a, .rules-elements-add ul.action-links a {
+body.adminimal-theme ul.rules-operations a, .rules-elements-add ul.action-links a {
   font-size: inherit;
 }
 
-body.adminimal-backend .rules-autocomplete-button {
+body.adminimal-theme .rules-autocomplete-button {
   height: 27px;
   top: -2px;
 }
 
-body.adminimal-backend ul.rules-autocomplete .rules-dsac-group {
+body.adminimal-theme ul.rules-autocomplete .rules-dsac-group {
   background-color: transparent;
 }
 
-body.adminimal-backend #media-browser-page #branding {
+body.adminimal-theme #media-browser-page #branding {
   background: #ddd;
   margin: 0;
   padding: 0;
 }
 
-body.adminimal-backend #media-tabs-wrapper {
+body.adminimal-theme #media-tabs-wrapper {
   float: left;
 }
 
-body.adminimal-backend .exposed-filters .form-select {
+body.adminimal-theme .exposed-filters .form-select {
   margin: 0.5em;
 }
 
-body.adminimal-backend .exposed-filters .container-inline .form-actions, .exposed-filters .container-inline.form-actions {
+body.adminimal-theme .exposed-filters .container-inline .form-actions, .exposed-filters .container-inline.form-actions {
   margin: 0.5em 0;
 }
 
-body.adminimal-backend .views-ui-dialog .ui-dialog-titlebar-close span {
+body.adminimal-theme .views-ui-dialog .ui-dialog-titlebar-close span {
   display: block;
   left: 0;
   top: 0;
 }
 
-body.adminimal-backend .views-ui-dialog #edit-options .collapsible {
-  float: left;
+body.adminimal-theme .views-ui-dialog #edit-options .collapsible {
+  float: unset;
   width: auto;
-  clear: both;
 }
 
-body.adminimal-backend div.views-display-settings #edit-display-settings-title {
+body.adminimal-theme div.views-display-settings #edit-display-settings-title {
   font-size: 26px;
   line-height: 1.5;
   margin: 0px;
 }
 
-body.adminimal-backend div#edit-display-settings .ctools-toggle {
+body.adminimal-theme div#edit-display-settings .ctools-toggle {
 	margin-right: 6px;
 	margin-top: 18px;
 }
 
-body.adminimal-backend div#edit-display-settings .ctools-toggle.ctools-toggle-collapsed {
-    margin-top: 14px;
+body.adminimal-theme div#edit-display-settings .ctools-toggle.ctools-toggle-collapsed {
+  margin-top: 14px;
 }
 
-body.adminimal-backend .ctools-twisty {
+body.adminimal-theme .ctools-twisty {
 	top: 1em;
 }
 
-body.adminimal-backend .views-admin h1.unit-title {
+body.adminimal-theme .views-admin h1.unit-title {
   margin-bottom: 4px;
 }
 
-body.adminimal-backend .views-edit-view .views-display-top {
-    padding: 0px;
+body.adminimal-theme .views-edit-view .views-display-top {
+  padding: 0px;
 }
 
-body.adminimal-backend .views-display-top ul#views-display-menu-tabs li {
-    margin: 0px;
+body.adminimal-theme ul#views-display-menu-tabs {
+  width: auto;
+  margin-right: 18em;
 }
 
-body.adminimal-backend .views-display-top ul#views-display-menu-tabs li a {
+body.adminimal-theme .views-display-top ul#views-display-menu-tabs li {
+  margin: 0px;
+}
+
+body.adminimal-theme .views-display-top ul#views-display-menu-tabs li a {
   padding: 12px 10px;
   font-size: 14px;
   border: none;
 }
 
-body.adminimal-backend .views-displays .secondary a:hover > .icon.add,
-body.adminimal-backend .views-displays .secondary a:focus > .icon.add  {
+body.adminimal-theme .views-displays .secondary a:hover > .icon.add,
+body.adminimal-theme .views-displays .secondary a:focus > .icon.add  {
   background-position: center -23px;
 }
 
-body.adminimal-backend .views-displays .secondary a > .icon.add {
+body.adminimal-theme .views-displays .secondary a > .icon.add {
   background-position: center 5px;
 }
 
-body.adminimal-backend #views-display-top #views-display-menu-tabs li.add .action-list {
-    top: 43px;
-    text-align: left;
+body.adminimal-theme #views-display-top #views-display-menu-tabs li.add .action-list {
+  top: 43px;
+  text-align: left;
 }
 
-body.adminimal-backend ul.secondary li.active a, ul.secondary li.active a.active {
+body.adminimal-theme ul.secondary li.active a, ul.secondary li.active a.active {
 	color: #FFF;
 	background-color: #888;
 	box-shadow: 0px -1px 0px #888, 0px 1px 0px #888;
 }
 
-body.adminimal-backend .views-display-top ul#views-display-menu-tabs li a:hover, 
-body.adminimal-backend .views-display-top ul#views-display-menu-tabs li a:focus {
+body.adminimal-theme .views-display-top ul#views-display-menu-tabs li a:hover, 
+body.adminimal-theme .views-display-top ul#views-display-menu-tabs li a:focus {
 	color: #FFF;
 	background-color: #0074BD;
 	box-shadow: 0px -1px 0px #0074BD, 0px 1px 0px #0074BD;
 	text-decoration: none;
 }
 
-body.adminimal-backend .views-admin a:hover {
+body.adminimal-theme .views-admin a:hover {
   text-decoration: underline;
 }
 
-body.adminimal-backend .views-displays .secondary .action-list li {
-    background-color: #fff;
+body.adminimal-theme .views-displays .secondary .action-list li {
+  background-color: #fff;
 }
 
-body.adminimal-backend .views-displays .secondary .action-list li:hover {
-    background-color: #fff;
+body.adminimal-theme .views-displays .secondary .action-list li:hover {
+  background-color: #fff;
 }
 
-body.adminimal-backend .views-displays .secondary .action-list li input {
-    color: #0074BD;
+body.adminimal-theme .views-displays .secondary .action-list li input {
+  color: #0074BD;
 }
 
-body.adminimal-backend .views-displays .secondary .action-list li input:hover {
-    text-decoration: underline;
+body.adminimal-theme .views-displays .secondary .action-list li input:hover {
+  text-decoration: underline;
 }
 
-body.adminimal-backend #edit-module-filter-name::-ms-clear {
-    display: none;
+body.adminimal-theme #edit-module-filter-name::-ms-clear {
+  display: none;
 }
 
-body.adminimal-backend .chosen-container-single .chosen-single {
+body.adminimal-theme .chosen-container-single .chosen-single {
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+  padding: 2px 10px;
+  border-color: #ddd;
+}
+
+body.adminimal-theme .chosen-container.chosen-container-active > a {
+  border-color: #0074BD;
+}
+
+body.adminimal-theme .chosen-container.chosen-container-active .chosen-drop {
+  border-color: #0074BD;
+}
+
+body.adminimal-theme .chosen-container-single .chosen-single div b {
+  background-position: 0px 4px;
+}
+
+body.adminimal-theme .chosen-container-single .chosen-drop {
 	border-radius: 0;
-	background: #fff;
 	box-shadow: none;
 }
 
-body.adminimal-backend .chosen-container-single .chosen-drop {
-	border-radius: 0;
-	box-shadow: none;
-}
-
-body.adminimal-backend .chosen-container-multi .chosen-choices li.search-choice,
-body.adminimal-backend .chosen-container-active.chosen-with-drop .chosen-single,
-body.adminimal-backend .chosen-container-active .chosen-choices {
+body.adminimal-theme .chosen-container-multi .chosen-choices li.search-choice,
+body.adminimal-theme .chosen-container-active.chosen-with-drop .chosen-single,
+body.adminimal-theme .chosen-container-active .chosen-choices {
 	box-shadow: none;
 	border-radius: 0;
 }
 
-body.adminimal-backend .chosen-container .chosen-results li.group-result {
+body.adminimal-theme .chosen-container .chosen-results li.group-result {
 	background: #eaeaea;
+}
+
+body.adminimal-theme input#edit-module-filter-name {
+  outline: none;
+  -webkit-outline: none;
+}
+
+body.adminimal-theme .custom_css_found .css_path {
+  padding: 2px 6px;
+  color: #61A643;
+  font-weight: 600;
+}
+
+body.adminimal-theme .custom_css_not_found .css_path {
+  color: #000;
+  padding: 2px 6px;
+  font-weight: 600;
+  background: #eee;
+}
+
+/* Sidebars */
+
+#content-wrapper {
+  width: 100%;
+  display: table;
+  margin: 0;
+}
+
+#main-content {
+  width: 100%;
+  display: table-cell;
+  vertical-align: top;
+}
+
+#sidebar-left .region-sidebar-left, #sidebar-right .region-sidebar-right {
+  display: block;
+  width: 220px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#sidebar-left .region-sidebar-left {
+  padding-right: 20px;
+}
+
+#sidebar-right .region-sidebar-right {
+  padding-left: 20px;
+}
+
+.form-wrapper {
+  margin-bottom: 20px;
+}
+
+#autosave-status {
+  height: auto;
+  left: 0;
+  padding: 1em;
+  background: #37A5DA;
+}
+
+#autosave-status #status {
+  margin-left: 0;
+}
+
+#autosave-status a {
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  background: #444;
+  text-decoration: none;
+}
+
+#autosave-status a:hover,
+#autosave-status a:focus {
+  background: #222;
+}
+
+/* Fix SemanticViews module see #2340681 */
+body.page-admin-structure-views-view #views-ui-edit-display-form #edit-options #edit-style-options-row fieldset#edit-style-options-row--2 {
+  float: left;
 }

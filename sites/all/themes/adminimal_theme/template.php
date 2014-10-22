@@ -25,6 +25,10 @@ function adminimal_preprocess_html(&$vars) {
   // Get adminimal folder path.
   $adminimal_path = drupal_get_path('theme', 'adminimal');
 
+  // Add default styles.
+  drupal_add_css($adminimal_path . '/css/reset.css', array( 'media' => 'all', 'weight' => -999));
+  drupal_add_css($adminimal_path . '/css/style.css', array( 'media' => 'all', 'weight' => 1));
+
   // Add conditional CSS for IE8 and below.
   drupal_add_css($adminimal_path . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'weight' => 999, 'preprocess' => FALSE));
 
@@ -40,6 +44,26 @@ function adminimal_preprocess_html(&$vars) {
   // Add icons to the admin configuration page.
   if (theme_get_setting('display_icons_config')) {
     drupal_add_css($adminimal_path . '/css/icons-config.css', array('group' => CSS_THEME, 'weight' => 10, 'preprocess' => FALSE));
+  }
+
+  // Define Default media queries.
+  $media_query_mobile = 'only screen and (max-width: 480px)';
+  $media_query_tablet = 'only screen and (min-width : 481px) and (max-width : 1024px)';
+
+  // Get custom media queries if set.
+  if (theme_get_setting('use_custom_media_queries')) {
+    $media_query_mobile = theme_get_setting('media_query_mobile');
+    $media_query_tablet = theme_get_setting('media_query_tablet');
+  }
+
+  // Add responsive styles.
+  drupal_add_css($adminimal_path . '/css/mobile.css', array( 'media' => $media_query_mobile, 'weight' => 1000));
+  drupal_add_css($adminimal_path . '/css/tablet.css', array( 'media' => $media_query_tablet, 'weight' => 1000));
+
+  // Add custom CSS.
+  $custom_css_path = $adminimal_path . '/css/custom.css'; 
+  if (theme_get_setting('custom_css') && file_exists($custom_css_path)) {
+    drupal_add_css($custom_css_path, array('group' => CSS_THEME, 'weight' => 9999, 'preprocess' => FALSE));
   }
 
   // Fix the viewport and zooming in mobile devices.
