@@ -443,7 +443,7 @@ function page_manager_page_form_basic($form, &$form_state) {
       '#type' => 'checkbox',
       '#default_value' => !empty($page->make_frontpage),
       '#title' => t('Make this your site home page.'),
-      '#description' => t('To set this panel as your home page you must create a unique path name with no % placeholders in the path. The site home page is currently set to %homepage on the !siteinfo configuration form.', array('!siteinfo' => l(t('Site Information'), 'admin/settings/site-information'), '%homepage' => '/' . $frontpage)),
+      '#description' => t('To set this panel as your home page you must create a unique path name with no % placeholders in the path. The site home page is currently set to %homepage on the !siteinfo configuration form.', array('!siteinfo' => l(t('Site Information'), 'admin/config/system/site-information'), '%homepage' => '/' . $frontpage)),
     );
     $form['admin_paths'] = array(
       '#type' => 'checkbox',
@@ -566,7 +566,7 @@ function page_manager_page_form_basic_validate(&$form, &$form_state) {
   if (strpos($path, '%') === FALSE) {
     $alias = db_query('SELECT alias, source FROM {url_alias} WHERE alias = :path', array(':path' => $path))->fetchObject();
     if ($alias) {
-      form_error($form['path'], t('That path is currently assigned to be an alias for @alias. This system cannot override existing aliases.', array('@alias' => $alias->source)));
+      form_error($form['path'], t('That path is currently assigned to be an alias for @alias. This system cannot override existing aliases.', array('@alias' => $alias->src)));
     }
   }
   else {
