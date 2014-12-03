@@ -563,8 +563,7 @@ body.front div#content section {
 }
 .front-events .row-fluid > div .event-info {
   margin-left: 70px;
-  border-left: 3px solid #a3afba;
-  padding-left: 10px;
+  padding-left: 13px;
 }
 .front-events .row-fluid > div:first-child {
   padding: 0 20px 0 0; 
