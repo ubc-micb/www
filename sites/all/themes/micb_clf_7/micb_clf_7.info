@@ -31,8 +31,92 @@ breakpoints[tablet] = (min-width: 768px)
 breakpoints[desktop] = (min-width: 980px)
 breakpoints[widescreen] = (min-width: 1200px)
 
-;settings[toggle_name] = 0
-settings[clf_clf_version] = '7.0.4'
+;
+; #######  Theme CLF Setting Defaults  ########
+; You can find the variable names being set in the theme-settings.php file.
+; These are broken up by fieldset as defined in the theme-settings.php file.
+; Commented out settings use default values.
+; 
+; example setting
+; settings[toggle_name] = 0
+;
+
+;
+; CLF Theme Options
+;
+; CLF Colour Scheme - Blue on White
+settings[clf_clf_theme_new] = '-bw'
+; CLF Version - 7.0.4 
+settings[clf_clf_version] = '7.0.4'    
+; CLF Package - Full Version  
 settings[clf_clf_package] = 'full'
-settings[clf_layout] = ''
-settings[clf_scriptsoption] = 'footer'
+; CLF Layout - Full Width CLF (must use CLF version 7.0.4+)       
+settings[clf_layout] = '__full'          
+; Primary Navigation Mobile Placement - Enable to show the navigation at the bottom of the page in addition to the top of the page on mobile devices
+; settings[clf_navoption] = ''			 
+; Do not load updated jQuery (1.8.x) from theme - Enable to stop the theme from loading its version of jQuery
+; settings[clf_jqueryoption] = ''		 
+; Script Location - Include scripts page footer
+settings[clf_scriptsoption] = 'footer'   
+
+;
+; Campus Identity
+;
+settings[clf_unit_campus] = 'vancouver'   ; Campus Identity - Vancouver
+
+;
+; Unit / Website Information
+;
+; Is your unit part of a Faculty? - Yes
+settings[clf_faculty] = '1'   									
+; If yes, choose your faculty 
+settings[clf_faculty_name] = 'Faculty of Science'   			
+; This field will populate the Unit Name in the header and the Unit Sub Footer 
+settings[clf_unitname] = 'Microbiology & Immunology'   			
+; Unit Name Background Colour 
+settings[colourpicker] = '0088cc'   							
+; Breadcrumbs Display Option
+settings[breadcrumb_display] = 'yes'   							
+; Street Address
+settings[clf_streetaddr] = '1365 - 2350 Health Sciences Mall' 	
+; City
+settings[clf_locality] = 'Vancouver'   							
+; Province / Region
+settings[clf_region] = 'British Columbia'   					
+; Country
+settings[clf_country] = 'Canada'   								
+; Postal Code
+settings[clf_postal] = 'V6T 1Z3'   								
+; Telephone Number - format as xxx xxx xxxx (spaces only)
+settings[clf_telephone] = '604 822 3308'   						
+; Fax Number - format as xxx xxx xxxx (spaces only)
+settings[clf_fax] = '604 822 6041'   							
+; Email 
+settings[clf_email] = 'micrecep@interchange.ubc.ca'   			
+; Website (do not include http://) 
+settings[clf_website] = 'www.microbiology.ubc.ca'   			
+
+;
+; Unit Social Media Links (footer)
+;
+; Facebook profile link
+; settings[clf_social_facebook] = ''   			
+; Twitter profile link
+; settings[clf_social_twitter] = ''   			
+; Linked In profile link
+; settings[clf_social_linkedin] = ''   			
+; Google Plus profile link
+; settings[clf_social_googleplus] = ''   		
+; Youtube profile link
+; settings[clf_social_youtube] = ''   			
+
+;
+; Global Utility Button Search Tool Configuration
+;
+; Search Label (usually your unit name)
+settings[clf_searchlabel] = 'Microbiology & Immunology' 		
+; Search Domain
+settings[clf_searchdomain] = '*.microbiology.ubc.ca'   			
+; Subunit Name Override (overrides text in search bar)
+; settings[clf_subunit_override] = ''   							
+
