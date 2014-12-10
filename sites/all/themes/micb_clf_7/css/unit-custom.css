@@ -504,7 +504,7 @@ body.front div#content section {
   font-size: 150px;
 }
 /* Carousel image caption */
-.views-field-field-highlight-image-caption {
+.views-field-field-carousel-image-caption {
   position: absolute;
   background-color: rgba(47,93,124, 0.75);
   border-radius: 0 25px 25px 0;
@@ -602,7 +602,7 @@ body.front div#content section {
   }
 
   /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
+  .views-field-field-carousel-image-caption {
     font-size: 23px;
   }
   
@@ -623,7 +623,7 @@ body.front div#content section {
   }
 
   /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
+  .views-field-field-carousel-image-caption {
     font-size: 19px;
   }
 
@@ -674,7 +674,7 @@ body.front div#content section {
   }
 
   /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
+  .views-field-field-carousel-image-caption {
     font-size: 19px;
   }
 
@@ -705,7 +705,7 @@ body.front div#content section {
   }
 
   /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
+  .views-field-field-carousel-image-caption {
     font-size: 13px;
   }
 
@@ -770,7 +770,7 @@ body.front div#content section {
   }
 
   /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
+  .views-field-field-carousel-image-caption {
     font-size: 13px;
   }
 
@@ -794,7 +794,7 @@ body.front div#content section {
     font-size: 100px;
   }
   /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
+  .views-field-field-carousel-image-caption {
     bottom: 0;
     height: 2.7em;
     width:95%;
@@ -820,7 +820,7 @@ body.front div#content section {
   }
 
   /* Carousel image caption */
-  .views-field-field-highlight-image-caption {
+  .views-field-field-carousel-image-caption {
     font-size: 12px;
     height: 3em;
   }
