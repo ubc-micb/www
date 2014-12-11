@@ -476,7 +476,7 @@ body.node-type-article .full-width-container h1 {
   /* END 1200 STYLES */  
 }
 @media screen and (max-width: 1199px) {
-  /* START 768-979 STYLES */
+  /* START 980-1199 STYLES */
 
   /* Center Breadcrumbs and Content */
   .full-width .full-width-container .breadcrumb,
@@ -489,12 +489,7 @@ body.node-type-article .full-width-container h1 {
     margin-right:auto;
   }
 
-  /* Carousel image caption */
-  body.front .views-field-field-carousel-image-caption {
-    font-size: 19px;
-  }
-
-  /* END 768-979 STYLES */
+  /* END 980-1199 STYLES */
 }
 @media screen and (max-width: 979px) { 
   /* START 768-979 STYLES */

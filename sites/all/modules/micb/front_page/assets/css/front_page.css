@@ -161,6 +161,18 @@ body.front .front-events .row-fluid > div:last-child {
   /* END 1200 STYLES */  
 }
 
+@media screen and (max-width: 1199px) {
+  /* START 980-1199 STYLES */
+
+  /* Carousel image caption */
+  body.front .views-field-field-carousel-image-caption {
+    font-size: 19px;
+  }
+
+  /* END 980-1199 STYLES */
+}
+
+
 @media screen and (max-width: 979px) { 
   /* START 768-979 STYLES */
 
@@ -189,7 +201,7 @@ body.front .front-events .row-fluid > div:last-child {
 @media screen and (max-width: 767px) {
   /* START >767 STYLES */
 
-    /* Carousel image caption */
+  /* Carousel image caption */
   body.front .views-field-field-carousel-image-caption {
     font-size: 13px;
   }
