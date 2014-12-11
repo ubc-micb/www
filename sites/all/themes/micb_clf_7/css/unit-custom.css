@@ -865,22 +865,15 @@ body.front div#content section {
     margin: 0 0 4px 0;
   }
   /* Reset the padding for event items */
-  .front-events .row-fluid > div {
-    border-bottom: 3px solid #a3afba;
+  .front-events .row-fluid > div,
+  .front-events .row-fluid > div:first-child,
+  .front-events .row-fluid > div:last-child  {
     margin: 0;
-    padding: 15px 0 15px 0;
-  }
-  .front-events .row-fluid > div:first-child {
-    padding: 0 0 15px 0;
-  }
-  .front-events .row-fluid > div:last-child {
-    border: none;
-    padding: 15px 0 15px 0;
+    padding: 25px 0 25px 0;
   }
   .front-events .row-fluid > div .event-info {
     padding-left: 0;
     margin-left: 0;
-    border-left: none;
   }
   .front-events .row-fluid > div,
   .front-events .row-fluid > div .event-info {
@@ -891,9 +884,8 @@ body.front div#content section {
   /* Upcomming page view */
   /* Reset padding on smaller screens */
   .seminar-events-calendar .views-row {
-    padding: 20px 0;
+    padding: 25px 0;
     margin: 0;
-    border-bottom: 2px solid #efefef;
   }
   .seminar-events-calendar .views-row-first {
     padding-top: 0;
