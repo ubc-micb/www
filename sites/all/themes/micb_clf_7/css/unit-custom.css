@@ -16,7 +16,7 @@ footer {
   font-family:'Open Sans', 'Arial', sans-serif;
   font-weight:400;
   font-style:normal;
-  background:#FFF
+  background:#FFF;
   text-rendering: optimizelegibility;
 }
 .full-width-container h1 {
@@ -450,130 +450,6 @@ body.node-type-article .full-width-container h1 {
 
 
 
-/* FRONT PAGE
--------------------------------------------------- */
-.panel-pane .pane-content {
-  padding: 0 20px;
-}
-
-.panel-pane {
-  padding: 20px 0;
-}
-
-/* Break out the front page to full width */
-body.front div#main {
-  max-width: none;
-}
-body.front .full-width .full-width-container .expand,
-body.front .full-width-container,
-body.front div#content {
-  margin-left:0;
-  margin-right:0;
-  padding-left: 0;
-  padding-right: 0;
-}
-body.front div.inflate,
-.pane-highlight-carousel,
-.pane-highlight-carousel .pane-content  {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
-}
-body.front .panel-pane h2 {
-  color: #002145;
-  font-size: 290%;
-  font-weight: normal;
-  line-height: 133.3%;
-  margin: 0 0 2%;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  border:none;
-  text-align: center;
-}
-
-/* Remove extra padding at bottom of page before footer */
-body.front div#content section {
-  padding-bottom: 0px;
-}
-
-/* Carousel controls */
-.carousel-control {
-  text-decoration: none;
-  border:none;
-  background:none;
-  font-size: 150px;
-}
-/* Carousel image caption */
-.views-field-field-carousel-image-caption {
-  position: absolute;
-  background-color: rgba(47,93,124, 0.75);
-  border-radius: 0 25px 25px 0;
-  color: white;
-  padding: 1.5em 2.2em 1.5em 5%;
-  /* bottom: calc(10% + 174px); */
-  bottom: 1em;
-  font-size: 12px;
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* Front page news listing */
-.front-news .views-row {
-  overflow: scroll;
-}
-.front-news .pane-content{
-  max-width: 1170px;
-  margin: 0 auto;
-}
-.front-news .news-title a {
-  text-decoration: none;
-}
-.front-news .row-fluid > div {
-  padding: 10px 5px 25px 5px;
-}
-
-/* Front page events listing */
-.front-events {
-  background-color: #C3D0DC;
-}
-.front-events .views-row {
-  overflow: scroll;
-}
-.front-events .pane-content {
-  max-width: 1170px;
-  margin: 0 auto;  
-}
-.front-events .event-title,
-.front-events .event-date,
-.front-events .event-presenter,
-.front-events .event-details {
-  margin: 0 0 4px 0;
-  display: block;
-}
-.front-events .event-title a {
-  text-decoration: none;
-}
-.front-events .row-fluid > div,
-.front-events .row-fluid > div .event-info {
-  min-height: 250px;
-}
-.front-events .row-fluid > div {
-  margin: 10px 0 30px 0;
-  padding: 0 20px 0 20px;
-}
-.front-events .row-fluid > div .event-info {
-  margin-left: 70px;
-  padding-left: 13px;
-}
-.front-events .row-fluid > div:first-child {
-  padding: 0 20px 0 0; 
-}
-.front-events .row-fluid > div:last-child {
-  padding: 0 0 0 20px; 
-}
-
-
-
 /* MEDIA QUERIES 
 (these are example queries to get you started - these can be modified to suit)
 -------------------------------------------------- */
@@ -596,15 +472,6 @@ body.front div#content section {
   #ubc7-unit-menu {
     margin-bottom:5px;
   }
-  /* Remove the whitespace on the front page as there are no breadcrumbs to show */  
-  body.front #ubc7-unit-menu {
-    margin-bottom:0;
-  }
-
-  /* Carousel image caption */
-  .views-field-field-carousel-image-caption {
-    font-size: 23px;
-  }
   
   /* END 1200 STYLES */  
 }
@@ -623,7 +490,7 @@ body.front div#content section {
   }
 
   /* Carousel image caption */
-  .views-field-field-carousel-image-caption {
+  body.front .views-field-field-carousel-image-caption {
     font-size: 19px;
   }
 
@@ -668,25 +535,6 @@ body.front div#content section {
     margin-right: 20px;
   }
 
-  body.front .full-width-container {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-
-  /* Carousel image caption */
-  .views-field-field-carousel-image-caption {
-    font-size: 19px;
-  }
-
-  /* Front Events List */
-  /* Reset the side padding for event items */
-  .front-events .row-fluid > div,
-  .front-events .row-fluid > div:first-child,
-  .front-events .row-fluid > div:last-child  {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   /* CALENDAR */
   /* Upcoming Events list */
   /* Center the ical feed button on smaller screens */
@@ -702,11 +550,6 @@ body.front div#content section {
   /* Center content */
   div#content{
     max-width: 767px;
-  }
-
-  /* Carousel image caption */
-  .views-field-field-carousel-image-caption {
-    font-size: 13px;
   }
 
   /* Make the header fonts smaller */
@@ -726,25 +569,6 @@ body.front div#content section {
     line-height: 146.1%;
     margin: 0 0 1.7%;
   }
-  body.front .panel-pane h2 {
-    font-size: 190%;
-    line-height: 120%;
-    letter-spacing: 2px;
-    margin: 0 0 2%;
-  }
-
-  /* Front Events List */
-  /* Reset the padding for event items */
-  .front-events .row-fluid > div,
-  .front-events .row-fluid > div:first-child,
-  .front-events .row-fluid > div:last-child  {
-    padding: 0;
-  }
-  .front-events .row-fluid > div,
-  .front-events .row-fluid > div .event-info {
-    min-height: 0;
-  }
-
 
   /* CALENDAR */
   /* Upcoming Events List */
@@ -769,12 +593,6 @@ body.front div#content section {
     max-width: 720px;
   }
 
-  /* Carousel image caption */
-  .views-field-field-carousel-image-caption {
-    font-size: 13px;
-  }
-
-
   /* END >720 STYLES */
 }
 @media screen and (max-width: 520px) {
@@ -784,30 +602,12 @@ body.front div#content section {
   div#content{
     max-width: 520px;
   }  
-
-  .carousel-inner>.item {
-    padding-bottom:60px;
-  }
-
-  /* Carousel controls */
-  .carousel-control {
-    font-size: 100px;
-  }
-  /* Carousel image caption */
-  .views-field-field-carousel-image-caption {
-    bottom: 0;
-    height: 2.7em;
-    width:95%;
-    border-radius: 0;
-    padding: 1em 1em 1em 5%;
-  }
-
+ 
   /* ARTICLES */
   /* Make the images in the articles small enough to not cause horizontal scrolling */
   .view-article-slideshow img {
     max-width: 500px;
   }
-
 
   /* END 520 STYLES */
 }
@@ -818,13 +618,7 @@ body.front div#content section {
   div#content{
     max-width: 480px;
   }
-
-  /* Carousel image caption */
-  .views-field-field-carousel-image-caption {
-    font-size: 12px;
-    height: 3em;
-  }
-  
+ 
   /* Shrink Date Box */
   .date-box .dateM,
   .date-box .datej {
@@ -848,37 +642,6 @@ body.front div#content section {
     width: 6.5em;
     height: auto;
   } 
-  
-  /* Front Events Listing */
-  /* Flatten the event date box and move above event info */
-  body.front .date-box {
-    float:none;
-    padding: 8px 5px 5px 5px;
-    width: 6.5em;
-    text-align: left;
-  }
-  /* Move front page event info left into space left by moving the date box */
-  .front-events .event-title,
-  .front-events .event-date,
-  .front-events .event-presenter,
-  .front-events .event-details {
-    margin: 0 0 4px 0;
-  }
-  /* Reset the padding for event items */
-  .front-events .row-fluid > div,
-  .front-events .row-fluid > div:first-child,
-  .front-events .row-fluid > div:last-child  {
-    margin: 0;
-    padding: 25px 0 25px 0;
-  }
-  .front-events .row-fluid > div .event-info {
-    padding-left: 0;
-    margin-left: 0;
-  }
-  .front-events .row-fluid > div,
-  .front-events .row-fluid > div .event-info {
-    min-height: 0;
-  }
 
   /* CALENDAR */
   /* Upcomming page view */
