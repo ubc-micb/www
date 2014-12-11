@@ -129,6 +129,37 @@ function front_page_default_page_manager_pages() {
     $display->content['new-89dd6760-25d3-4d12-9761-ae6b29a587f7'] = $pane;
     $display->panels['full-width'][0] = 'new-89dd6760-25d3-4d12-9761-ae6b29a587f7';
     $pane = new stdClass();
+    $pane->pid = 'new-4089914b-b783-41be-af95-0bb9e6f560da';
+    $pane->panel = 'full-width';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'About MICB',
+      'title' => 'Microbiology & Immunology',
+      'body' => '<p>The Department of Microbiology and Immunology at the University of British Columbia provides a stimulating environment in which to pursue a graduate or undergraduate research program. Our faculty is internationally recognized for contributions in microbiology, molecular biology and immunology. Students will have the opportunity to experience the most up to date molecular approaches to the study of problems in microbiology and immunology.</p>
+
+<p>&nbsp;</p>
+',
+      'format' => 'wysiwyg_filter',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'front-about',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '4089914b-b783-41be-af95-0bb9e6f560da';
+    $display->content['new-4089914b-b783-41be-af95-0bb9e6f560da'] = $pane;
+    $display->panels['full-width'][1] = 'new-4089914b-b783-41be-af95-0bb9e6f560da';
+    $pane = new stdClass();
     $pane->pid = 'new-0ee75dd2-5ace-4bae-9a42-fbf16f4aceee';
     $pane->panel = 'full-width-middle';
     $pane->type = 'views';
