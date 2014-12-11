@@ -62,7 +62,7 @@ settings[clf_scriptsoption] = 'footer'
 ;
 ; Campus Identity
 ;
-settings[clf_unit_campus] = 'vancouver'   ; Campus Identity - Vancouver
+settings[clf_unit_campus] = 'vancouver'   
 
 ;
 ; Unit / Website Information
