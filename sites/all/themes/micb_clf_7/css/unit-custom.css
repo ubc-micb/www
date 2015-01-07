@@ -101,6 +101,13 @@ Unit Bar background gradient and box shadow */
   box-shadow: none;
 }
 
+/* Increase main menu padding */
+#ubc7-unit-menu .btn-group a.btn,
+#ubc7-unit-alternate-navigation .btn-group a.btn {
+  padding-right: 7px; 
+  padding-left: 15px;
+}
+
 /* Create a bit more whitespace around the breadcrumbs */
 .full-width .full-width-container .breadcrumb {
   height:auto;
