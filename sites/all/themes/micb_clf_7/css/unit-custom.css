@@ -448,42 +448,6 @@ body.node-type-article .full-width-container h1 {
   background-color: #d9d9d9;
 }
 
-/* FACULTY LIST */
-/* Make the faculty filter easier to use */
-.facultytable .view-header {
-  margin-bottom:60px;
-}
-.facultytable .view-display-id-attachment_1 {
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.facultytable .view-display-id-attachment_1 .view-header,
-.facultytable .view-display-id-attachment_1 p {
-  margin:0;
-}
-.facultytable .view-display-id-attachment_1 a {
-  font-size: 150%;
-  line-height: 150%;
-}
-.facultytable caption {
-  font-size: 150%;
-  line-height: 150%;
-  font-weight: bold;
-  background: #A5BDD1;
-  color:white;
-}
-.facultytable td {
-  padding: 5px 20px 1px 0;
-  width: 25%;
-  vertical-align: middle;
-}
-.facultytable .views-field-field-picture {
-  width: 100px;
-}
-.facultytable .views-field-field-name {
-  width: auto;
-}
-
 /* MEDIA QUERIES 
 (these are example queries to get you started - these can be modified to suit)
 -------------------------------------------------- */
