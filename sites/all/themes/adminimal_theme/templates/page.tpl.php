@@ -56,7 +56,7 @@
     <?php endif; ?>
 
     <div id="main-content">
-	    <?php print render($page['content']['system_main']); ?>
+	    <?php print render($page['content']); ?>
 	  </div>
 
     <?php if (isset($page['sidebar_right'])): ?>

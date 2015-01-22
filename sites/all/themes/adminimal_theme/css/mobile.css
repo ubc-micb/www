@@ -94,10 +94,6 @@ body.adminimal-theme div.admin .right, body.adminimal-theme div.admin .left {
   width: 100%;
 }
 
-.views-exposed-form .views-exposed-widget {
-  width: 100%;
-}
-
 .views-exposed-form label {
   margin: 0;
   padding: 0 0 0.5em;

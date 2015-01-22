@@ -56,14 +56,7 @@
     <?php endif; ?>
 
     <div id="main-content">
-
-      <?php if (isset($page['content']['dashboard'])): ?>
-        <div id="dashboard-wrapper">
-          <?php print render($page['content']['dashboard']); ?>
-        </div>
-      <?php endif; ?>
-
-      <?php print render($page['content']['system_main']); ?>
+      <?php print render($page['content']); ?>
     </div>
 
     <?php if (isset($page['sidebar_right'])): ?>

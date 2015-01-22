@@ -22,6 +22,12 @@ body.adminimal-theme *::-moz-focus-inner {
   border: 0;
 }
 
+body.adminimal-theme * {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
 body {
   color: #000;
   background: #fff;
@@ -310,13 +316,13 @@ strong {
  * Tabs.
  */
 ul.primary {
-  border-bottom: medium none;
-  float: right;
+  border-bottom: 0;
+  float: left;
+  clear: both;
   font-size: 0.923em;
-  height: 2.6em;
-  margin: 12px 0 0;
+  height: auto;
+  margin: 2px 0 0;
   padding-top: 0;
-  text-transform: uppercase;
 }
 
 ul.primary li {
@@ -373,8 +379,8 @@ ul.secondary {
 }
 
 ul.secondary li {
-  margin: 0 5px;
-  float: none;/* LTR */
+  margin: 5px;
+  float: left;/* LTR */
 }
 
 ul.secondary li a {
@@ -658,7 +664,7 @@ fieldset legend {
  */
 .form-item {
   padding: 0 1em 0 0;
-  margin: 0 0 20px;
+  margin-bottom: 1em;
 }
 
 .filter-wrapper .form-item,div.teaser-checkbox .form-item,.form-item .form-item {
@@ -681,8 +687,12 @@ fieldset legend {
   font-weight: 300;
   margin: 0;
   margin: 0 0 10px;
-  line-height: 40px;
+  line-height: 1.4;
   width: initial;
+}
+
+.exposed-filters .form-item label {
+  line-height: 40px;
 }
 
 .form-item label.option {
@@ -765,6 +775,21 @@ input.form-autocomplete,input.form-text,input.form-file,textarea.form-textarea,s
   background: #fff;
   color: #333;
   vertical-align: baseline;
+  box-sizing: inherit;
+}
+
+/* Fix webkit select on OS X see issue #2351221 */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input.form-autocomplete,input.form-text,input.form-file,textarea.form-textarea,select.form-select {
+    -webkit-appearance: none;
+    -webkit-padding-start: 5px;
+    -webkit-padding-end: 16px;
+    -webkit-padding-before: 5px;
+    -webkit-padding-after: 5px;
+  }
+  input.form-autocomplete, select.form-select {
+    background: url('images/select-arrow.svg') no-repeat right 50% #fff;
+  }
 }
 
 #module-filter-modules {
@@ -894,7 +919,9 @@ html.js .toggle-enable div:after, html.js .toggle-enable div:before {
 
 input.form-text:focus,input.form-file:focus,textarea.form-textarea:focus,select.form-select:focus {
   color: #000;
-  border-color: #0074BD;
+  border-color: #68A3CF;
+  outline: 2px solid #C1E0FF;
+  outline-offset: 0px;
 }
 
 html.js input.form-autocomplete {
@@ -1591,7 +1618,7 @@ input#remove-button,
 input#edit-remove,
 input#edit-clear,
 a.button.remove,
-input[id$="remove-button"],
+input[id*="remove-button"],
 .page-admin-modules-uninstall input#edit-submit {
   cursor: pointer;
   padding: 6px 10px;
@@ -1612,7 +1639,7 @@ input#remove-button:hover,
 input#edit-remove:hover,
 input#edit-clear:hover,
 a.button.remove:hover,
-input[id$="remove-button"]:hover,
+input[id*="remove-button"]:hover,
 body.page-admin-modules-uninstall input#edit-submit:hover {
   background: #990000;
   border-radius: 0;
@@ -1624,7 +1651,7 @@ input#edit-delete:active,
 input#remove-button:active,
 input#edit-remove:active,
 input#edit-clear:active,
-input[id$="remove-button"]:active,
+input[id*="remove-button"]:active,
 body.page-admin-modules-uninstall input#edit-submit:active {
   box-shadow: 0 2px 2px rgba(0,0,0,0.75) inset;
   background: #333;
@@ -1843,7 +1870,14 @@ body.adminimal-theme .token-tree th {
   font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
   font-size: 23px;
   font-weight: 300;
+  line-height: inherit;
+  margin-bottom: 0;
   padding: 0.25em 0;
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+  /* Add top margin of 34px. */
+  margin-top: 2.429em;
 }
 
 /* Views and Ctools */
@@ -2175,14 +2209,33 @@ div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.media-wrapper {
   color: #111;
 }
 
-.progress .bar {
+body.adminimal-theme .progress .bar {
   background: none repeat scroll 0 0 #CCCCCC;
   border: none;
   border-radius: 0;
-  margin: 0 0.2em;
+  margin: 0 0 0.5em 0;
 }
 
-.progress .filled, .progress .bar .filled {
+body.adminimal-theme .progress .percentage {
+  float: right;
+  font-size: 26px;
+  font-weight: 100;
+  line-height: 30px;
+}
+
+body.adminimal-theme .progress .filled {
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+body.adminimal-theme .progress .filled,
+body.adminimal-theme .progress .bar .filled {
   background: none repeat scroll 0 0 #0074BD !important;
 }
 
@@ -2215,6 +2268,9 @@ table.update tr.error td, table.update tr.error th {
 
 .form-textarea-wrapper textarea {
   resize:vertical;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 div.krumo-root {
@@ -2290,8 +2346,14 @@ body.adminimal-theme .cke_combo_off a.cke_combo_button:hover {
 
 body.adminimal-theme .cke_button_on {
   background: #fff;
-  box-shadow: none;
-  border-bottom: 3px solid #0074BD;
+  box-shadow: 0px 3px 0px #0074BD;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+body.adminimal-theme .cke_button_on:hover {
+  box-shadow: 0px 3px 0px #0074BD;
 }
 
 body.adminimal-theme .cke_bottom {
@@ -2305,8 +2367,14 @@ body.adminimal-theme .cke_combo_off a.cke_combo_button:active,body.adminimal-the
   box-shadow: none;
 }
 
-body.adminimal-theme a.cke_button_on:hover,body.adminimal-theme  a.cke_button_on:focus,body.adminimal-theme  a.cke_button_on:active {
-  box-shadow: none;
+body.adminimal-theme a.cke_button_on:hover,
+body.adminimal-theme a.cke_button_on:focus,
+body.adminimal-theme a.cke_button_on:active,
+body.adminimal-theme .cke_button:first-child,
+body.adminimal-theme .cke_button:last-child {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 body.adminimal-theme a.cke_button_off:hover,
@@ -2317,6 +2385,9 @@ body.adminimal-theme a.cke_button_disabled:active {
   background: #eee;
   box-shadow: none;
   border-color: #0074BD;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 body.adminimal-theme .cke_reset_all label {
@@ -2440,6 +2511,15 @@ body.adminimal-theme a.cke_dialog_ui_button_ok:hover {
   border-color: #0A6700;
 }
 
+body.adminimal-theme a.cke_path_item:hover, body.adminimal-theme a.cke_path_item:focus, body.adminimal-theme a.cke_path_item:active {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: none;
+  text-decoration:none;
+  text-shadow: none;
+}
+
 .messages.theme-disabled {
   background: transparent;
   border: none;
@@ -2486,7 +2566,7 @@ body.adminimal-theme .views-ui-dialog .ui-dialog-titlebar-close span {
 }
 
 body.adminimal-theme .views-ui-dialog #edit-options .collapsible {
-  float: unset;
+  float: inherit;
   width: auto;
 }
 
@@ -2596,7 +2676,8 @@ body.adminimal-theme .chosen-container.chosen-container-active > a {
   border-color: #0074BD;
 }
 
-body.adminimal-theme .chosen-container.chosen-container-active .chosen-drop {
+body.adminimal-theme .chosen-container.chosen-container-active .chosen-drop,
+body.adminimal-theme .chosen-container-active .chosen-choices {
   border-color: #0074BD;
 }
 
@@ -2604,7 +2685,8 @@ body.adminimal-theme .chosen-container-single .chosen-single div b {
   background-position: 0px 4px;
 }
 
-body.adminimal-theme .chosen-container-single .chosen-drop {
+body.adminimal-theme .chosen-container-single .chosen-drop,
+body.adminimal-theme .chosen-container-multi .chosen-drop {
 	border-radius: 0;
 	box-shadow: none;
 }
@@ -2614,6 +2696,16 @@ body.adminimal-theme .chosen-container-active.chosen-with-drop .chosen-single,
 body.adminimal-theme .chosen-container-active .chosen-choices {
 	box-shadow: none;
 	border-radius: 0;
+}
+body.adminimal-theme .chosen-container-multi .chosen-choices {
+  background: #fff;
+}
+body.adminimal-theme .chosen-container-multi .chosen-choices li.search-choice {
+  background: #e3e3e3;
+  border-color: #e3e3e3;
+}
+body.adminimal-theme .chosen-container .chosen-results li.highlighted {
+  background: #0074BD;
 }
 
 body.adminimal-theme .chosen-container .chosen-results li.group-result {
