@@ -1706,6 +1706,7 @@ function front_page_views_default_views() {
   $handler->display->display_options['fields']['field_carousel_image_image']['table'] = 'field_data_field_carousel_image_image';
   $handler->display->display_options['fields']['field_carousel_image_image']['field'] = 'field_carousel_image_image';
   $handler->display->display_options['fields']['field_carousel_image_image']['label'] = '';
+  $handler->display->display_options['fields']['field_carousel_image_image']['alter']['text'] = '[field_carousel_image_image]';
   $handler->display->display_options['fields']['field_carousel_image_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_carousel_image_image']['empty'] = 'Sorry, I could not find any carousel images to display.  Please create a new carousel image.';
   $handler->display->display_options['fields']['field_carousel_image_image']['click_sort_column'] = 'fid';
