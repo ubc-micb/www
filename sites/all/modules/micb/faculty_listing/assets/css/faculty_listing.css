@@ -1,0 +1,121 @@
+/* 
+ * Styles for the Front Page Microbiology and Immunology features module
+ */
+
+/* Make the faculty filter easier to use */
+.view-faculty .view-header {
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+.view-faculty .view-header img {
+  display:block; 
+  float: left; 
+  padding: 0 10px 10px 0;
+}
+.view-faculty .view-header #anchors {
+  width: 100%;
+  margin-top: 30px;
+}
+.view-faculty .view-header #anchors td {
+  vertical-align: top;
+}
+.view-faculty .view-header #anchors a {
+  display: inline-block;
+  width: 80%;
+  padding: 3px 7px;
+  margin: 3px 0;
+  background-color: #fff;
+  border-radius: 0;
+  border: 1px solid #d7e0e7;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.view-faculty .view-header #anchors a.active {
+  display: inline-block;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+.view-faculty .view-header #anchors a:hover {
+  background: #002145;
+  border: 1px solid #002145;
+  color: #fff;
+}
+
+.view-faculty .view-display-id-attachment_1 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.view-faculty .view-display-id-attachment_1 .view-header,
+.view-faculty .view-display-id-attachment_1 p {
+  margin: 0;
+}
+.view-faculty #filter-reset {
+  float: left;
+  margin-right: 5%;
+}
+.view-faculty .view-display-id-attachment_1 a {
+  display: inline-block;
+  padding: 3px 7px;
+  margin: 3px 0;
+  background-color: #fff;
+  border-radius: 0;
+  border: 1px solid #d7e0e7;
+  text-decoration: none;
+}
+.view-faculty .view-display-id-attachment_1 a.active {
+  display: inline-block;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+.view-faculty .view-display-id-attachment_1 a:hover {
+  background: #002145;
+  border: 1px solid #002145;
+  color: #fff;
+}
+
+.view-faculty caption {
+  font-size: 150%;
+  line-height: 150%;
+  font-weight: bold;
+  background: #A5BDD1;
+  color:white;
+}
+.view-faculty td {
+  padding: 5px 20px 1px 0;
+  width: 25%;
+  vertical-align: middle;
+}
+.view-faculty .views-field-field-picture {
+  width: 100px;
+}
+.view-faculty .views-field-field-name {
+  width: auto;
+}
+
+/* MEDIA QUERIES 
+-------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  /* START 480 STYLES */
+
+  .view-faculty .view-header img {
+    float: none;
+  }
+  /* Hide the faculty picture on small screens due to not having space to properly view it and the other fields together. */
+  .view-faculty .views-field-field-picture {
+    display:none;
+  }
+  .view-faculty .views-field-field-name {
+    padding-right: 10px;
+  }
+  .view-faculty .views-field-field-name a {
+    font-size: 16px;
+  }
+  .view-faculty .views-field-field-title,
+  .view-faculty .views-field-field-department {
+    font-size: 12px;
+  }
+
+  /* END 480 STYLES */
+}
