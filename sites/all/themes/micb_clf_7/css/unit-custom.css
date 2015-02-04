@@ -364,7 +364,7 @@ div#content section {
 .seminar-events-calendar .views-row {
   margin: 10px 0;
   padding: 15px 10px 25px 20px;
-  overflow: scroll;
+  overflow: auto;
 }
 .seminar-events-calendar .views-row-last {
   border-bottom: none;
