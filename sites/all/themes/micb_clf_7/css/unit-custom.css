@@ -1,0 +1,681 @@
+/* ALL CUSTOM UNIT STYLES IN HERE */
+/* Custom classes
+-------------------------------------------------- */
+body{
+  background:white;
+}
+
+/* UNIT SPECIFIC
+Typography
+-------------------------------------------------- */
+.fancybox-title, 
+.full-width-container,
+.survey,
+.ubc-menu,
+footer {
+  font-family:'Open Sans', 'Arial', sans-serif;
+  font-weight:400;
+  font-style:normal;
+  background:#FFF;
+  text-rendering: optimizelegibility;
+}
+.full-width-container h1 {
+  color: #002145;
+  font-size: 290%;
+  line-height: 133.3%;
+  margin: 0 0 2%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border:none;
+}
+.full-width-container h2 {
+  color: #002145;
+  font-size: 235.2%;
+  line-height: 150%;
+  margin: 0 0 1.7%;
+  letter-spacing: 2px;
+}
+.full-width-container h3 {
+  color: #0680A6;
+  font-size: 176.4%;
+  line-height: 166.6%;
+  margin: 0 0 .5%;
+  letter-spacing: 2px;
+}
+.full-width-container h3 a,
+.full-width-container h4 a,
+.full-width-container h5 a,
+.full-width-container h6 a {
+  text-decoration: underline;
+}
+.full-width-container h3 a:visited, 
+.full-width-container h4 a:visited, 
+.full-width-container h5 a:visited, 
+.full-width-container h6 a:visited {
+  color: #0680a6;
+}
+
+/* UNIT COLOURS
+Unit Bar background gradient and box shadow */
+#ubc7-unit {
+  background: #245b7b;
+  /* replace with unit colour (or use theme settings) */
+  box-shadow: inset 0px -10px 10px -10px #333333;
+  -moz-box-shadow: inset 0px -10px 10px -10px #333333;
+  -webkit-box-shadow: inset 0px -10px 10px -10px #333333;
+}
+
+/* NAVIGATION */
+/* Soften the color of the menu bar to match newer UBC websites */
+#ubc7-unit-menu, 
+#ubc7-unit-menu .navbar-inner,
+#ubc7-unit-menu .btn-group .btn, 
+#ubc7-unit-menu .nav>li>a.active,
+#ubc7-unit-menu .nav>li.active-trail>.btn-group, 
+#ubc7-unit-menu .nav>li.active-trail:hover>.btn-group,
+#ubc7-unit-alternate-navigation .btn-group .btn,
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group,
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group .btn {
+  background-color:#f6f6f6;
+}
+/* Fix menu hover effect colors */
+#ubc7-unit-menu .nav>li>a.active:hover, 
+#ubc7-unit-menu .nav>li.active-trail>.btn-group:hover, 
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group:hover,
+#ubc7-unit-menu .nav>li.active-trail:hover>.btn-group:hover,
+#ubc7-unit-menu .nav>li.active-trail>.btn-group .btn:hover,
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group .btn:hover {
+  background-color:#002145;
+  color:white;
+}
+#ubc7-unit-menu .nav>li.active-trail>.btn-group:hover {
+  background-color: #002145;
+  color: white;
+}
+/* Remove drop shadow on menu items */
+#ubc7-unit-menu .nav>li>a.active,
+#ubc7-unit-menu .nav>li.active-trail>.btn-group,
+#ubc7-unit-alternate-navigation .nav>li.active-trail>.btn-group {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Increase main menu padding */
+#ubc7-unit-menu .btn-group a.btn,
+#ubc7-unit-alternate-navigation .btn-group a.btn {
+  padding-right: 7px; 
+  padding-left: 15px;
+}
+
+/* Create a bit more whitespace around the breadcrumbs */
+.full-width .full-width-container .breadcrumb {
+  height:auto;
+  margin-bottom:5px;
+}
+
+/* SIDEBAR NAVIGATION */
+/* Align the sidebar navigation menu with the title of the page */
+.bootstrap-sidenav {
+  margin-top:10px;
+}
+/* Arrow styles */
+.bootstrap-sidenav a,
+.bootstrap-sidenav .collapsed>a,
+.bootstrap-sidenav .expanded>a, 
+.bootstrap-sidenav>.active-trail>a,
+.bootstrap-sidenav>.active>a
+{
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* Right arrow for menu items */
+.bootstrap-sidenav a,
+.bootstrap-sidenav .collapsed>a {
+  background-image: url('../img/page-menu-arrow.png');
+}
+/* Down arrow for menu items with child items */
+.bootstrap-sidenav .expanded>a {
+  background-image: url('../img/page-menu-arrow-child.png');
+}
+/* Down arrow for active trail menu items */
+.bootstrap-sidenav>.active-trail>a {
+  background-image: url('../img/page-menu-arrow-active-trail.png');
+}
+/* Right arrow for active menu items */
+.bootstrap-sidenav>.active>a {
+  background-image: url('../img/page-menu-arrow-active.png');
+}
+
+/* First level menu active link */
+.bootstrap-sidenav>.active>a, 
+.bootstrap-sidenav a.active {
+  background-color: #0088cc;
+  border-color: #0088cc;
+  color:white;
+  font-weight: bold;
+}
+.bootstrap-sidenav>.active>a {
+  padding: 8px 14px;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: #d7e0e7;
+}
+/* Second level of expanded menu */ 
+.bootstrap-sidenav .bootstrap-sidenav {
+  background-color: #edf1f4
+}
+/* Third level of expanded menu */
+.bootstrap-sidenav .bootstrap-sidenav .bootstrap-sidenav {
+  background-color: #d7e0e7
+}
+
+/* Center the content area */
+div#content {
+  margin-left: auto;
+  margin-right: auto; 
+}
+div#main {
+  padding:0px;
+}
+
+/* Improve Drupal Status Message Theming
+  Drupal has 3 levels of messages:
+  - Error
+  - Warning
+  - Status
+ */
+.alert,
+.alert>h4 {
+  color: white;
+}
+.alert {
+  border-radius: 4px;
+  border: none;
+}
+.alert a {
+  color: white;
+  font-weight: bold;
+}
+/* Remove underline on close alert link */
+.alert a.close {
+  text-decoration: none;
+  color: white;
+}
+/* Error message */
+.alert-error {
+  background-color: #DF382C;
+}
+/* Warning message */
+.alert-warning {
+  background-color: #ECA918;
+}
+/* Status message */
+.alert-status {
+  background-color: #38B44A;
+}
+/* Enlarge the glyphicons used in messages and move them to the left */
+.alert [class^="icon-"], 
+.alert [class*=" icon-"] {
+  font-size: 40px;
+  margin: 0 20px 20px 0;
+  float: left;
+}
+.alert ul {
+  margin-left: 72px;
+}
+
+/* Hexagonal wrapper.  Used on events date box. */
+.hex {
+  float:left;
+  margin-top: 8px;
+}
+.hex-left {
+  float: left;
+  border-right: 15px solid #6C6;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+}
+.hex-center {
+  float: left;
+  width: 30px;
+  height: 52px;
+  background-color: #6C6;
+}
+.hex-right {
+  float: left;
+  border-left: 15px solid #6C6;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+}
+
+/* Date Box for events */
+.date-box {  
+  /* background-color: #f7c23d; */
+  color: #FFFFFF;
+  float: left;
+  /* margin: 5px 10px 0 0;
+  padding: 2px 0 0;
+  */
+  margin:0;
+  padding:0;
+  text-align: center;
+  width:100%;
+  /* width: 50px; */
+} 
+/* Short Month PHP date format (ex. SEP) */
+.date-box .dateM {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+/* Day of month PHP date format (ex. 3) */
+.date-box .datej {
+  font-size: 1.4em;
+  margin-bottom: 7px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+/* Start time PHP date format (ex. 12:32 PM) */
+.date-box .dategiA {
+  font-size: .9em;
+  margin-bottom: 7px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Add a little more whitespace at the bottom of the page */
+div#content section {
+  padding-bottom:20px;
+}
+
+/* Make the footer top border stand out a bit more */
+#ubc7-unit-footer {
+  border-top-color: #0680A6;
+}
+
+/* My Account Login/Logout Items */
+#login-link {
+  width:95%;
+}
+#login-link a {
+  display: inline-block;
+  font-style: normal;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: #315d7b;
+  border-radius:4px;
+  color: #FFF;
+}
+
+/* Seminar Events */
+.seminar-event {
+  width: 90%;
+  margin: 0 auto 0 auto;
+  padding: 0 15px 0 15px;
+  text-align: center;
+}
+.seminar-event .ubc,
+.seminar-event .dept,
+.seminar-event .presenter,
+.seminar-event .presenter-title,
+.seminar-event .seminar-title,
+.seminar-event .date,
+.seminar-event .host {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.seminar-event .ubc,
+.seminar-event .seminar-title {
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: bold;
+}
+.seminar-event .dept,
+.seminar-event .title {
+  font-size: 16px;
+}
+.seminar-event .presenter{
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: bold;
+}
+.seminar-event .date,
+.seminar-event .host {
+  font-size: 19px;
+}
+
+/* CALENDAR */
+/* Upcomming page view */
+.seminar-events-calendar .feed-icon {
+  margin:0 auto 10px auto;
+}
+.seminar-events-calendar .views-row {
+  margin: 10px 0;
+  padding: 15px 10px 25px 20px;
+  overflow: scroll;
+}
+.seminar-events-calendar .views-row-last {
+  border-bottom: none;
+}
+.seminar-events-calendar .calendar-info {
+  margin-left: 80px;
+  padding-left: 20px;
+  border-left: 4px solid #efefef;
+
+}
+.seminar-events-calendar .calendar-presenter-title {
+  font-style: italic;
+}
+
+/* JEMI */
+.jemi-header {
+  padding-bottom: 25px;
+}
+.jemi-volume {
+  color: navy;
+  font-size: medium;
+  font-weight: bold;
+}
+.jemi-body {
+  padding-top: 15px;
+}
+.jemi-body p {
+  padding-top: 5px;
+}
+
+/* NEWS */
+.view-news .views-row {
+  padding: 10px;
+  overflow: scroll;
+  margin-bottom: 10px;
+}
+.view-news .views-row-even {
+  background: #efefef;
+  border-radius: 4px;
+}
+.view-news .views-field-created {
+  margin-bottom: 5px;
+}
+
+/* ARTICLES */
+/* Make the titles a bit smaller as they are usually very long compared to other pages */
+body.node-type-article .full-width-container h1 {
+  font-size:220%;
+}
+/* Article node theming */
+.article-return-link {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #eeeeee;
+  padding: 5px;
+  margin: 15px 0 20px 0;
+  display: block;
+  border-radius: 5px;
+  width: 120px;
+}
+.article-return-link:hover {
+  background-color: #d9d9d9;
+}
+/* Article Slideshow (Recent Publications) view theming */
+.view-article-slideshow img {
+  max-width: 650px;
+}
+.view-article-slideshow .views-row {
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+  border-bottom: 1px dashed #cccccc;
+}
+.view-article-slideshow .views-row-last {
+  border: none;
+}
+.view-article-slideshow .read-more a {
+  padding: 5px;
+  background: #eeeeee;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  width: 80px;
+  text-align: center;
+  margin-top: 20px;
+}
+.view-article-slideshow .read-more a:hover {
+  background-color: #d9d9d9;
+}
+
+/* MEDIA QUERIES 
+(these are example queries to get you started - these can be modified to suit)
+-------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+  /* START 1200 STYLES */  
+
+  /* Center Breadcrumbs and Content */
+  .full-width .full-width-container .breadcrumb,
+  div#main,
+  .seminar-events-calendar .feed-icon {
+    max-width: 1170px;
+  }
+  .full-width .full-width-container .breadcrumb,
+  div#main  {
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Create a bit more whitespace around the breadcrumbs */
+  #ubc7-unit-menu {
+    margin-bottom:5px;
+  }
+  
+  /* END 1200 STYLES */  
+}
+@media screen and (max-width: 1199px) {
+  /* START 980-1199 STYLES */
+
+  /* Center Breadcrumbs and Content */
+  .full-width .full-width-container .breadcrumb,
+  div#main{
+    max-width: 940px;
+  }
+  .full-width .full-width-container .breadcrumb,
+  div#main  {
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* END 980-1199 STYLES */
+}
+@media screen and (max-width: 979px) { 
+  /* START 768-979 STYLES */
+
+  /* Align all main level nav items positioning */
+  #ubc7-unit-menu .dropdown .btn-group a.btn,
+  #ubc7-unit-alternate-navigation .dropdown .btn-group a.btn {
+    padding-left:15px;
+  }
+  /* Reduce sub menu item indent a bit */
+  .nav-collapse .dropdown-menu a {
+    padding-left: 25px;
+  }
+  /* Soften the color of the navbar to match newer UBC websites */  
+  #ubc7-unit-menu .nav-collapse li a, 
+  #ubc7-unit-alternate-navigation .nav-collapse li a,
+  #ubc7-unit-menu .nav-collapse li, 
+  #ubc7-unit-alternate-navigation .nav-collapse li, 
+  #ubc7-unit-menu .dropdown .btn-group .btn, 
+  #ubc7-unit-alternate-navigation .dropdown .btn-group .btn {
+    background-color: #f6f6f6;
+    color: #002145;
+  }
+  /* Fix menu hover effect colors */
+  #ubc7-unit-menu .nav-collapse li a:hover, 
+  #ubc7-unit-alternate-navigation .nav-collapse li a:hover,
+  #ubc7-unit-menu .nav-collapse li:hover, 
+  #ubc7-unit-alternate-navigation .nav-collapse li:hover, 
+  #ubc7-unit-menu .dropdown .btn-group .btn:hover, 
+  #ubc7-unit-alternate-navigation .dropdown .btn-group .btn:hover {
+    background-color: #002145;
+    color: white;
+  }  
+
+  /* Center Breadcrumbs and Content */
+  .full-width .full-width-container .breadcrumb {
+    margin-left: -20px;
+    margin-right: 20px;
+  }
+
+  /* CALENDAR */
+  /* Upcoming Events list */
+  /* Center the ical feed button on smaller screens */
+  .seminar-events-calendar .feed-icon {
+    text-align: center;
+  }
+
+  /* END 768-979 STYLES */
+}
+@media screen and (max-width: 767px) {
+  /* START >767 STYLES */
+
+  /* Center content */
+  div#content{
+    max-width: 767px;
+  }
+
+  /* Make the header fonts smaller */
+  .full-width-container h1 {
+    font-size: 190%;
+    line-height: 120%;
+    letter-spacing: 2px;
+    margin: 0 0 2%;
+  }
+  .full-width-container h2 {
+    font-size: 160%;
+    line-height: 130%;
+    margin: 0 0 2%;
+  }
+  .full-width-container h3 {
+    font-size: 152.9%;
+    line-height: 146.1%;
+    margin: 0 0 1.7%;
+  }
+
+  /* CALENDAR */
+  /* Upcoming Events List */
+  /* Reset padding on smaller screens */
+  .seminar-events-calendar .views-row {
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+
+  /* Make the article titles a bit smaller as they are usually very long compared to other pages */
+  body.node-type-article .full-width-container h1 {
+    font-size:150%;
+  }
+  
+  /* END >767 STYLES */
+}
+@media screen and (max-width: 720px) {
+  /* START >720 STYLES */
+  
+  /* Center content */
+  div#content{
+    max-width: 720px;
+  }
+
+  /* END >720 STYLES */
+}
+@media screen and (max-width: 520px) {
+  /* START 520 STYLES */
+  
+  /* Center content */
+  div#content{
+    max-width: 520px;
+  }  
+ 
+  /* ARTICLES */
+  /* Make the images in the articles small enough to not cause horizontal scrolling */
+  .view-article-slideshow img {
+    max-width: 500px;
+  }
+
+  /* END 520 STYLES */
+}
+@media screen and (max-width: 480px) {
+  /* START 480 STYLES */
+  
+  /* Center content */
+  div#content{
+    max-width: 480px;
+  }
+ 
+  /* Shrink Date Box */
+  .date-box .dateM,
+  .date-box .datej {
+    display: inline;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 3px;
+  }  
+  /* Hide the hex wrapper of the date box. */
+  .hex {
+    float:none;
+    display:block;
+    margin-bottom:10px;
+  }
+  .hex-left,
+  .hex-right {
+    display:none;
+  }
+  .hex-center {
+    float: none;
+    width: 6.5em;
+    height: auto;
+  } 
+
+  /* CALENDAR */
+  /* Upcomming page view */
+  /* Reset padding on smaller screens */
+  .seminar-events-calendar .views-row {
+    padding: 25px 0;
+    margin: 0;
+  }
+  .seminar-events-calendar .views-row-first {
+    padding-top: 0;
+  }
+  .seminar-events-calendar .views-row-last {
+    border: none;
+  }
+  /* Move event info left into space left by moving the date box */
+  .seminar-events-calendar .calendar-info {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: none;
+  }
+
+  /* Flatten the event date box and move above event info */
+  .seminar-events-calendar .date-box {
+    float:none;
+    padding: 8px 5px 5px 5px;
+    width: 7.5em;
+    text-align: left;
+  }
+
+  /* ARTICLES */
+  /* Make the images in the articles small enough to not cause horizontal scrolling */
+  .view-article-slideshow img {
+    max-width: 300px;
+  }
+
+  /* END 480 STYLES */
+}

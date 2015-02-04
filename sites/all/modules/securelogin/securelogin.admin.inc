@@ -44,6 +44,7 @@ function securelogin_admin() {
   $register = variable_get('user_email_verification', TRUE) ? 'optional' : 'required';
   $forms['user_register_form'] = array('group' => $register, 'title' => t('User registration form'));
   $forms['user_pass'] = array('group' => 'optional', 'title' => t('User password request form'));
+  $forms['node_form'] = array('group' => 'optional', 'title' => t('Node form'));
   drupal_alter('securelogin', $forms);
   foreach ($forms as $id => $item) {
     $form[$item['group']]['securelogin_form_' . $id] = array(
@@ -98,13 +99,6 @@ function comment_securelogin_alter(&$forms) {
 function contact_securelogin_alter(&$forms) {
   $forms['contact_personal_form'] = array('group' => 'optional', 'title' => t('Personal contact form'));
   $forms['contact_site_form'] = array('group' => 'optional', 'title' => t('Site contact form'));
-}
-
-/**
- * Implements hook_securelogin_alter() for node module.
- */
-function node_securelogin_alter(&$forms) {
-  $forms['node_form'] = array('group' => 'optional', 'title' => t('Node form'));
 }
 
 /**

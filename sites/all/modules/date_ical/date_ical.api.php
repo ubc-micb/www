@@ -139,7 +139,7 @@ function hook_date_ical_export_post_render_alter(&$rendered_calendar, $view) {
  *****************************************************************************/
 
 /**
- * Alter the vcalendar object created from an imported iCal feed.
+ * Alter the vcalendar object imported from an iCal feed.
  *
  * @param object $calendar
  *   An instance of the iCalcreator library's vcalendar class.
@@ -153,7 +153,7 @@ function hook_date_ical_import_vcalendar_alter(&$calendar, $context) {
 }
 
 /**
- * Alter a calendar component created from an imported iCal feed.
+ * Alter a calendar component imported from an iCal feed.
  *
  * @param object $component
  *   This will usually be an iCalcreator vevent object, but Date iCal also
@@ -171,6 +171,24 @@ function hook_date_ical_import_component_alter(&$component, $context) {
   }
   elseif ($component->objName == 'valarm') {
     // Do something different for valarms...
+  }
+}
+
+/**
+ * Alter the parsed data for an event imported from an iCal feed.
+ *
+ * @param array $data
+ *   An associative array of field data that represents an imported event.
+ * @param array $context
+ *   An associative array of context, with the following keys and values:
+ *   - 'calendar': The iCalcreator vcalendar parent object of this component.
+ *   - 'source': FeedsSource object for this Feed.
+ *   - 'fetcher_result': The FeedsFetcherResult object for this Feed.
+ */
+function hook_date_ical_import_post_parse_alter(&$data, $context) {
+  // Example of what might be done with this alter hook.
+  if (!empty($context['calendar']->xprop['X-WR-CALNAME']['value'])) {
+    // Do something with the calendar name....
   }
 }
 
@@ -202,4 +220,33 @@ function hook_date_ical_import_timezone_alter(&$tzid, $context) {
     // However, it's equivalent to "America/New_York", which PHP is fine with.
     $tzid = 'America/New_York';
   }
+}
+
+/**
+ * Add an additional custom source to be mapped by a feed.
+ *
+ * This is useful when you need to map fields from an iCal feed which
+ * the Date iCal module does not currently support.
+ *
+ * @param array $sources
+ *   An associative array containing the source's properties, as follows:
+ *     name: The name that will appear in the feed importer Mapping page.
+ *     description: The description of this field shown in the Mapping page.
+ *     date_ical_parse_handler: The function in the ParserVcalendar class
+ *       which should be used to parse this iCal property into a Drupal field.
+ */
+function hook_date_ical_mapping_sources_alter(&$sources) {
+  // Example of what might be done with this alter hook:
+  // Add the "ATTENDEE" iCal property to the mapping sources.
+  $sources['ATTENDEE'] = array(
+    'name' => t('Attendee'),
+    'description' => t('The ATTENDEE property.'),
+    'date_ical_parse_handler' => 'parseTextProperty',
+  );
+  // Add "ATTENDEE:CN" parameter to the mapping sources.
+  $sources['ATTENDEE:CN'] = array(
+    'name' => t('Attendee: CN'),
+    'description' => t("The CN parameter of the ATTENDEE property: the attendee's Common Name."),
+    'date_ical_parse_handler' => 'parsePropertyParameter',
+  );
 }

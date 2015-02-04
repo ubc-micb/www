@@ -1,0 +1,325 @@
+/* 
+ * Styles for the Front Page Microbiology and Immunology features module
+ */
+
+/* FRONT PAGE
+-------------------------------------------------- */
+body.front .panel-pane .pane-content {
+  padding: 0 20px;
+}
+
+body.front .panel-pane {
+  padding: 20px 0;
+}
+
+/* Break out the front page to full width */
+body.front div#main {
+  max-width: none;
+}
+body.front .full-width .full-width-container .expand,
+body.front .full-width-container,
+body.front div#content {
+  margin-left:0;
+  margin-right:0;
+  padding-left: 0;
+  padding-right: 0;
+}
+body.front div.inflate,
+body.front .pane-highlight-carousel,
+body.front .pane-highlight-carousel .pane-content  {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+body.front .panel-pane h2 {
+  color: #002145;
+  font-size: 290%;
+  font-weight: normal;
+  line-height: 133.3%;
+  margin: 0 0 2%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border:none;
+  text-align: center;
+}
+
+/* Remove extra padding at bottom of page before footer */
+body.front div#content section {
+  padding-bottom: 0px;
+}
+
+/* Carousel */
+body.front .carousel {
+  margin-bottom: 0;
+}
+
+/* Carousel controls */
+body.front .carousel-control {
+  text-decoration: none;
+  border:none;
+  background:none;
+  font-size: 150px;
+}
+
+/* Carousel image */
+body.front .views-field-field-carousel-image-image {
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+body.front .views-field-field-carousel-image-image img {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Carousel image caption */
+body.front .views-field-field-carousel-image-caption {
+  position: absolute;
+  background-color: rgba(47,93,124, 0.75);
+  border-radius: 0 25px 25px 0;
+  color: white;
+  padding: 1.5em 2.2em 1.5em 5%;
+  /* bottom: calc(10% + 174px); */
+  bottom: 1em;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Front page about blurb */
+body.front #front-about {
+  background: url('/sites/all/modules/micb/front_page/assets/images/coxiella_burnetii_bacteria_background.jpg');
+}
+
+body.front #front-about .pane-content {
+  max-width: 1170px;
+  margin: 0 auto;
+  font-size: 176.4%;
+  line-height: 163.3%;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* Front page news listing */
+body.front .front-news {
+  background-color: #C3D0DC;
+}
+body.front .front-news .views-row {
+  overflow: scroll;
+}
+body.front .front-news .pane-content{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+body.front .front-news .news-title a {
+  text-decoration: none;
+}
+body.front .front-news .row-fluid > div {
+  padding: 10px 5px 25px 5px;
+}
+
+/* Front page events listing */
+body.front .front-events .views-row {
+  overflow: scroll;
+}
+body.front .front-events .pane-content {
+  max-width: 1170px;
+  margin: 0 auto;  
+}
+body.front .front-events .event-title,
+body.front .front-events .event-date,
+body.front .front-events .event-presenter,
+body.front .front-events .event-details {
+  margin: 0 0 4px 0;
+  display: block;
+}
+body.front .front-events .event-title a {
+  text-decoration: none;
+}
+body.front .front-events .row-fluid > div,
+body.front .front-events .row-fluid > div .event-info {
+  min-height: 250px;
+}
+body.front .front-events .row-fluid > div {
+  margin: 10px 0 30px 0;
+  padding: 0 20px 0 20px;
+}
+body.front .front-events .row-fluid > div .event-info {
+  margin-left: 70px;
+  padding-left: 13px;
+}
+body.front .front-events .row-fluid > div:first-child {
+  padding: 0 20px 0 0; 
+}
+body.front .front-events .row-fluid > div:last-child {
+  padding: 0 0 0 20px; 
+}
+
+/* MEDIA QUERIES 
+-------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+  /* START 1200 STYLES */  
+
+  /* Remove the whitespace on the front page as there are no breadcrumbs to show */  
+  body.front #ubc7-unit-menu {
+    margin-bottom:0;
+  }
+
+  /* Carousel image caption */
+  body.front .views-field-field-carousel-image-caption {
+    font-size: 23px;
+  }
+
+  /* END 1200 STYLES */  
+}
+
+@media screen and (max-width: 1199px) {
+  /* START 980-1199 STYLES */
+
+  /* Carousel image caption */
+  body.front .views-field-field-carousel-image-caption {
+    font-size: 19px;
+  }
+
+  /* END 980-1199 STYLES */
+}
+
+
+@media screen and (max-width: 979px) { 
+  /* START 768-979 STYLES */
+
+  body.front .full-width-container {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  /* Carousel image caption */
+  body.front .views-field-field-carousel-image-caption {
+    font-size: 19px;
+  }
+
+  /* Front Events List */
+  /* Reset the side padding for event items */
+  body.front .front-events .row-fluid > div,
+  body.front .front-events .row-fluid > div:first-child,
+  body.front .front-events .row-fluid > div:last-child  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* END 768-979 STYLES */
+}
+
+@media screen and (max-width: 767px) {
+  /* START >767 STYLES */
+
+  /* Carousel image caption */
+  body.front .views-field-field-carousel-image-caption {
+    font-size: 13px;
+  }
+
+  /* Front About blurb */
+  body.front #front-about .pane-content {
+    font-size: 110%;
+  }
+
+  body.front .panel-pane h2 {
+    font-size: 190%;
+    line-height: 120%;
+    letter-spacing: 2px;
+    margin: 0 0 2%;
+  }
+
+  /* Front Events List */
+  /* Reset the padding for event items */
+  body.front .front-events .row-fluid > div,
+  body.front .front-events .row-fluid > div:first-child,
+  body.front .front-events .row-fluid > div:last-child  {
+    padding: 0;
+  }
+  body.front .front-events .row-fluid > div,
+  body.front .front-events .row-fluid > div .event-info {
+    min-height: 0;
+  }
+
+  /* END >767 STYLES */
+}
+
+@media screen and (max-width: 720px) {
+  /* START >720 STYLES */
+
+  /* Carousel image caption */
+  body.front .views-field-field-carousel-image-caption {
+    font-size: 13px;
+  }
+
+  /* END >720 STYLES */
+}
+
+@media screen and (max-width: 520px) {
+  /* START 520 STYLES */
+
+    /* Carousel positioning */
+  body.front .carousel-inner>.item {
+    padding-bottom:60px;
+  }
+
+  /* Carousel controls */
+  body.front .carousel-control {
+    font-size: 100px;
+  }
+  /* Carousel image caption */
+  body.front .views-field-field-carousel-image-caption {
+    bottom: 0;
+    height: 2.7em;
+    width:95%;
+    border-radius: 0;
+    padding: 1em 1em 1em 5%;
+  }
+
+  /* END 520 STYLES */
+}
+
+@media screen and (max-width: 480px) {
+  /* START 480 STYLES */
+
+  /* Carousel image caption */
+  body.front .views-field-field-carousel-image-caption {
+    font-size: 12px;
+    height: 3em;
+  }
+
+  /* Front Events Listing */
+  /* Flatten the event date box and move above event info */
+  body.front .date-box {
+    float:none;
+    padding: 8px 5px 5px 5px;
+    width: 6.5em;
+    text-align: left;
+  }
+  /* Move front page event info left into space left by moving the date box */
+  body.front .front-events .event-title,
+  body.front .front-events .event-date,
+  body.front .front-events .event-presenter,
+  body.front .front-events .event-details {
+    margin: 0 0 4px 0;
+  }
+  /* Reset the padding for event items */
+  body.front .front-events .row-fluid > div,
+  body.front .front-events .row-fluid > div:first-child,
+  body.front .front-events .row-fluid > div:last-child  {
+    margin: 0;
+    padding: 25px 0 25px 0;
+  }
+  body.front .front-events .row-fluid > div .event-info {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  body.front .front-events .row-fluid > div,
+  body.front .front-events .row-fluid > div .event-info {
+    min-height: 0;
+  }
+
+  /* END 480 STYLES */
+}

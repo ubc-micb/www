@@ -2,7 +2,8 @@ Date iCal
 
 This module allows users to export iCal feeds using Views, and import iCal feeds
 from other sites using Feeds. Any entity that contains a Date field can act as
-the source of events for an iCal feed.
+the source/target to export/import an iCal feed.
+
 
 ===============================================================================
 INSTALLATION
@@ -15,14 +16,13 @@ Date iCal has several required dependencies, and an optional one:
 - The Feeds module is optional. It's needed only if you you wish to import iCal
   feeds from other sites.
 
-To install the iCalcreator library, download it from the project's github:
-http://github.com/iCalcreator/iCalcreator
-Using either git clone or the "Download Zip" button, you'll find the file
-iCalcreator.class.php inside. Copy that file to a folder in your Drupal site
-named sites/all/libraries/iCalcreator.
+To install the iCalcreator library, download the project's official zip file:
+https://github.com/iCalcreator/iCalcreator/archive/master.zip
+Extract it, and copy iCalcreator.class.php to a folder in your Drupal site
+named sites/all/libraries/iCalcreator (you'll need to create that folder).
 
-Or, if you have drush, install iCalcreator by running this command from your
-site's root directory:
+Or, if you have drush, you can install iCalcreator by running this command from
+your site's root directory:
 drush make sites/all/modules/date_ical/date_ical.make --no-core
 
 Then, clear the cache on your site by using either "drush cc all" or logging in
@@ -56,37 +56,41 @@ HOW TO EXPORT AN ICAL FEED USING THE iCal Entities PLUGIN
     size, include additional information from other fields, etc.
 4.  Do this for each of the content types that you wish to include in your
     site's iCal feeds.
-5.  Create a new View that displays the entities that you want to include in the
-    iCal feed.
-6.  Add a "Feed" to the view. Change the Format to "iCal Feed". When you click
-    Apply from that dialog, you'll be given the option to name the calendar,
-    which will appear in your users' calendar clients as the calendar's title.
+5.  Create a new View that displays the entities that you want to include in
+    the iCal feed.
+6.  Add a "Feed" display to the same View. Change the Format to "iCal Feed".
+    When you click "Apply" from that dialog, you'll be given the option to name
+    the calendar, which will appear in your users' calendar clients as the
+    calendar's title.
 7.  Change the Show setting to "iCal Entity".
 8.  In the settings for iCal Entity, select the date field that should be used
     as the event date for the iCal feed. Make sure that you choose a field that
     is a part of every entity that your View displays. Otherwise, the entities
     which don't have that field will be left out of the iCal feed.
-9.  You may optionally choose a field that will be used to populate the Location
-    property of events in your iCal feed. This field can be a text field, a
-    Node Reference field, an Addressfield, or a Location field.
-10. Give the feed a path like 'calendar/%/export.ics', including a '/%/' for 
+9.  You may optionally choose a field that will be used to populate the 
+    Location property of events in your iCal feed. This field can be a text
+    field, a Node Reference field, an Addressfield, or a Location field.
+10. Give the Feed a path like 'calendar/%/export.ics', including a '/%/' for
     every contextual filter in the view.
 11. Make sure the Pager options are set to "Display all items".
 12. Add date filters or arguments that will constrain the view to the items you
     want to be included in the iCal feed.
-13. Attach the feed to a another view (usually a Page view that is displaying
-    the same events). Be aware, though, that attaching the feed to a view with
-    different output will not make the iCal feed include that output. It will
-    always include the events which match the feed's filters.
+13. Using the "Attach to:" setting in the Feed Settings panel, attach the feed
+    to a another display in the same view (usually a Page display). Be aware,
+    though, that the Feed will display exactly what its settings tell it to,
+    regardless of how the Page display is set up. Thus, it's best to ensure
+    that both displays are configured to include the same content.
 14. Save the View.
-15. Navigate to a page which displays the attached view. You should see the iCal
-    icon at the bottom of the view's output. Clicking on the icon will subscribe
-    your preferred calendar app to the iCal feed. However, if you don't have a
-    calendar app set up on your computer, you'll want to go back to the View
-    settings page, click the Settings link next to "Format: iCal Feed", and check
-    "Disable webcal://", then save your View. This will make the iCal icon
-    download a .ics file with the events, instead of loading the events directly
-    into a calendar app.
+15. Navigate to a page which displays the view (usually the Page display's
+    "path" setting). You should see the iCal icon at the bottom of the view's
+    output. Clicking on the icon will subscribe your calendar app to the iCal
+    feed.
+16. If you don't have a calendar app set up on your computer, or you want your
+    users to download the ical feed rather than subscribe to it, you'll want to
+    go back to the View settings page, click the Settings link next to
+    "Format: iCal Feed", and check "Disable webcal://". Then save your View.
+    This will make the iCal icon download a .ics file with the events, instead
+    of loading the events directly into the user's calendar app.
 
 HOW TO EXPORT AN ICAL FEED USING THE iCal Fields PLUGIN
 1-6.These steps are the same as above.
@@ -94,7 +98,7 @@ HOW TO EXPORT AN ICAL FEED USING THE iCal Fields PLUGIN
     your iCal feed with. A Date field is required, and fields that will act as
     the Title and Description of the events are reccomended. You can also
     include a Location field.
-8.  Back in the FORMAT section, change the Show setting to 'iCal Fields'.
+8.  Back in the FORMAT section, change the "Show" setting to 'iCal Fields'.
 9.  In the settings for iCal Fields, choose which views fields you want to use
     for the Date, Title, Description, and Location.
 10+ These steps are the same as above.
@@ -133,16 +137,15 @@ IMPORTING AN ICAL FEED FROM ANOTHER SITE USING Feeds
      you add any more mappings, click "Save" at the bottom of the page.
   2) It's a good idea to map the "Summary/Title" source to the "Title" target,
      and the "Description" source to whatever field is the "body" of the node.
-  3) As of 2014/02/03 there is a major bug in Feeds that leaves the Date
-     values on all imported events blank. You must update your Feeds module
-     to the dev release (https://drupal.org/node/927032) to overcome this bug.
+  3) AS OF 2014/04/10 THERE IS A MAJOR BUG IN Feeds WHICH LEAVES THE DATE
+     VALUES ON ALL IMPORTED EVENTS BLACNK. YOU MUST APPLY A PATCH TO Feeds
+     TO FIX THIS PROBLEM. IT IS AVAILABLE HERE: http://drupal.org/node/2237177.
 - Once you've completed all the mappings, click the "Save" button on the
   bottom left side of the page.
 - Now you can import the iCal feed into nodes by going to the /import page of
   your site (e.g. http://www.exmaple.com/import). Click the link for the
-  importer you just created, and enter the URL of the feed you'd like to
-  import into the "URL" field. Click the "Import" button, and observe the
-  progress.
+  importer you just created, and enter the URL of the feed into the "URL"
+  field. Click the "Import" button, and observe the progress.
 - Once it's done, you should see a green message saying "Created X nodes." If
   you do, you've successfully set up your iCal importer. If you get some other
   message, you'll need to tweak the importer's settings.
@@ -150,14 +153,46 @@ IMPORTING AN ICAL FEED FROM ANOTHER SITE USING Feeds
 Remember, you have to map the UID source to the GUID target, and make it
 unique, or your imports won't work!
 
-IMPORTANT NOTE:
-If you're building a site that will be viewed by out-of-state users, and you
-allow said users to set their own timezone, you'll want to set up your Date
-fields to use the "Date's time zone" option. If you don't, then users who live
-in a different timezone will be shown the times for your events in their local
-timezone, rather than your events' timezone. This makes sense if your events
-will be broadcast live to these out-of-state users, but if they need to travel
-to your event, they may end up arriving at the wrong time.
+
+===============================================================================
+IMPORTANT NOTE ABOUT THE DATE FIELD TIMEZONE SETTING
+===============================================================================
+Date fields have a setting called "Time zone handling" which determines how
+dates are stored in the database, and how they are displayed to users.
+ - "Site's time zone" converts the date to UTC as it stores it to the DB. Upon
+  display, it converts the date to the "Default time zone" that's set on your
+  site's Regional Settings configuration page (/admin/config/regional/settings).
+ - "Date's time zone" stores the date as it is entered, along with the timezone
+  name. Upon display, it converts the date from the stored timezone into the
+  site's default timezone. Well, I'm pretty sure it's *supposed* to do that, but
+  the code behind this setting is very buggy. DO NOT USE THIS SETTING.
+ - "User's time zone" converts the date to UTC as it stores it to the DB. Upon
+  display, it converts the date to the current user's timezone setting.
+ - "UTC" converts the date to UTC as it stores it to the DB. Upon display, it
+  performs no conversion, showing the UTC date directly to the user.
+ - "No time zone conversion" performs no conversion as it stores the date in
+  the DB. It also performs no conversion upon display.
+
+The appropriate setting to choose here will depend upon how you want times to
+be displayed on your site. The best setting *would* be "Date's time zone",
+but since that setting is so buggy, I must recommend against it. Instead,
+I'd suggest using "Site's time zone" for sites which host events that are
+mostly in the same timezone (set the site's default timezone appropriately).
+This works just right for local users of your site, and will be the least
+confusing for users who live in a different timezone.
+
+For sites which store events that take place in multiple different timezones,
+the "User's time zone" setting is probably the most appropriate. Most users will
+presumably be tuning in to your events online or on TV (since many take place
+far away from them), which means they'll want to know what time the event occurs
+in their local timezone, so they don't miss the broadcast.
+
+If your Date field is already set to "Date's time zone", you won't be able to
+change it, because that setting uses a different table schema than the others.
+Since "Date's time zone" is very buggy, I'd strongly recomend deleting the
+field and recreating it with a different setting. This will delete all the
+dates in existing event nodes which use this field.
+
 
 ===============================================================================
 HOW TO FIX THE "not a valid timezone" ERROR
@@ -184,10 +219,11 @@ function <module>_date_ical_import_timezone_alter(&$tzid, $context) {
 Replace <module> with the name of your module, change the code to do whatever
 needs to be done to fix your timezones, and clear your Drupal cache.
 
+
 ===============================================================================
 ADDITIONAL NOTES
 ===============================================================================
-Date iCal only supports outputting iCal calendars through Views.
+Date iCal only supports exporting iCal calendars by using Views.
 To put an "Add to calendar" button on individual event nodes, try the
 Add to Cal module (http://drupal.org/project/addtocal), or follow the
 instructions created by the estimable nmc at:

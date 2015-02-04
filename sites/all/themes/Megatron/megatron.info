@@ -1,0 +1,69 @@
+name = UBC CLF 7.0.4 Drupal Theme
+description = This is a responsive <a href="http://clf.ubc.ca/" title="Discover the UBC CLF" target="_blank">UBC CLF</a> (Common Look and Feel) theme, developed by UBC IT Web Services Department. The CLF is developed, managed and distributed by UBC Communications & Marketing. To find out more about the CLF, requirements and possible customizations please see <a href="http://brand.ubc.ca/clf" title="Discover the UBC CLF Brand" target="_blank">brand.ubc.ca/clf</a>.<br /><br />For more information, support or to report an issue with this theme, please contact <a href="http://web.it.ubc.ca/forms/webservices/" title="Contact UBC IT Web Services" target="_blank">UBC IT Web Services</a>.
+version = 2.4
+core = 7.x
+
+regions[search]         = 'Search'
+;regions[navigation]    = 'Navigation'
+regions[highlighted]    = 'Content: Above'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'First Sidebar'
+regions[sidebar_second] = 'Second Sidebar'
+regions[prefooter]      = 'Content: Below'
+
+stylesheets[all][] = css/clf_drupal.css
+stylesheets[all][] = css/unit-custom.css
+
+;Scripts - concatenated bootstrap-alert with custom js
+scripts[] = js/custom-min.js
+
+plugins[panels][layouts] = panels-layouts
+
+breakpoints[mobile] = (min-width: 0px)
+breakpoints[narrow] = (min-width: 480px)
+breakpoints[tablet] = (min-width: 768px)
+breakpoints[desktop] = (min-width: 980px)
+breakpoints[widescreen] = (min-width: 1200px)
+
+;settings[toggle_name] = 0
+settings[clf_clf_version] = '7.0.4'
+settings[clf_clf_package] = 'full'
+settings[clf_layout] = ''
+settings[clf_scriptsoption] = 'footer'
+
+;Excluded CSS Files
+exclude[css][] = 'misc/vertical-tabs.css'
+exclude[css][] = 'modules/aggregator/aggregator.css'
+exclude[css][] = 'modules/block/block.css'
+exclude[css][] = 'modules/book/book.css'
+exclude[css][] = 'modules/comment/comment.css'
+exclude[css][] = 'modules/dblog/dblog.css'
+exclude[css][] = 'modules/file/file.css'
+exclude[css][] = 'modules/filter/filter.css'
+exclude[css][] = 'modules/forum/forum.css'
+exclude[css][] = 'modules/help/help.css'
+exclude[css][] = 'modules/menu/menu.css'
+exclude[css][] = 'modules/node/node.css'
+exclude[css][] = 'modules/openid/openid.css'
+exclude[css][] = 'modules/poll/poll.css'
+exclude[css][] = 'modules/search/search.css'
+exclude[css][] = 'modules/statistics/statistics.css'
+exclude[css][] = 'modules/syslog/syslog.css'
+exclude[css][] = 'modules/system/admin.css'
+exclude[css][] = 'modules/system/maintenance.css'
+exclude[css][] = 'modules/system/system.css'
+exclude[css][] = 'modules/system/system.admin.css'
+;exclude[css][] = 'modules/system/system.base.css'
+exclude[css][] = 'modules/system/system.maintenance.css'
+exclude[css][] = 'modules/system/system.menus.css'
+exclude[css][] = 'modules/system/system.messages.css'
+exclude[css][] = 'modules/system/system.theme.css'
+exclude[css][] = 'modules/taxonomy/taxonomy.css'
+exclude[css][] = 'modules/tracker/tracker.css'
+exclude[css][] = 'modules/update/update.css'
+exclude[css][] = 'modules/user/user.css'
+
+core = "7.x"
+project = "megatron"
+datestamp = "1339332196"

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Faculty Listing feature.
+ */
+
+include_once 'faculty_listing.features.inc';

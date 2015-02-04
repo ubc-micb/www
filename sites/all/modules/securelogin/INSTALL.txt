@@ -1,7 +1,10 @@
 SECURE LOGIN MODULE INSTALLATION
 --------------------------------
 
-1. Ensure the HTTPS version of your site works.
+1. Ensure the HTTPS version of your site works. Note: In certain server
+   environments, you may need to set PHP's $_SERVER['HTTPS'] variable to "on"
+   when the site is accessed via HTTPS (either in your webserver configuration
+   or in your settings.php file).
 2. Untar the module into your Drupal modules directory.
 3. Read the README.txt before enabling the module and before upgrading!
 4. Enable the module at admin/modules.
