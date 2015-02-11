@@ -1706,11 +1706,14 @@ function front_page_views_default_views() {
   $handler->display->display_options['fields']['field_carousel_image_image']['table'] = 'field_data_field_carousel_image_image';
   $handler->display->display_options['fields']['field_carousel_image_image']['field'] = 'field_carousel_image_image';
   $handler->display->display_options['fields']['field_carousel_image_image']['label'] = '';
-  $handler->display->display_options['fields']['field_carousel_image_image']['alter']['text'] = '[field_carousel_image_image]';
+  $handler->display->display_options['fields']['field_carousel_image_image']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_carousel_image_image']['alter']['text'] = '<div class="carousel-image" style="position: absolute; top: 0px; left: 0px; display: block; opacity: 0; z-index: 96; visibility: hidden; background-image: url([field_carousel_image_image]);"></div>';
   $handler->display->display_options['fields']['field_carousel_image_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_carousel_image_image']['empty'] = 'Sorry, I could not find any carousel images to display.  Please create a new carousel image.';
   $handler->display->display_options['fields']['field_carousel_image_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_carousel_image_image']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_carousel_image_image']['settings'] = array(
+    'url_type' => '1',
     'image_style' => '',
     'image_link' => '',
   );

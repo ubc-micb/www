@@ -67,10 +67,16 @@ body.front .views-field-field-carousel-image-image {
   vertical-align: middle;
   overflow: hidden;
 }
-body.front .views-field-field-carousel-image-image img {
+
+body.front .carousel-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  max-width: 100%;
   width: 100%;
-  text-align: center;
-  vertical-align: middle;
+  padding: 3em 0;
+  z-index: 1;
 }
 
 /* Carousel image caption */
@@ -269,6 +275,12 @@ body.front .front-events .row-fluid > div:last-child {
   body.front .carousel-control {
     font-size: 100px;
   }
+
+  /* Carousel Image */
+  body.front .carousel-image {
+    height:250px;
+  }  
+
   /* Carousel image caption */
   body.front .views-field-field-carousel-image-caption {
     bottom: 0;
