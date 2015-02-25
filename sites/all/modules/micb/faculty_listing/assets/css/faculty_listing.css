@@ -3,23 +3,23 @@
  */
 
 /* Make the faculty filter easier to use */
-.view-faculty .view-header {
+.view-faculty-list .view-header {
   margin-bottom: 10px;
   vertical-align: top;
 }
-.view-faculty .view-header img {
+.view-faculty-list .view-header img {
   display:block; 
   float: left; 
   padding: 0 10px 10px 0;
 }
-.view-faculty .view-header #anchors {
+.view-faculty-list .view-header #anchors {
   width: 100%;
   margin-top: 30px;
 }
-.view-faculty .view-header #anchors td {
+.view-faculty-list .view-header #anchors td {
   vertical-align: top;
 }
-.view-faculty .view-header #anchors a {
+.view-faculty-list .view-header #anchors a {
   display: inline-block;
   width: 80%;
   padding: 3px 7px;
@@ -32,30 +32,30 @@
   letter-spacing: 2px;
   font-weight: bold;
 }
-.view-faculty .view-header #anchors a.active {
+.view-faculty-list .view-header #anchors a.active {
   display: inline-block;
   background-color: #eee;
   border: 1px solid #ddd;
 }
-.view-faculty .view-header #anchors a:hover {
+.view-faculty-list .view-header #anchors a:hover {
   background: #002145;
   border: 1px solid #002145;
   color: #fff;
 }
 
-.view-faculty .view-display-id-attachment_1 {
+.view-faculty-list .view-display-id-attachment_1 {
   font-weight: bold;
   margin-bottom: 30px;
 }
-.view-faculty .view-display-id-attachment_1 .view-header,
-.view-faculty .view-display-id-attachment_1 p {
+.view-faculty-list .view-display-id-attachment_1 .view-header,
+.view-faculty-list .view-display-id-attachment_1 p {
   margin: 0;
 }
-.view-faculty #filter-reset {
+.view-faculty-list #filter-reset {
   float: left;
   margin-right: 5%;
 }
-.view-faculty .view-display-id-attachment_1 a {
+.view-faculty-list .view-display-id-attachment_1 a {
   display: inline-block;
   padding: 3px 7px;
   margin: 3px 0;
@@ -64,34 +64,46 @@
   border: 1px solid #d7e0e7;
   text-decoration: none;
 }
-.view-faculty .view-display-id-attachment_1 a.active {
+.view-faculty-list .view-display-id-attachment_1 a.active {
   display: inline-block;
   background-color: #eee;
   border: 1px solid #ddd;
 }
-.view-faculty .view-display-id-attachment_1 a:hover {
+.view-faculty-list .view-display-id-attachment_1 a:hover {
   background: #002145;
   border: 1px solid #002145;
   color: #fff;
 }
 
-.view-faculty caption {
+.view-faculty-list caption {
   font-size: 150%;
   line-height: 150%;
   font-weight: bold;
   background: #A5BDD1;
   color:white;
 }
-.view-faculty td {
+.view-faculty-list td {
   padding: 5px 20px 1px 0;
   width: 25%;
   vertical-align: middle;
 }
-.view-faculty .views-field-field-picture {
+.view-faculty-list .views-field-field-faculty-picture {
   width: 100px;
 }
-.view-faculty .views-field-field-name {
+.view-faculty-list .views-field-field-faculty-last-name {
   width: auto;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.view-faculty-list .views-field-field-faculty-last-name div a {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 15px;
+  clear: both;
+  font-weight: normal;
 }
 
 /* MEDIA QUERIES 
@@ -99,21 +111,21 @@
 @media screen and (max-width: 480px) {
   /* START 480 STYLES */
 
-  .view-faculty .view-header img {
+  .view-faculty-list .view-header img {
     float: none;
   }
   /* Hide the faculty picture on small screens due to not having space to properly view it and the other fields together. */
-  .view-faculty .views-field-field-picture {
+  .view-faculty-list .views-field-field-picture {
     display:none;
   }
-  .view-faculty .views-field-field-name {
+  .view-faculty-list .views-field-field-name {
     padding-right: 10px;
   }
-  .view-faculty .views-field-field-name a {
+  .view-faculty-list .views-field-field-name a {
     font-size: 16px;
   }
-  .view-faculty .views-field-field-title,
-  .view-faculty .views-field-field-department {
+  .view-faculty-list .views-field-field-title,
+  .view-faculty-list .views-field-field-department {
     font-size: 12px;
   }
 

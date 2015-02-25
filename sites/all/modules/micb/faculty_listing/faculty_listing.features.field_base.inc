@@ -10,13 +10,13 @@
 function faculty_listing_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_department'
-  $field_bases['field_department'] = array(
+  // Exported field_base: 'field_faculty_departments'
+  $field_bases['field_faculty_departments'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_department',
+    'field_name' => 'field_faculty_departments',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -39,13 +39,13 @@ function faculty_listing_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_faculty3'
-  $field_bases['field_faculty3'] = array(
+  // Exported field_base: 'field_faculty_faculty'
+  $field_bases['field_faculty_faculty'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_faculty3',
+    'field_name' => 'field_faculty_faculty',
     'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
@@ -62,7 +62,7 @@ function faculty_listing_field_default_field_bases() {
         4 => 'Associate Faculty',
         5 => 'Adjunct Faculty',
         6 => 'Professors Emeriti',
-        21 => 'Active Professors Emeriti',
+        7 => 'Active Professors Emeriti',
       ),
       'allowed_values_function' => '',
     ),
@@ -70,43 +70,71 @@ function faculty_listing_field_default_field_bases() {
     'type' => 'list_integer',
   );
 
-  // Exported field_base: 'field_name'
-  $field_bases['field_name'] = array(
+  // Exported field_base: 'field_faculty_first_name'
+  $field_bases['field_faculty_first_name'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_name',
-    'foreign keys' => array(),
-    'indexes' => array(),
+    'field_name' => 'field_faculty_first_name',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
     'locked' => 0,
-    'module' => 'link',
+    'module' => 'text',
     'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'rel' => '',
-        'target' => 'default',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
+      'max_length' => 255,
     ),
     'translatable' => 0,
-    'type' => 'link_field',
+    'type' => 'text',
   );
 
-  // Exported field_base: 'field_picture'
-  $field_bases['field_picture'] = array(
+  // Exported field_base: 'field_faculty_last_name'
+  $field_bases['field_faculty_last_name'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_picture',
+    'field_name' => 'field_faculty_last_name',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_faculty_picture'
+  $field_bases['field_faculty_picture'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_faculty_picture',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -130,33 +158,34 @@ function faculty_listing_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_title'
-  $field_bases['field_title'] = array(
+  // Exported field_base: 'field_faculty_url'
+  $field_bases['field_faculty_url'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_title',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
+    'field_name' => 'field_faculty_url',
+    'foreign keys' => array(),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'text',
+    'module' => 'link',
     'settings' => array(
-      'max_length' => 255,
+      'attributes' => array(
+        'class' => '',
+        'rel' => '',
+        'target' => 'default',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
     ),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'link_field',
   );
 
   return $field_bases;
