@@ -5,6 +5,15 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function faculty_listing_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
  * Implements hook_views_api().
  */
 function faculty_listing_views_api($module = NULL, $api = NULL) {
@@ -41,4 +50,22 @@ function faculty_listing_image_default_styles() {
   );
 
   return $styles;
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function faculty_listing_node_info() {
+  $items = array(
+    'faculty' => array(
+      'name' => t('Faculty'),
+      'base' => 'node_content',
+      'description' => t('A faculty member.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
 }
