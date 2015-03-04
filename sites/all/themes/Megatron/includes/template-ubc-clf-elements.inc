@@ -13,7 +13,7 @@ function megatron_ubc_clf_toolbar($variables) {
 
     // get unit name
     if (theme_get_setting('clf_searchlabel')) {
-        $subunit_text = t('Search ') . theme_get_setting('clf_searchlabel');
+        $subunit_text = theme_get_setting('clf_searchlabel');
     } 
     else {
         $subunit_text = t('Search');
@@ -24,13 +24,13 @@ function megatron_ubc_clf_toolbar($variables) {
     if (theme_get_setting('clf_subunit_blank')) {
     } 
     else if (theme_get_setting('clf_subunit_override')) {
-        $search_text = t('Search ') . theme_get_setting('clf_subunit_override');
+        $search_text = theme_get_setting('clf_subunit_override');
     }
     else {
-        $search_text = t('Search');
+        $search_text = t('');
     }
   $output = '<form class="form-search" method="get" action="//www.ubc.ca/search/refine/">
-      <input type="text" name="q" placeholder="' . $search_text . '" class="input-xlarge search-query">
+      <input type="text" name="q" placeholder="Search ' . $search_text . '" class="input-xlarge search-query">
       <input type="hidden" name="label" value="' . $subunit_text . '" />
       <input type="hidden" name="site" value="' . $subunit_search .'" />
       <button type="submit" class="btn btn-primary">Search</button>
@@ -112,7 +112,7 @@ function megatron_ubc_clf_visual_identity_footer($variables) {
         $output .= '<div class="ubc7-address-email">E-mail <a href="mailto:' . theme_get_setting('clf_email') . '">' . theme_get_setting('clf_email') . '</a></div>';
     }
     if (theme_get_setting('clf_website')) {
-        $output .= '<div class="ubc7-address-website">Website <a href="http://' . theme_get_setting('clf_website') . '" title="' . theme_get_setting('clf_unitname') . '">' . theme_get_setting('clf_website') . '</a></div>';
+        $output .= '<div class="ubc7-address-website">Website <a href="//' . theme_get_setting('clf_website') . '" title="' . theme_get_setting('clf_unitname') . '">' . theme_get_setting('clf_website') . '</a></div>';
     }
     $output .= '</div>';
     if (theme_get_setting('clf_social_facebook') || theme_get_setting('clf_social_twitter') || theme_get_setting('clf_social_linkedin') || theme_get_setting('clf_social_googleplus') || theme_get_setting('clf_social_youtube'))  {
