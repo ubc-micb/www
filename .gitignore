@@ -1,7 +1,6 @@
 # ----- IGNORE DRUPAL -----
 # Ignore configuration files that may contain sensitive information.
 sites/*/*settings*.php
-.htaccess
 
 # Ignore paths that contain generated content.
 cache/
