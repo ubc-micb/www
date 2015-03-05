@@ -37,20 +37,17 @@ li.dhtml-menu-open > a {
 a.dhtml-menu-icon {
   position: relative;
   float: left;
-  width: 15px;
-  height: 21px;
-  top:1px;
+  width: 16px;
+  height: 16px;
 }
 
 /*
  * Provide large and visible folder icons for easy clicking.
  */
-/* 
-li.dhtml-folder.expanded>a {
+li.dhtml-folder.expanded {
   list-style-image: url("images/folder-open-white.png") !important;
-  background: url("images/expanded.gif") no-repeat scroll 10px 11px transparent !important;
 }
-li.dhtml-folder.collapsed>a {
-  background: url("images/collapsed.gif") no-repeat scroll 10px 11px transparent !important;
+li.dhtml-folder.collapsed {
+  list-style-image: url("images/folder-closed-white.png") !important;
 }
- */
+
