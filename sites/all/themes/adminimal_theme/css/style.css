@@ -23,9 +23,9 @@ body.adminimal-theme *::-moz-focus-inner {
 }
 
 body.adminimal-theme * {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -321,47 +321,70 @@ ul.primary {
   clear: both;
   font-size: 0.923em;
   height: auto;
-  margin: 2px 0 0;
+  margin: 0;
   padding-top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 100%;
+  background: #ebebeb;
+  display: table;
 }
 
 ul.primary li {
   float: left;/* LTR */
   list-style: none;
-  margin: 0 2px;
+  margin: 0;
+}
+
+#navigation ul.primary li:first-of-type {
+  margin-left: 10px;
+}
+
+#navigation ul.primary li:first-of-type.active {
+  margin-left: 20px;
 }
 
 ul.primary li a:link,ul.primary li a.active,ul.primary li a:active,ul.primary li a:visited,ul.primary li a:hover,ul.primary li.active a {
   display: block;
   float: left;/* LTR */
   line-height: 18px;
-  background-color: #a6a7a2;
-  color: #000;
   font-weight: normal;
-  border-width: 1px 1px 0 1px;
-  border-style: solid;
-  border-color: #a6a7a2;
-  font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+  border: 0;
+  font-size: 15px;
+  font-weight: normal;
   margin: 0;
-  padding: 10px 20px;
-  text-transform: none;
+  padding: 10px 12px;
+  color: #797979;
+  background: transparent;
 }
 
 ul.primary li.active a,ul.primary li.active a.active,ul.primary li.active a:active,ul.primary li.active a:visited {
   background-color: #fff;
   border: none;
-  border-top: 5px solid #0074BD;
-  margin-top: -4px;
+  border-top: 3px solid #0074BD;
+  margin-top: -3px;
+  color: #333;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+ul.primary li.active a.active:after {
+  content: "";
+  display: block;
+  height: 5px;
+  left: 0px;
+  bottom: -5px;
+  width: 100%;
+  background: white;
+  position: absolute;
 }
 
 ul.primary li a:hover {
-  color: #fff;
+  color: #0074BD;
 }
 
 ul.primary li.active a:hover {
-  color: #000;
+  color: #333;
 }
 
 .tabs-secondary {
@@ -369,41 +392,52 @@ ul.primary li.active a:hover {
 }
 
 ul.secondary {
-  font-size: 0.923em;
-  padding: 0 3px 5px;
+  font-size: 1em;
+  padding: 0;
   line-height: 1.385em;
   overflow: hidden;
   background-color: #fff;
-  text-align: right;
   width: 100%;
 }
 
 ul.secondary li {
-  margin: 5px;
   float: left;/* LTR */
 }
 
 ul.secondary li a {
-  background-color: #ddd;
-  color: #000;
   display: inline-block;
+  color: #777;
+  border-bottom: 1px solid #EBEBEB;
 }
 
 ul.secondary li a,ul.secondary li a:hover,ul.secondary li.active a,ul.secondary li.active a.active {
   padding: 2px 10px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  border-radius: 7px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 ul.secondary li a:hover,ul.secondary li.active a,ul.secondary li.active a.active {
-  color: #fff;
-  background: none repeat scroll 0% 0% #0074BD;
-  box-shadow: 0px -1px 0px #0074BD,0px 1px 0px #0074BD;
+  color: #0074BD;
+  background: transparent;
+  box-shadow: none;
+  border-color: #0074BD;
 }
 
 ul.secondary li a:hover {
 	box-shadow: none;
+}
+
+body.adminimal-theme ul.secondary li a, body.adminimal-theme ul.secondary li a:hover, body.adminimal-theme ul.secondary li.active a, body.adminimal-theme ul.secondary li.active a.active {
+  border-radius: 0;
+  padding: 10px 10px;
+}
+
+body.adminimal-theme ul.secondary li.active a, ul.secondary li.active a.active {
+  color: #000;
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid #000;
 }
 
 div.vertical-tabs ul li.vertical-tab-button a {
@@ -441,9 +475,7 @@ div.vertical-tabs ul li.selected a:focus strong {
  * Page layout.
  */
 #page {
-  padding: 20px 0 40px 0;/* LTR */
-  margin-right: 40px;/* LTR */
-  margin-left: 40px;/* LTR */
+  padding: 20px 40px;
   background: #fff;
   position: relative;
   color: #333;
@@ -1001,7 +1033,8 @@ div.admin-panel h3 {
 }
 
 .theme-selector h3 {
-  font-weight: normal;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .theme-default h3 {
@@ -1506,12 +1539,6 @@ body div.status a {
 #edit-pages-apply, #edit-pages-reset {
   float: left;
   margin-top: 40px;
-}
-
-body.adminimal-theme ul.secondary li a, body.adminimal-theme ul.secondary li a:hover, body.adminimal-theme ul.secondary li.active a, body.adminimal-theme ul.secondary li.active a.active {
-  border-radius: 0;
-  padding: 2px 10px;
-  border: none;
 }
 
 body.adminimal-theme .views-ui-display-tab-bucket h3 {
@@ -2112,14 +2139,6 @@ body.page-admin-dashboard .container-inline .form-actions, body.page-admin-dashb
   margin-top: 0;
 }
 
-/* Margin fix for some pages in overlay mode */
-body.page-admin-help.overlay #page,
-body.page-admin-reports-updates-update #page,
-body.page-admin-appearance.overlay #page {
-  margin: 0;
-  padding: 0 20px 20px;
-}
-
 .system-themes-list-disabled .theme-selector {
   display: inline-block;
   float: none;
@@ -2157,6 +2176,10 @@ body.page-admin-appearance.overlay #page {
 .system-themes-list-disabled {
   border-top: 5px solid #CDCDCD;
   padding-top: 20px;
+}
+
+.system-themes-list-disabled .theme-selector .screenshot, .system-themes-list-disabled .theme-selector .no-screenshot {
+  margin-bottom: 10px;
 }
 
 #block-system-main {
@@ -2622,14 +2645,26 @@ body.adminimal-theme .views-displays .secondary a > .icon.add {
 }
 
 body.adminimal-theme #views-display-top #views-display-menu-tabs li.add .action-list {
-  top: 43px;
+  top: 42px;
   text-align: left;
+  width: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
 
-body.adminimal-theme ul.secondary li.active a, ul.secondary li.active a.active {
-	color: #FFF;
-	background-color: #888;
-	box-shadow: 0px -1px 0px #888, 0px 1px 0px #888;
+body.adminimal-theme .views-displays .secondary .action-list li {
+  border: none;
+  clear: both;
+}
+
+body.adminimal-theme .views-displays .secondary .action-list li.last  {
+  padding-bottom: 5px;
+}
+
+body.adminimal-theme .views-display-top ul#views-display-menu-tabs li a.active {
+  box-shadow: 0px 1px 0px #0073BC;
+  color: #0073BC;
 }
 
 body.adminimal-theme .views-display-top ul#views-display-menu-tabs li a:hover, 

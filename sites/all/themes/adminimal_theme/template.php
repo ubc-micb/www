@@ -61,7 +61,7 @@ function adminimal_preprocess_html(&$vars) {
   drupal_add_css($adminimal_path . '/css/tablet.css', array('group' => CSS_THEME, 'media' => $media_query_tablet, 'weight' => 1000));
 
   // Add custom CSS.
-  $custom_css_path = $adminimal_path . '/css/custom.css'; 
+  $custom_css_path = 'public://adminimal-custom.css';
   if (theme_get_setting('custom_css') && file_exists($custom_css_path)) {
     drupal_add_css($custom_css_path, array('group' => CSS_THEME, 'weight' => 9999, 'preprocess' => FALSE));
   }
