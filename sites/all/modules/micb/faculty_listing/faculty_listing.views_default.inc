@@ -176,15 +176,12 @@ function faculty_listing_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['element_type'] = 'div';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Faculty Title */
+  $handler->display->display_options['fields']['field_faculty_title']['id'] = 'field_faculty_title';
+  $handler->display->display_options['fields']['field_faculty_title']['table'] = 'field_data_field_faculty_title';
+  $handler->display->display_options['fields']['field_faculty_title']['field'] = 'field_faculty_title';
+  $handler->display->display_options['fields']['field_faculty_title']['label'] = '';
+  $handler->display->display_options['fields']['field_faculty_title']['element_label_colon'] = FALSE;
   /* Field: Content: Department(s) */
   $handler->display->display_options['fields']['field_faculty_departments']['id'] = 'field_faculty_departments';
   $handler->display->display_options['fields']['field_faculty_departments']['table'] = 'field_data_field_faculty_departments';
@@ -192,6 +189,7 @@ function faculty_listing_views_default_views() {
   $handler->display->display_options['fields']['field_faculty_departments']['label'] = '';
   $handler->display->display_options['fields']['field_faculty_departments']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_faculty_departments']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_faculty_departments']['separator'] = ', <br />';
   /* Field: Content: Faculty */
   $handler->display->display_options['fields']['field_faculty_faculty']['id'] = 'field_faculty_faculty';
   $handler->display->display_options['fields']['field_faculty_faculty']['table'] = 'field_data_field_faculty_faculty';

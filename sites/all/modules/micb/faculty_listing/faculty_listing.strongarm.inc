@@ -64,13 +64,13 @@ function faculty_listing_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '3',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
       ),
       'display' => array(),
