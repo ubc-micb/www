@@ -189,6 +189,7 @@ function faculty_listing_views_default_views() {
   $handler->display->display_options['fields']['field_faculty_departments']['label'] = '';
   $handler->display->display_options['fields']['field_faculty_departments']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_faculty_departments']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_faculty_departments']['separator'] = ', <br />';
   /* Field: Content: Faculty */
   $handler->display->display_options['fields']['field_faculty_faculty']['id'] = 'field_faculty_faculty';
   $handler->display->display_options['fields']['field_faculty_faculty']['table'] = 'field_data_field_faculty_faculty';
