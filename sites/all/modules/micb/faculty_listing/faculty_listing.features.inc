@@ -54,7 +54,7 @@ function faculty_listing_node_info() {
       'base' => 'node_content',
       'description' => t('A faculty member.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Full Name'),
       'help' => '',
     ),
   );
